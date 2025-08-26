@@ -1,0 +1,595 @@
+// Critical Mineral Explorer JavaScript
+class CriticalMineralExplorer {
+    constructor() {
+        this.metalsData = [];
+        this.filteredData = [];
+        this.reportsCache = {};
+        this.mineDataCache = {};
+        this.currentMetal = null;
+        
+        this.init();
+    }
+
+    async init() {
+        this.setupEventListeners();
+        await this.loadData();
+        this.hideLoading();
+        this.renderDashboard();
+        this.renderMetalList();
+        this.updateSummaryStats();
+    }
+
+    setupEventListeners() {
+        // Tab navigation
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                this.switchTab(e.target.dataset.tab);
+            });
+        });
+
+        // Search and filters
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            this.filterMetals();
+        });
+        
+        document.getElementById('production-filter').addEventListener('change', () => {
+            this.filterMetals();
+        });
+        
+        document.getElementById('confidence-filter').addEventListener('change', () => {
+            this.filterMetals();
+        });
+
+        // Modal close
+        document.querySelector('.modal-close').addEventListener('click', () => {
+            this.closeModal();
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                this.closeModal();
+            }
+        });
+    }
+
+    async loadData() {
+        try {
+            // Load the CSV data
+            const csvResponse = await fetch('msha_scraper/complete_all_metals_analysis/summary_reports/complete_all_metals_summary.csv');
+            const csvText = await csvResponse.text();
+            this.metalsData = this.parseCSV(csvText);
+            this.filteredData = [...this.metalsData];
+            
+            console.log('Loaded data for', this.metalsData.length, 'metals');
+        } catch (error) {
+            console.error('Error loading data:', error);
+            this.showError('Failed to load mineral data');
+        }
+    }
+
+    parseCSV(text) {
+        const lines = text.trim().split('\n');
+        const headers = lines[0].split(',');
+        
+        return lines.slice(1).map(line => {
+            if (!line.trim()) return null;
+            
+            const values = this.parseCSVLine(line);
+            const row = {};
+            
+            headers.forEach((header, index) => {
+                row[header.trim()] = values[index] ? values[index].trim() : '';
+            });
+            
+            // Convert numeric fields
+            row.total_mines_identified = parseInt(row.total_mines_identified) || 0;
+            row.active_mines = parseInt(row.active_mines) || 0;
+            row.total_estimated_production_mt_per_year = parseFloat(row.total_estimated_production_mt_per_year) || 0;
+            row.total_employment = parseInt(row.total_employment) || 0;
+            
+            return row;
+        }).filter(row => row !== null);
+    }
+
+    parseCSVLine(line) {
+        const result = [];
+        let current = '';
+        let inQuotes = false;
+        
+        for (let i = 0; i < line.length; i++) {
+            const char = line[i];
+            
+            if (char === '"') {
+                inQuotes = !inQuotes;
+            } else if (char === ',' && !inQuotes) {
+                result.push(current);
+                current = '';
+            } else {
+                current += char;
+            }
+        }
+        
+        result.push(current);
+        return result;
+    }
+
+    hideLoading() {
+        document.getElementById('loading').style.display = 'none';
+    }
+
+    showError(message) {
+        const loading = document.getElementById('loading');
+        loading.innerHTML = `
+            <div style="color: #e74c3c;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                <p>${message}</p>
+            </div>
+        `;
+    }
+
+    switchTab(tabName) {
+        // Update nav tabs
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+
+        // Update content
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        document.getElementById(`${tabName}-tab`).classList.add('active');
+
+        // Load analysis charts if needed
+        if (tabName === 'analysis') {
+            this.renderAnalysisCharts();
+        }
+    }
+
+    filterMetals() {
+        const searchTerm = document.getElementById('search-input').value.toLowerCase();
+        const productionFilter = document.getElementById('production-filter').value;
+        const confidenceFilter = document.getElementById('confidence-filter').value;
+
+        this.filteredData = this.metalsData.filter(metal => {
+            const matchesSearch = metal.metal.toLowerCase().includes(searchTerm);
+            const matchesProduction = !productionFilter || metal.expected_us_production === productionFilter;
+            const matchesConfidence = !confidenceFilter || metal.confidence_level === confidenceFilter;
+
+            return matchesSearch && matchesProduction && matchesConfidence;
+        });
+
+        this.renderDashboard();
+        this.updateSummaryStats();
+    }
+
+    updateSummaryStats() {
+        const totalMetals = this.filteredData.length;
+        const activeMines = this.filteredData.reduce((sum, metal) => sum + metal.active_mines, 0);
+        const totalProduction = this.filteredData.reduce((sum, metal) => sum + metal.total_estimated_production_mt_per_year, 0);
+        const totalEmployment = this.filteredData.reduce((sum, metal) => sum + metal.total_employment, 0);
+
+        document.getElementById('total-metals').textContent = totalMetals.toLocaleString();
+        document.getElementById('active-mines').textContent = activeMines.toLocaleString();
+        document.getElementById('total-production').textContent = this.formatNumber(totalProduction);
+        document.getElementById('total-employment').textContent = totalEmployment.toLocaleString();
+    }
+
+    formatNumber(num) {
+        if (num >= 1000000) {
+            return (num / 1000000).toFixed(1) + 'M';
+        } else if (num >= 1000) {
+            return (num / 1000).toFixed(1) + 'K';
+        }
+        return num.toLocaleString();
+    }
+
+    renderDashboard() {
+        const grid = document.getElementById('metals-grid');
+        
+        if (this.filteredData.length === 0) {
+            grid.innerHTML = `
+                <div class="text-center" style="grid-column: 1 / -1; padding: 4rem;">
+                    <i class="fas fa-search" style="font-size: 3rem; color: #bdc3c7; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #7f8c8d;">No metals found</h3>
+                    <p style="color: #7f8c8d;">Try adjusting your search criteria</p>
+                </div>
+            `;
+            return;
+        }
+
+        grid.innerHTML = this.filteredData.map(metal => this.createMetalCard(metal)).join('');
+    }
+
+    createMetalCard(metal) {
+        const productionClass = `production-${metal.expected_us_production}`;
+        const confidenceClass = `confidence-${metal.confidence_level}`;
+        
+        return `
+            <div class="metal-card" onclick="explorer.showMineDetails('${metal.metal}')">
+                <div class="metal-header">
+                    <h3 class="metal-name">${metal.metal}</h3>
+                    <span class="production-badge ${productionClass}">${metal.expected_us_production}</span>
+                </div>
+                
+                <div class="metal-stats">
+                    <div class="stat">
+                        <div class="stat-value">${metal.active_mines}</div>
+                        <div class="stat-label">Active Mines</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">${this.formatNumber(metal.total_estimated_production_mt_per_year)}</div>
+                        <div class="stat-label">Production (MT/yr)</div>
+                    </div>
+                </div>
+                
+                <div class="metal-details">
+                    <div class="detail-item">
+                        <span>Total Mines:</span>
+                        <span>${metal.total_mines_identified}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>Employment:</span>
+                        <span>${metal.total_employment.toLocaleString()}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>Method:</span>
+                        <span>${metal.method}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>Confidence:</span>
+                        <span>${metal.confidence_level}<span class="confidence-indicator ${confidenceClass}"></span></span>
+                    </div>
+                </div>
+                
+                <button class="mines-button" onclick="event.stopPropagation(); explorer.showMineDetails('${metal.metal}')">
+                    <i class="fas fa-info-circle"></i> View Mine Details
+                </button>
+            </div>
+        `;
+    }
+
+    renderMetalList() {
+        const metalList = document.getElementById('metal-list');
+        
+        metalList.innerHTML = this.metalsData.map(metal => `
+            <div class="metal-list-item" onclick="explorer.loadReport('${metal.metal}')">
+                ${metal.metal}
+            </div>
+        `).join('');
+    }
+
+    async loadReport(metalName) {
+        // Update active metal in sidebar
+        document.querySelectorAll('.metal-list-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        // Check cache first
+        if (this.reportsCache[metalName]) {
+            this.displayReport(metalName, this.reportsCache[metalName]);
+            return;
+        }
+
+        // Show loading
+        const reportContent = document.getElementById('report-content');
+        const placeholder = document.querySelector('.report-placeholder');
+        
+        placeholder.style.display = 'none';
+        reportContent.style.display = 'block';
+        reportContent.innerHTML = `
+            <div class="text-center" style="padding: 4rem;">
+                <div class="loading-spinner"></div>
+                <p>Loading ${metalName} report...</p>
+            </div>
+        `;
+
+        try {
+            const response = await fetch(`detailed_reports/${metalName}_report.md`);
+            if (!response.ok) {
+                throw new Error(`Report not found for ${metalName}`);
+            }
+            
+            const markdownText = await response.text();
+            this.reportsCache[metalName] = markdownText;
+            this.displayReport(metalName, markdownText);
+            
+        } catch (error) {
+            console.error('Error loading report:', error);
+            reportContent.innerHTML = `
+                <div class="text-center" style="padding: 4rem; color: #e74c3c;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                    <h3>Report not available</h3>
+                    <p>The detailed report for ${metalName} could not be loaded.</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d;">Error: ${error.message}</p>
+                </div>
+            `;
+        }
+    }
+
+    displayReport(metalName, markdownText) {
+        const reportContent = document.getElementById('report-content');
+        
+        // Convert markdown to HTML using marked.js
+        const htmlContent = marked.parse(markdownText);
+        
+        reportContent.innerHTML = `
+            <h1><i class="fas fa-gem"></i> ${metalName.charAt(0).toUpperCase() + metalName.slice(1)} Supply Chain Analysis</h1>
+            ${htmlContent}
+        `;
+    }
+
+    async showMineDetails(metalName) {
+        // Check cache first
+        if (this.mineDataCache[metalName]) {
+            this.displayMineModal(metalName, this.mineDataCache[metalName]);
+            return;
+        }
+
+        // Show loading modal
+        this.showLoadingModal(metalName);
+
+        try {
+            const response = await fetch(`msha_scraper/complete_all_metals_analysis/consolidated_tables/${metalName}_detailed_mines.json`);
+            if (!response.ok) {
+                throw new Error(`Mine data not found for ${metalName}`);
+            }
+            
+            // Get the raw text and fix invalid JSON values
+            const jsonText = await response.text();
+            const fixedJsonText = this.fixInvalidJson(jsonText);
+            const mineData = JSON.parse(fixedJsonText);
+            
+            this.mineDataCache[metalName] = mineData;
+            this.displayMineModal(metalName, mineData);
+            
+        } catch (error) {
+            console.error('Error loading mine data:', error);
+            this.displayMineErrorModal(metalName, error.message);
+        }
+    }
+
+    showLoadingModal(metalName) {
+        const modal = document.getElementById('mine-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        
+        modalTitle.textContent = `${metalName.charAt(0).toUpperCase() + metalName.slice(1)} Mine Details`;
+        modalBody.innerHTML = `
+            <div class="text-center" style="padding: 4rem;">
+                <div class="loading-spinner"></div>
+                <p>Loading mine data for ${metalName}...</p>
+            </div>
+        `;
+        
+        modal.style.display = 'block';
+    }
+
+    displayMineModal(metalName, mineData) {
+        const modal = document.getElementById('mine-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        
+        modalTitle.innerHTML = `<i class="fas fa-mountain"></i> ${metalName.charAt(0).toUpperCase() + metalName.slice(1)} Mine Details`;
+        
+        // Extract the mines array from the data structure
+        let mines = [];
+        if (mineData && mineData.all_identified_mines && Array.isArray(mineData.all_identified_mines)) {
+            mines = mineData.all_identified_mines;
+        } else if (Array.isArray(mineData)) {
+            mines = mineData;
+        }
+        
+        if (mines.length === 0) {
+            modalBody.innerHTML = `
+                <div class="text-center" style="padding: 4rem;">
+                    <i class="fas fa-info-circle" style="font-size: 3rem; color: #7f8c8d; margin-bottom: 1rem;"></i>
+                    <h3>No detailed mine data available</h3>
+                    <p>There are no specific mines recorded for ${metalName} in the database.</p>
+                </div>
+            `;
+        } else {
+            // Show summary statistics if available
+            let summaryHtml = '';
+            if (mineData.summary_statistics) {
+                const stats = mineData.summary_statistics;
+                summaryHtml = `
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <h4 style="margin-bottom: 0.5rem; color: #2c3e50;">Summary Statistics</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <div><strong>Total Mines:</strong> ${stats.total_mines_identified || 0}</div>
+                            <div><strong>Active Mines:</strong> ${stats.active_production_mines || 0}</div>
+                            <div><strong>Total Production:</strong> ${this.formatNumber(stats.total_estimated_production_mt_per_year || 0)} MT/yr</div>
+                            <div><strong>Total Employment:</strong> ${(stats.total_employment || 0).toLocaleString()}</div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            modalBody.innerHTML = `
+                ${summaryHtml}
+                <div style="margin-bottom: 1rem;">
+                    <strong>Individual Mines (${mines.length}):</strong>
+                </div>
+                <div style="max-height: 400px; overflow-y: auto;">
+                    ${mines.map(mine => this.createMineCard(mine)).join('')}
+                </div>
+            `;
+        }
+        
+        modal.style.display = 'block';
+    }
+
+    displayMineErrorModal(metalName, errorMessage) {
+        const modal = document.getElementById('mine-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        
+        modalTitle.textContent = `${metalName.charAt(0).toUpperCase() + metalName.slice(1)} Mine Details`;
+        modalBody.innerHTML = `
+            <div class="text-center" style="padding: 4rem; color: #e74c3c;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3>Error loading mine data</h3>
+                <p>Could not load mine information for ${metalName}.</p>
+                <p style="font-size: 0.9rem; color: #7f8c8d;">Error: ${errorMessage}</p>
+            </div>
+        `;
+        
+        modal.style.display = 'block';
+    }
+
+    createMineCard(mine) {
+        // Handle both the original CSV-based structure and the detailed JSON structure
+        const mineName = mine.mine_name || 'Unknown Mine';
+        const state = mine.state || 'N/A';
+        const status = mine.status || 'N/A';
+        const mineType = mine.mine_type || 'N/A';
+        const operator = mine.operator || 'N/A';
+        const employees = mine.employees_reported || mine.employees || 0;
+        const production = mine.estimated_annual_production_mt || mine.estimated_annual_production_mt || 0;
+        const primarySic = mine.primary_sic || mine.sic || 'N/A';
+        const isActive = mine.is_active_producer !== undefined ? (mine.is_active_producer ? 'Active' : 'Inactive') : status;
+        
+        return `
+            <div class="mine-card">
+                <div class="mine-name">${mineName}</div>
+                <div class="mine-details">
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">State:</span>
+                        <span class="mine-detail-value">${state}</span>
+                    </div>
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">Status:</span>
+                        <span class="mine-detail-value">${isActive}</span>
+                    </div>
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">Type:</span>
+                        <span class="mine-detail-value">${mineType}</span>
+                    </div>
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">Operator:</span>
+                        <span class="mine-detail-value">${operator}</span>
+                    </div>
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">Primary SIC:</span>
+                        <span class="mine-detail-value">${primarySic}</span>
+                    </div>
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">Employees:</span>
+                        <span class="mine-detail-value">${employees ? employees.toLocaleString() : 'N/A'}</span>
+                    </div>
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">Est. Production (MT/yr):</span>
+                        <span class="mine-detail-value">${production ? this.formatNumber(production) : 'N/A'}</span>
+                    </div>
+                    ${mine.longitude && mine.latitude && mine.longitude !== null && mine.latitude !== null ? `
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">Location:</span>
+                        <span class="mine-detail-value">${mine.latitude.toFixed(4)}, ${mine.longitude.toFixed(4)}</span>
+                    </div>
+                    ` : ''}
+                    ${mine.county ? `
+                    <div class="mine-detail-item">
+                        <span class="mine-detail-label">County:</span>
+                        <span class="mine-detail-value">${mine.county}</span>
+                    </div>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+    }
+
+    fixInvalidJson(jsonText) {
+        // Replace invalid JSON values with valid ones
+        return jsonText
+            .replace(/:\s*NaN\s*([,}])/g, ': null$1')  // Replace NaN with null
+            .replace(/:\s*Infinity\s*([,}])/g, ': null$1')  // Replace Infinity with null
+            .replace(/:\s*-Infinity\s*([,}])/g, ': null$1')  // Replace -Infinity with null
+            .replace(/:\s*undefined\s*([,}])/g, ': null$1');  // Replace undefined with null
+    }
+
+    closeModal() {
+        document.getElementById('mine-modal').style.display = 'none';
+    }
+
+    renderAnalysisCharts() {
+        this.renderProductionChart();
+        this.renderConfidenceChart();
+    }
+
+    renderProductionChart() {
+        const ctx = document.getElementById('production-chart');
+        if (!ctx) return;
+
+        const productionCounts = {};
+        this.metalsData.forEach(metal => {
+            const prod = metal.expected_us_production;
+            productionCounts[prod] = (productionCounts[prod] || 0) + 1;
+        });
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(productionCounts),
+                datasets: [{
+                    data: Object.values(productionCounts),
+                    backgroundColor: [
+                        '#27ae60', '#f39c12', '#e67e22', '#e74c3c', 
+                        '#95a5a6', '#9b59b6', '#1abc9c'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    }
+
+    renderConfidenceChart() {
+        const ctx = document.getElementById('confidence-chart');
+        if (!ctx) return;
+
+        const confidenceCounts = {};
+        this.metalsData.forEach(metal => {
+            const conf = metal.confidence_level;
+            confidenceCounts[conf] = (confidenceCounts[conf] || 0) + 1;
+        });
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Object.keys(confidenceCounts),
+                datasets: [{
+                    label: 'Number of Metals',
+                    data: Object.values(confidenceCounts),
+                    backgroundColor: ['#27ae60', '#f39c12', '#e74c3c']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+    }
+}
+
+// Initialize the application
+const explorer = new CriticalMineralExplorer();

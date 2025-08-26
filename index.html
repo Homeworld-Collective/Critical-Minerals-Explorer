@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical Mineral Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Decorative elements -->
+        <div class="decoration-particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+        </div>
+        
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1><i class="fas fa-gem"></i> Critical Mineral Explorer</h1>
+                <p>Comprehensive analysis of critical mineral supply chains for the US and allied nations</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="dashboard">
+                <i class="fas fa-chart-bar"></i> Dashboard
+            </button>
+            <button class="nav-tab" data-tab="reports">
+                <i class="fas fa-file-alt"></i> Detailed Reports
+            </button>
+            <button class="nav-tab" data-tab="analysis">
+                <i class="fas fa-analytics"></i> Analysis
+            </button>
+        </nav>
+
+        <!-- Loading indicator -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading critical mineral data...</p>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Tab -->
+            <div id="dashboard-tab" class="tab-content active">
+                <div class="dashboard-controls">
+                    <div class="search-filter">
+                        <input type="text" id="search-input" placeholder="Search metals..." />
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="filter-controls">
+                        <select id="production-filter">
+                            <option value="">All Production Levels</option>
+                            <option value="significant">Significant</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="limited">Limited</option>
+                            <option value="minimal">Minimal</option>
+                            <option value="none">None</option>
+                        </select>
+                        <select id="confidence-filter">
+                            <option value="">All Confidence Levels</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <h3 id="total-metals">0</h3>
+                        <p>Total Metals</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="active-mines">0</h3>
+                        <p>Active Mines</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="total-production">0</h3>
+                        <p>Total Production (MT/yr)</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="total-employment">0</h3>
+                        <p>Total Employment</p>
+                    </div>
+                </div>
+
+                <div class="metals-grid" id="metals-grid">
+                    <!-- Metal cards will be dynamically generated here -->
+                </div>
+            </div>
+
+            <!-- Reports Tab -->
+            <div id="reports-tab" class="tab-content">
+                <div class="reports-container">
+                    <div class="reports-sidebar">
+                        <h3>Select Metal</h3>
+                        <div class="metal-list" id="metal-list">
+                            <!-- Metal list will be populated dynamically -->
+                        </div>
+                    </div>
+                    <div class="report-viewer">
+                        <div class="report-placeholder">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>Select a metal to view its detailed report</h3>
+                            <p>Choose from the list on the left to explore comprehensive supply chain analysis</p>
+                        </div>
+                        <div class="report-content" id="report-content" style="display: none;">
+                            <!-- Report content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Tab -->
+            <div id="analysis-tab" class="tab-content">
+                <div class="analysis-container">
+                    <h2>Supply Chain Analysis Overview</h2>
+                    <div class="analysis-charts">
+                        <div class="chart-container">
+                            <h3>Production by Metal Category</h3>
+                            <canvas id="production-chart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Confidence Level Distribution</h3>
+                            <canvas id="confidence-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal for mine details -->
+        <div id="mine-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Mine Details</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Mine details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
