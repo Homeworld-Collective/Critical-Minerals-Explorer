@@ -28,7 +28,10 @@
 
         <!-- Navigation -->
         <nav class="nav-tabs">
-            <button class="nav-tab active" data-tab="dashboard">
+            <button class="nav-tab active" data-tab="introduction">
+                <i class="fas fa-info-circle"></i> Introduction
+            </button>
+            <button class="nav-tab" data-tab="dashboard">
                 <i class="fas fa-chart-bar"></i> Dashboard
             </button>
             <button class="nav-tab" data-tab="reports">
@@ -47,8 +50,17 @@
 
         <!-- Main Content -->
         <main class="main-content">
+            <!-- Introduction Tab -->
+            <div id="introduction-tab" class="tab-content active">
+                <div class="report-viewer">
+                    <div id="introduction-content" class="report-content" style="display: block;">
+                        <!-- Introduction content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
             <!-- Dashboard Tab -->
-            <div id="dashboard-tab" class="tab-content active">
+            <div id="dashboard-tab" class="tab-content">
                 <div class="dashboard-controls">
                     <div class="search-filter">
                         <input type="text" id="search-input" placeholder="Search metals..." />

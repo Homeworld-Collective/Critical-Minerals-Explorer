@@ -5,6 +5,7 @@ class CriticalMineralExplorer {
         this.filteredData = [];
         this.reportsCache = {};
         this.mineDataCache = {};
+        this.introductionCache = null;
         this.currentMetal = null;
         
         this.init();
@@ -17,6 +18,14 @@ class CriticalMineralExplorer {
         this.renderDashboard();
         this.renderMetalList();
         this.updateSummaryStats();
+        
+        // Handle initial URL or default to introduction
+        this.handleUrlChange();
+        
+        // Listen for browser back/forward buttons
+        window.addEventListener('popstate', () => {
+            this.handleUrlChange();
+        });
     }
 
     setupEventListeners() {
@@ -127,7 +136,13 @@ class CriticalMineralExplorer {
         `;
     }
 
-    switchTab(tabName) {
+    switchTab(tabName, metalName = null, updateHistory = true) {
+        // Update URL hash if updating history
+        if (updateHistory) {
+            const hash = metalName ? `#${tabName}/${metalName}` : `#${tabName}`;
+            history.pushState({tab: tabName, metal: metalName}, '', hash);
+        }
+        
         // Update nav tabs
         document.querySelectorAll('.nav-tab').forEach(tab => {
             tab.classList.remove('active');
@@ -140,9 +155,33 @@ class CriticalMineralExplorer {
         });
         document.getElementById(`${tabName}-tab`).classList.add('active');
 
-        // Load analysis charts if needed
+        // Load tab-specific content if needed
         if (tabName === 'analysis') {
             this.renderAnalysisCharts();
+        } else if (tabName === 'introduction') {
+            this.loadIntroduction();
+        } else if (tabName === 'reports' && metalName) {
+            this.loadReport(metalName, false); // Don't update history again
+        }
+    }
+    
+    handleUrlChange() {
+        const hash = window.location.hash.slice(1); // Remove #
+        
+        if (!hash) {
+            // Default to introduction
+            this.switchTab('introduction', null, false);
+            return;
+        }
+        
+        const parts = hash.split('/');
+        const tabName = parts[0];
+        const metalName = parts[1];
+        
+        if (tabName === 'reports' && metalName) {
+            this.switchTab('reports', metalName, false);
+        } else {
+            this.switchTab(tabName, null, false);
         }
     }
 
@@ -253,13 +292,13 @@ class CriticalMineralExplorer {
         const metalList = document.getElementById('metal-list');
         
         metalList.innerHTML = this.metalsData.map(metal => `
-            <div class="metal-list-item" onclick="explorer.loadReport('${metal.metal}')">
+            <div class="metal-list-item" onclick="app.switchToMetalReport('${metal.metal}')">
                 ${metal.metal}
             </div>
         `).join('');
     }
 
-    async loadReport(metalName) {
+    async loadReport(metalName, updateHistory = true) {
         console.log('loadReport called for:', metalName);
         
         // Update active metal in sidebar
@@ -355,6 +394,70 @@ class CriticalMineralExplorer {
             <h1 style="border-bottom: none; margin-bottom: 0;"><i class="fas fa-gem"></i> ${metalName.charAt(0).toUpperCase() + metalName.slice(1)} Supply Chain Analysis</h1>
             <div>${htmlContent}</div>
         `;
+    }
+
+    async loadIntroduction() {
+        const introContent = document.getElementById('introduction-content');
+        
+        // Show loading if not already cached
+        if (!this.introductionCache) {
+            introContent.innerHTML = `
+                <div class="text-center" style="padding: 4rem;">
+                    <div class="loading-spinner"></div>
+                    <p>Loading introduction...</p>
+                </div>
+            `;
+        }
+
+        try {
+            if (!this.introductionCache) {
+                const response = await fetch('introduction.md');
+                if (!response.ok) {
+                    throw new Error('Introduction file not found');
+                }
+                
+                const markdownText = await response.text();
+                this.introductionCache = markdownText;
+            }
+            
+            // Initialize markdown-it
+            const md = window.markdownit({
+                html: true,
+                linkify: true,
+                typographer: false,
+                breaks: true
+            });
+            
+            // Convert markdown to HTML and make links clickable for detailed reports
+            let processedMarkdown = this.introductionCache;
+            
+            // Replace [metal](metalname) links with clickable report links
+            processedMarkdown = processedMarkdown.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, metalName) => {
+                // Convert the metal name to lowercase for consistency with file names
+                const normalizedMetalName = metalName.toLowerCase().trim();
+                return `<a href="#reports/${normalizedMetalName}" onclick="app.switchToMetalReport('${normalizedMetalName}'); return false;" style="color: #3498db; text-decoration: underline;">${text}</a>`;
+            });
+            
+            const htmlContent = md.render(processedMarkdown);
+            
+            introContent.innerHTML = htmlContent;
+            
+        } catch (error) {
+            console.error('Error loading introduction:', error);
+            introContent.innerHTML = `
+                <div class="text-center" style="padding: 4rem; color: #e74c3c;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                    <h3>Introduction not available</h3>
+                    <p>The introduction content could not be loaded.</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d;">Error: ${error.message}</p>
+                </div>
+            `;
+        }
+    }
+
+    switchToMetalReport(metalName) {
+        // Switch to reports tab and load the specific report with history
+        this.switchTab('reports', metalName);
     }
 
     async showMineDetails(metalName) {
@@ -630,3 +733,4 @@ class CriticalMineralExplorer {
 
 // Initialize the application
 const explorer = new CriticalMineralExplorer();
+const app = explorer; // Alias for easier access in onclick handlers
