@@ -260,6 +260,8 @@ class CriticalMineralExplorer {
     }
 
     async loadReport(metalName) {
+        console.log('loadReport called for:', metalName);
+        
         // Update active metal in sidebar
         document.querySelectorAll('.metal-list-item').forEach(item => {
             item.classList.remove('active');
@@ -268,7 +270,9 @@ class CriticalMineralExplorer {
 
         // Check cache first
         if (this.reportsCache[metalName]) {
-            this.displayReport(metalName, this.reportsCache[metalName]);
+            console.log('Loading from cache for:', metalName);
+            const cached = this.reportsCache[metalName];
+            this.displayReport(metalName, cached.content, cached.lastModified);
             return;
         }
 
@@ -286,14 +290,32 @@ class CriticalMineralExplorer {
         `;
 
         try {
+            console.log('Fetching report for:', metalName);
             const response = await fetch(`detailed_reports/${metalName}_report.md`);
             if (!response.ok) {
                 throw new Error(`Report not found for ${metalName}`);
             }
             
             const markdownText = await response.text();
-            this.reportsCache[metalName] = markdownText;
-            this.displayReport(metalName, markdownText);
+            console.log('Fetched markdown, length:', markdownText.length);
+            
+            // Get the last modified date from the response headers
+            const lastModified = response.headers.get('Last-Modified');
+            let lastModifiedDate = null;
+            if (lastModified) {
+                const date = new Date(lastModified);
+                lastModifiedDate = date.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+            }
+            
+            this.reportsCache[metalName] = { 
+                content: markdownText, 
+                lastModified: lastModifiedDate 
+            };
+            this.displayReport(metalName, markdownText, lastModifiedDate);
             
         } catch (error) {
             console.error('Error loading report:', error);
@@ -308,15 +330,30 @@ class CriticalMineralExplorer {
         }
     }
 
-    displayReport(metalName, markdownText) {
+    displayReport(metalName, markdownText, lastModifiedDate) {
         const reportContent = document.getElementById('report-content');
         
-        // Convert markdown to HTML using marked.js
-        const htmlContent = marked.parse(markdownText);
+        // Initialize markdown-it with options for better link handling
+        const md = window.markdownit({
+            html: true,
+            linkify: true,
+            typographer: false,
+            breaks: true
+        });
+        
+        // Insert the last updated date at the beginning of the markdown content before conversion
+        let modifiedMarkdown = markdownText;
+        if (lastModifiedDate) {
+            const lastUpdatedLine = `<p style="color: #7f8c8d; font-style: italic; margin-top: 0.5rem; margin-bottom: 1rem;">Last updated on: ${lastModifiedDate}</p>\n\n---\n\n`;
+            modifiedMarkdown = lastUpdatedLine + markdownText;
+        }
+        
+        // Convert markdown to HTML using markdown-it
+        const htmlContent = md.render(modifiedMarkdown);
         
         reportContent.innerHTML = `
-            <h1><i class="fas fa-gem"></i> ${metalName.charAt(0).toUpperCase() + metalName.slice(1)} Supply Chain Analysis</h1>
-            ${htmlContent}
+            <h1 style="border-bottom: none; margin-bottom: 0;"><i class="fas fa-gem"></i> ${metalName.charAt(0).toUpperCase() + metalName.slice(1)} Supply Chain Analysis</h1>
+            <div>${htmlContent}</div>
         `;
     }
 
