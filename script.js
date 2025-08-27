@@ -973,6 +973,125 @@ class CriticalMineralExplorer {
             }
         });
     }
+    
+    highlightCommentedText(comments) {
+        if (!comments || comments.length === 0) return;
+        
+        const reportContent = document.getElementById('report-content');
+        if (!reportContent) return;
+        
+        // Get all text nodes in the report content (excluding the comments section itself)
+        const commentsSection = reportContent.querySelector('.community-feedback-section');
+        const contentToSearch = commentsSection ? 
+            reportContent.cloneNode(true) : 
+            reportContent;
+        
+        if (commentsSection) {
+            // Remove comments section from our search content
+            const clonedCommentsSection = contentToSearch.querySelector('.community-feedback-section');
+            if (clonedCommentsSection) {
+                clonedCommentsSection.remove();
+            }
+        }
+        
+        comments.forEach((comment, index) => {
+            const selectedText = comment.selectedText.trim();
+            if (selectedText.length < 10) return; // Skip very short selections
+            
+            // Find and highlight the selected text in the actual report content
+            this.highlightTextInElement(reportContent, selectedText, `comment-${comment.id}`, commentsSection);
+        });
+    }
+    
+    highlightTextInElement(element, textToHighlight, commentId, commentsSection) {
+        // Get all text nodes
+        const walker = document.createTreeWalker(
+            element,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function(node) {
+                    // Skip if this node is within the comments section
+                    if (commentsSection && commentsSection.contains(node)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+        
+        const textNodes = [];
+        let node;
+        while (node = walker.nextNode()) {
+            textNodes.push(node);
+        }
+        
+        // Search through text nodes for matches
+        textNodes.forEach(textNode => {
+            const text = textNode.textContent;
+            const index = text.toLowerCase().indexOf(textToHighlight.toLowerCase());
+            
+            if (index !== -1) {
+                // Create highlighted version
+                const beforeText = text.substring(0, index);
+                const highlightedText = text.substring(index, index + textToHighlight.length);
+                const afterText = text.substring(index + textToHighlight.length);
+                
+                // Create new elements
+                const fragment = document.createDocumentFragment();
+                
+                if (beforeText) {
+                    fragment.appendChild(document.createTextNode(beforeText));
+                }
+                
+                // Create highlighted span with link to comment
+                const highlightSpan = document.createElement('span');
+                highlightSpan.className = 'commented-text';
+                highlightSpan.style.cssText = `
+                    background: rgba(255, 193, 7, 0.2);
+                    border-bottom: 2px solid #ffc107;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    text-decoration: none;
+                    position: relative;
+                `;
+                
+                // Add hover effect
+                highlightSpan.addEventListener('mouseenter', function() {
+                    this.style.background = 'rgba(255, 193, 7, 0.3)';
+                    this.style.borderBottomColor = '#f39c12';
+                });
+                
+                highlightSpan.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(255, 193, 7, 0.2)';
+                    this.style.borderBottomColor = '#ffc107';
+                });
+                
+                // Add click handler to scroll to comment
+                highlightSpan.addEventListener('click', function() {
+                    const commentElement = document.getElementById(commentId);
+                    if (commentElement) {
+                        commentElement.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'center' 
+                        });
+                    }
+                });
+                
+                highlightSpan.textContent = highlightedText;
+                fragment.appendChild(highlightSpan);
+                
+                if (afterText) {
+                    fragment.appendChild(document.createTextNode(afterText));
+                }
+                
+                // Replace the text node with our fragment
+                textNode.parentNode.replaceChild(fragment, textNode);
+                
+                // Only highlight the first occurrence to avoid duplicates
+                return;
+            }
+        });
+    }
 
 }
 
@@ -1374,8 +1493,8 @@ class CommentingSystem {
         commentsSection.className = 'community-feedback-section';
         commentsSection.innerHTML = `
             <hr style="margin: 3rem 0 2rem 0; border: none; border-top: 1px solid #ddd;">
-            <h2 style="color: #2c3e50; margin-bottom: 1.5rem;">
-                <i class="fas fa-comments" style="margin-right: 0.5rem;"></i>
+            <h2 style="color: #ffffff; margin-bottom: 1.5rem;">
+                <i class="fas fa-comments" style="margin-right: 0.5rem; color: #ffffff;"></i>
                 Community Feedback (${metalComments.length})
             </h2>
             <div class="comments-list">
@@ -1385,6 +1504,11 @@ class CommentingSystem {
         `;
         
         reportContent.appendChild(commentsSection);
+        
+        // Highlight commented text in the report content
+        if (window.explorer) {
+            window.explorer.highlightCommentedText(metalComments);
+        }
     }
 
     renderComment(comment) {
@@ -1397,7 +1521,7 @@ class CommentingSystem {
         });
         
         return `
-            <div class="comment-item" style="
+            <div class="comment-item" id="comment-${comment.id}" style="
                 border: 1px solid #e1e8ed;
                 border-radius: 8px;
                 padding: 1.5rem;
@@ -1442,5 +1566,6 @@ const explorer = new CriticalMineralExplorer();
 const app = explorer; // Alias for easier access in onclick handlers
 const commentingSystem = new CommentingSystem();
 
-// Make commenting system globally available
+// Make both systems globally available
+window.explorer = explorer;
 window.commentingSystem = commentingSystem;

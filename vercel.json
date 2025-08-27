@@ -1,10 +1,20 @@
 {
   "functions": {
-    "api/comments/index.js": {
+    "api/comments.py": {
       "maxDuration": 10
     },
-    "api/comments/moderate.js": {
+    "api/moderate.py": {
       "maxDuration": 10
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/api/comments",
+      "destination": "/api/comments.py"
+    },
+    {
+      "source": "/api/comments/moderate",
+      "destination": "/api/moderate.py"
+    }
+  ]
 }

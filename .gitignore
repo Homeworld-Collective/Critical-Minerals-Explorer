@@ -57,3 +57,6 @@ npm-debug.log*
 # Temporary files
 *.tmp
 *.temp
+
+# Local comment storage (development only)
+comments.json
