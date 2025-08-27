@@ -1,0 +1,31 @@
+{
+  "metal": "bismuth",
+  "analysis_date": "2025-08-07T16:04:21.627484",
+  "search_methodology": {
+    "method": "controlled_keyword",
+    "confidence_level": "low",
+    "search_criteria": {
+      "exact_sic_codes": [],
+      "controlled_keywords": [
+        "bismuth"
+      ],
+      "sic_patterns": [
+        "bismuth"
+      ],
+      "operator_keywords": [],
+      "exclude_terms": []
+    }
+  },
+  "summary_statistics": {
+    "total_mines_identified": 0,
+    "active_production_mines": 0,
+    "inactive_or_non_producing_mines": 0,
+    "total_estimated_production_mt_per_year": 0,
+    "total_employment": 0,
+    "expected_us_production_level": "none"
+  },
+  "all_identified_mines": [],
+  "active_production_summary": [],
+  "analysis_notes": "Very limited US bismuth operations",
+  "data_sources": "MSHA Mine Safety and Health Administration data"
+}

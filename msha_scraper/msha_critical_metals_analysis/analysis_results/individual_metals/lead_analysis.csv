@@ -1,0 +1,12 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,1000088,Lucky Friday,ID,Active,Underground,Hecla Limited,Silver Ore,372.0,1302000.0,3500,high,-115.801944,47.470278,lead,exact_sic,Lead mining and lead-zinc operations
+2,5001545,Red Dog Operations,AK,Active,Surface,Teck Alaska Inc,Lead-Zinc Ore,350.0,1225000.0,3500,high,-162.433889,68.046111,lead,exact_sic,Lead mining and lead-zinc operations
+3,1000082,Galena,ID,Active,Underground,"U.S. Silver-Idaho, Inc.",Silver Ore,248.0,868000.0,3500,high,-115.961389,47.485,lead,exact_sic,Lead mining and lead-zinc operations
+4,2300409,Fletcher Mine and Mill,MO,Active,Underground,The Doe Run Company,Lead-Zinc Ore,189.0,661500.0,3500,high,-91.109167,37.466389,lead,exact_sic,Lead mining and lead-zinc operations
+5,2300458,Sweetwater Mine/Mill,MO,Active,Underground,The Doe Run Company,Lead-Zinc Ore,157.0,549500.0,3500,high,-91.073611,37.400833,lead,exact_sic,Lead mining and lead-zinc operations
+6,3001185,Empire State Mines,NY,Active,Underground,Empire State Mines LLC,Lead-Zinc Ore,140.0,490000.0,3500,high,-75.408611,44.265,lead,exact_sic,Lead mining and lead-zinc operations
+7,2300499,Brushy Creek Mine/Mill,MO,Active,Underground,The Doe Run Company,Lead-Zinc Ore,139.0,486500.0,3500,high,-91.110833,37.4925,lead,exact_sic,Lead mining and lead-zinc operations
+8,2301800,Viburnum #35 (Casteel Mine),MO,Active,Underground, Doe Run Co,Lead-Zinc Ore,98.0,343000.0,3500,high,-91.1225,37.656389,lead,exact_sic,Lead mining and lead-zinc operations
+9,2300457,Buick Mine/Mill,MO,Active,Facility,The Doe Run Company,Lead-Zinc Ore,73.0,255500.0,3500,high,-91.134722,37.6325,lead,exact_sic,Lead mining and lead-zinc operations
+10,2300243,Elvins Quarry & Mill ,MO,Active,Surface,Lead Belt Materials Company Inc,"Crushed, Broken Limestone NEC",8.0,28000.0,3500,high,-90.533056,37.839722,lead,exact_sic,Lead mining and lead-zinc operations
+11,2300495,Viburnum #29 Mine,MO,Active,Underground,Doe Run Resources Corp dba Doe Run Company,Lead-Zinc Ore,7.0,24500.0,3500,high,-91.076667,37.755,lead,exact_sic,Lead mining and lead-zinc operations

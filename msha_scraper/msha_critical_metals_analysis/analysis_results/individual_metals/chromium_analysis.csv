@@ -1,0 +1,2 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,3607535,PENN MAG INC. PLANT #2,PA,Active,Facility,"Penn Mag, Inc.",Chromite Chromium Ore,7.0,21000.0,3000,low,-78.4675,40.270833,chromium,controlled_keyword,No significant US chromium mining

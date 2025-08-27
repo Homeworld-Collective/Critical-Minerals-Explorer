@@ -1,0 +1,6 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,3100354,Plant #1,NC,Active,Facility,The Quartz Corp USA,Feldspar,77.0,308000.0,4000,medium,-82.060556,35.905556,feldspar,controlled_keyword,Feldspar mining for ceramics and glass
+2,3101334,K-T Feldspar Plant and Mine,NC,Active,Facility,The Quartz Corp USA,Feldspar,60.0,240000.0,4000,medium,-82.090833,35.928611,feldspar,controlled_keyword,Feldspar mining for ceramics and glass
+3,3100117,Wiseman Sullins/Chalk,NC,Active,Surface,The Quartz Corp USA,Feldspar,10.0,40000.0,4000,medium,-82.073889,35.935556,feldspar,controlled_keyword,Feldspar mining for ceramics and glass
+4,3102358,Duncan Tailings Facility,NC,Active,Surface,TQC USA,Feldspar,6.0,24000.0,4000,medium,-82.046111,35.910556,feldspar,controlled_keyword,Feldspar mining for ceramics and glass
+5,3100362,Hawkins Mine,NC,Active,Surface,"Sibelco North America, Inc",Feldspar,5.0,20000.0,4000,medium,-82.090833,35.938333,feldspar,controlled_keyword,Feldspar mining for ceramics and glass

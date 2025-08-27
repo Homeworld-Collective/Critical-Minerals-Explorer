@@ -1,0 +1,640 @@
+{
+  "analysis_date": "2025-08-26T21:45:40.010480",
+  "methodology": "Employment-based production estimation with metal-specific factors",
+  "metals_analyzed": 63,
+  "metals_with_active_production": 43,
+  "total_estimated_production_mt": 113904879.5,
+  "total_employment": 51930.0,
+  "results": [
+    {
+      "metal": "aluminum",
+      "total_mines_identified": 53,
+      "active_mines": 8,
+      "total_estimated_production_mt_per_year": 1903000.0,
+      "total_employment": 865.0,
+      "confidence_level": "high",
+      "method": "exact_sic",
+      "notes": "Primary aluminum refining and bauxite mining"
+    },
+    {
+      "metal": "bauxite",
+      "total_mines_identified": 27,
+      "active_mines": 3,
+      "total_estimated_production_mt_per_year": 336000.0,
+      "total_employment": 112.0,
+      "confidence_level": "high",
+      "method": "exact_sic",
+      "notes": "Aluminum ore (bauxite) mining operations"
+    },
+    {
+      "metal": "copper",
+      "total_mines_identified": 291,
+      "active_mines": 31,
+      "total_estimated_production_mt_per_year": 55146000.0,
+      "total_employment": 15756.0,
+      "confidence_level": "high",
+      "method": "exact_sic",
+      "notes": "Major copper mining operations"
+    },
+    {
+      "metal": "lead",
+      "total_mines_identified": 160,
+      "active_mines": 11,
+      "total_estimated_production_mt_per_year": 6233500.0,
+      "total_employment": 1781.0,
+      "confidence_level": "high",
+      "method": "exact_sic",
+      "notes": "Lead mining and lead-zinc operations"
+    },
+    {
+      "metal": "zinc",
+      "total_mines_identified": 153,
+      "active_mines": 15,
+      "total_estimated_production_mt_per_year": 8888000.0,
+      "total_employment": 2222.0,
+      "confidence_level": "high",
+      "method": "exact_sic",
+      "notes": "Lead-zinc districts and zinc operations"
+    },
+    {
+      "metal": "nickel",
+      "total_mines_identified": 25,
+      "active_mines": 3,
+      "total_estimated_production_mt_per_year": 858000.0,
+      "total_employment": 286.0,
+      "confidence_level": "high",
+      "method": "exact_sic",
+      "notes": "Primary nickel ore mining"
+    },
+    {
+      "metal": "lithium",
+      "total_mines_identified": 10,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "high",
+      "method": "exact_sic",
+      "notes": "Lithium mineral extraction and brine operations"
+    },
+    {
+      "metal": "silver",
+      "total_mines_identified": 792,
+      "active_mines": 25,
+      "total_estimated_production_mt_per_year": 7068.0,
+      "total_employment": 3534.0,
+      "confidence_level": "medium",
+      "method": "exact_sic",
+      "notes": "Silver mining operations"
+    },
+    {
+      "metal": "barite",
+      "total_mines_identified": 237,
+      "active_mines": 24,
+      "total_estimated_production_mt_per_year": 1900000.0,
+      "total_employment": 380.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Barium sulfate mining for drilling mud"
+    },
+    {
+      "metal": "feldspar",
+      "total_mines_identified": 99,
+      "active_mines": 5,
+      "total_estimated_production_mt_per_year": 632000.0,
+      "total_employment": 158.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Feldspar mining for ceramics and glass"
+    },
+    {
+      "metal": "fluorspar",
+      "total_mines_identified": 54,
+      "active_mines": 4,
+      "total_estimated_production_mt_per_year": 196000.0,
+      "total_employment": 49.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Fluorite mining for chemical industry"
+    },
+    {
+      "metal": "graphite",
+      "total_mines_identified": 9,
+      "active_mines": 5,
+      "total_estimated_production_mt_per_year": 728000.0,
+      "total_employment": 208.0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Natural graphite mining"
+    },
+    {
+      "metal": "magnesium",
+      "total_mines_identified": 12,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Magnesium compounds and mineral extraction"
+    },
+    {
+      "metal": "mica",
+      "total_mines_identified": 256,
+      "active_mines": 9,
+      "total_estimated_production_mt_per_year": 2214000.0,
+      "total_employment": 738.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Mica mining for electrical and cosmetic industries"
+    },
+    {
+      "metal": "phosphates",
+      "total_mines_identified": 126,
+      "active_mines": 12,
+      "total_estimated_production_mt_per_year": 14016000.0,
+      "total_employment": 2336.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Phosphate rock mining for fertilizers"
+    },
+    {
+      "metal": "potash",
+      "total_mines_identified": 24,
+      "active_mines": 5,
+      "total_estimated_production_mt_per_year": 4720000.0,
+      "total_employment": 944.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Potash mining for fertilizer production"
+    },
+    {
+      "metal": "silicon",
+      "total_mines_identified": 261,
+      "active_mines": 77,
+      "total_estimated_production_mt_per_year": 13234500.0,
+      "total_employment": 2941.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "High-purity silica and silicon production"
+    },
+    {
+      "metal": "titanium",
+      "total_mines_identified": 15,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 318500.0,
+      "total_employment": 91.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Titanium minerals and processing"
+    },
+    {
+      "metal": "zirconium",
+      "total_mines_identified": 11,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 227500.0,
+      "total_employment": 91.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Zircon sands and zirconium compounds"
+    },
+    {
+      "metal": "beryllium",
+      "total_mines_identified": 10,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 4000.0,
+      "total_employment": 80.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Beryllium mining - highly specialized"
+    },
+    {
+      "metal": "cobalt",
+      "total_mines_identified": 10,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 10400.0,
+      "total_employment": 13.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Cobalt as byproduct of copper/nickel mining"
+    },
+    {
+      "metal": "vanadium",
+      "total_mines_identified": 119,
+      "active_mines": 2,
+      "total_estimated_production_mt_per_year": 93600.0,
+      "total_employment": 78.0,
+      "confidence_level": "medium",
+      "method": "controlled_keyword",
+      "notes": "Vanadium from uranium operations and steel slag"
+    },
+    {
+      "metal": "tungsten",
+      "total_mines_identified": 96,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Very limited US tungsten production"
+    },
+    {
+      "metal": "manganese",
+      "total_mines_identified": 11,
+      "active_mines": 2,
+      "total_estimated_production_mt_per_year": 1582000.0,
+      "total_employment": 452.0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Mostly imported, limited US operations"
+    },
+    {
+      "metal": "chromium",
+      "total_mines_identified": 8,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 21000.0,
+      "total_employment": 7.0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "No significant US chromium mining"
+    },
+    {
+      "metal": "cerium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 137000.0,
+      "total_employment": 685.0,
+      "confidence_level": "medium",
+      "method": "rare_earth_group",
+      "notes": "Most abundant rare earth element"
+    },
+    {
+      "metal": "lanthanum",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 102750.0,
+      "total_employment": 685.0,
+      "confidence_level": "medium",
+      "method": "rare_earth_group",
+      "notes": "Second most abundant REE"
+    },
+    {
+      "metal": "neodymium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 68500.0,
+      "total_employment": 685.0,
+      "confidence_level": "medium",
+      "method": "rare_earth_group",
+      "notes": "Critical for permanent magnets"
+    },
+    {
+      "metal": "praseodymium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 54800.0,
+      "total_employment": 685.0,
+      "confidence_level": "medium",
+      "method": "rare_earth_group",
+      "notes": "Light rare earth element"
+    },
+    {
+      "metal": "yttrium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 82200.0,
+      "total_employment": 685.0,
+      "confidence_level": "medium",
+      "method": "rare_earth_group",
+      "notes": "Heavy rare earth element"
+    },
+    {
+      "metal": "dysprosium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 34250.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Critical heavy REE"
+    },
+    {
+      "metal": "erbium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 20550.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Heavy REE for fiber optics"
+    },
+    {
+      "metal": "europium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 6850.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Most expensive REE"
+    },
+    {
+      "metal": "gadolinium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 27400.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Heavy REE with specialized uses"
+    },
+    {
+      "metal": "holmium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 3425.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Rare heavy REE"
+    },
+    {
+      "metal": "lutetium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 685.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Rarest and most expensive REE"
+    },
+    {
+      "metal": "samarium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 41100.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Used in permanent magnets"
+    },
+    {
+      "metal": "scandium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 10275.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Not technically REE but grouped with them"
+    },
+    {
+      "metal": "terbium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 13700.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Critical heavy REE"
+    },
+    {
+      "metal": "thulium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 3425.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Second rarest REE"
+    },
+    {
+      "metal": "ytterbium",
+      "total_mines_identified": 17,
+      "active_mines": 1,
+      "total_estimated_production_mt_per_year": 17125.0,
+      "total_employment": 685.0,
+      "confidence_level": "low",
+      "method": "rare_earth_group",
+      "notes": "Heavy REE with limited uses"
+    },
+    {
+      "metal": "platinum",
+      "total_mines_identified": 21,
+      "active_mines": 3,
+      "total_estimated_production_mt_per_year": 4716.0,
+      "total_employment": 1572.0,
+      "confidence_level": "high",
+      "method": "exact_sic",
+      "notes": "Stillwater Complex primary PGM operation"
+    },
+    {
+      "metal": "palladium",
+      "total_mines_identified": 14,
+      "active_mines": 2,
+      "total_estimated_production_mt_per_year": 3138.0,
+      "total_employment": 1569.0,
+      "confidence_level": "medium",
+      "method": "pgm_group",
+      "notes": "Platinum group metal, limited US production"
+    },
+    {
+      "metal": "rhodium",
+      "total_mines_identified": 14,
+      "active_mines": 2,
+      "total_estimated_production_mt_per_year": 1569.0,
+      "total_employment": 1569.0,
+      "confidence_level": "low",
+      "method": "pgm_group",
+      "notes": "Rare PGM, mostly byproduct"
+    },
+    {
+      "metal": "ruthenium",
+      "total_mines_identified": 14,
+      "active_mines": 2,
+      "total_estimated_production_mt_per_year": 1569.0,
+      "total_employment": 1569.0,
+      "confidence_level": "low",
+      "method": "pgm_group",
+      "notes": "PGM with limited production"
+    },
+    {
+      "metal": "iridium",
+      "total_mines_identified": 14,
+      "active_mines": 2,
+      "total_estimated_production_mt_per_year": 784.5,
+      "total_employment": 1569.0,
+      "confidence_level": "low",
+      "method": "pgm_group",
+      "notes": "Rarest PGM"
+    },
+    {
+      "metal": "antimony",
+      "total_mines_identified": 24,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Minimal US antimony production"
+    },
+    {
+      "metal": "arsenic",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Mostly byproduct, no dedicated arsenic mines"
+    },
+    {
+      "metal": "bismuth",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Very limited US bismuth operations"
+    },
+    {
+      "metal": "cadmium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Byproduct of zinc refining"
+    },
+    {
+      "metal": "cesium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Extremely limited US cesium production"
+    },
+    {
+      "metal": "gallium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Byproduct of aluminum processing"
+    },
+    {
+      "metal": "germanium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Byproduct of zinc processing"
+    },
+    {
+      "metal": "hafnium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Byproduct of zirconium processing"
+    },
+    {
+      "metal": "indium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Byproduct of zinc processing"
+    },
+    {
+      "metal": "niobium",
+      "total_mines_identified": 1,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "No significant US niobium production"
+    },
+    {
+      "metal": "rhenium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Byproduct of molybdenum processing"
+    },
+    {
+      "metal": "rubidium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Very limited commercial production"
+    },
+    {
+      "metal": "selenium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Byproduct of copper refining"
+    },
+    {
+      "metal": "strontium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Limited US strontium mineral production"
+    },
+    {
+      "metal": "tantalum",
+      "total_mines_identified": 1,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Very limited US tantalum operations"
+    },
+    {
+      "metal": "tellurium",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "low",
+      "method": "controlled_keyword",
+      "notes": "Byproduct of copper refining"
+    },
+    {
+      "metal": "tin",
+      "total_mines_identified": 0,
+      "active_mines": 0,
+      "total_estimated_production_mt_per_year": 0,
+      "total_employment": 0,
+      "confidence_level": "verified_zero",
+      "method": "industry_knowledge",
+      "notes": "No active US tin mines since 1990s"
+    }
+  ]
+}

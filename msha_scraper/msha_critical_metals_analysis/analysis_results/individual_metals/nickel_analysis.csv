@@ -1,0 +1,4 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,2003454,Eagle Mine,MI,Active,Underground,"Eagle Mine, LLC.",Nickel Ore,170.0,510000.0,3000,high,-87.879444,46.743056,nickel,exact_sic,Primary nickel ore mining
+2,2000420,Humboldt Mill,MI,Active,Surface,"Eagle Mine, LLC.",Nickel Ore,103.0,309000.0,3000,high,-87.835556,46.411111,nickel,exact_sic,Primary nickel ore mining
+3,2103658,Northmet,MN,Active,Surface,"NewRange Copper Nickel, LLC",Copper Ore NEC,13.0,39000.0,3000,high,-92.121389,47.527778,nickel,exact_sic,Primary nickel ore mining

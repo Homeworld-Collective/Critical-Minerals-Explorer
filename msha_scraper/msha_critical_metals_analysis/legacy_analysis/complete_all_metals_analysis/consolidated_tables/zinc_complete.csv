@@ -1,0 +1,16 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes,expected_us_production
+1,1000088,Lucky Friday,ID,Active,Underground,Hecla Limited,Silver Ore,372.0,1488000.0,4000,high,-115.801944,47.470278,zinc,exact_sic,Lead-zinc districts well documented,significant
+2,5001545,Red Dog Operations,AK,Active,Surface,Teck Alaska Inc,Lead-Zinc Ore,350.0,1400000.0,4000,high,-162.433889,68.046111,zinc,exact_sic,Lead-zinc districts well documented,significant
+3,1000082,Galena,ID,Active,Underground,"U.S. Silver-Idaho, Inc.",Silver Ore,248.0,992000.0,4000,high,-115.961389,47.485,zinc,exact_sic,Lead-zinc districts well documented,significant
+4,2300409,Fletcher Mine and Mill,MO,Active,Underground,The Doe Run Company,Lead-Zinc Ore,189.0,756000.0,4000,high,-91.109167,37.466389,zinc,exact_sic,Lead-zinc districts well documented,significant
+5,2300458,Sweetwater Mine/Mill,MO,Active,Underground,The Doe Run Company,Lead-Zinc Ore,157.0,628000.0,4000,high,-91.073611,37.400833,zinc,exact_sic,Lead-zinc districts well documented,significant
+6,4000170,Immel Mine ,TN,Active,Underground,"Nyrstar Tennessee Mines, Strawberry Plains LLC",Zinc,150.0,600000.0,4000,high,-83.702778,36.065,zinc,exact_sic,Lead-zinc districts well documented,significant
+7,3001185,Empire State Mines,NY,Active,Underground,Empire State Mines LLC,Lead-Zinc Ore,140.0,560000.0,4000,high,-75.408611,44.265,zinc,exact_sic,Lead-zinc districts well documented,significant
+8,2300499,Brushy Creek Mine/Mill,MO,Active,Underground,The Doe Run Company,Lead-Zinc Ore,139.0,556000.0,4000,high,-91.110833,37.4925,zinc,exact_sic,Lead-zinc districts well documented,significant
+9,4000168,Young Mine ,TN,Active,Underground,"Nyrstar Tennessee Mines, Strawberry Plains LLC",Zinc,126.0,504000.0,4000,high,-83.615833,36.076944,zinc,exact_sic,Lead-zinc districts well documented,significant
+10,2301800,Viburnum #35 (Casteel Mine),MO,Active,Underground, Doe Run Co,Lead-Zinc Ore,98.0,392000.0,4000,high,-91.1225,37.656389,zinc,exact_sic,Lead-zinc districts well documented,significant
+11,4000166,Coy Mine,TN,Active,Underground,"Nyrstar Tennessee Mines, Strawberry Plains LLC",Zinc,85.0,340000.0,4000,high,-83.209444,36.121389,zinc,exact_sic,Lead-zinc districts well documented,significant
+12,2300457,Buick Mine/Mill,MO,Active,Facility,The Doe Run Company,Lead-Zinc Ore,73.0,292000.0,4000,high,-91.134722,37.6325,zinc,exact_sic,Lead-zinc districts well documented,significant
+13,4001981,Young Mill ,TN,Active,Facility,Nyrstar Tennessee Mines Strawberry Plains LLC,Zinc,58.0,232000.0,4000,high,-83.620278,36.079167,zinc,exact_sic,Lead-zinc districts well documented,significant
+14,4000864,Middle Tennessee Mine,TN,Active,Underground,"Nyrstar Tennessee Mines - Gordonsville, LLC",Zinc,30.0,120000.0,4000,high,-85.935278,36.194444,zinc,exact_sic,Lead-zinc districts well documented,significant
+15,2300495,Viburnum #29 Mine,MO,Active,Underground,Doe Run Resources Corp dba Doe Run Company,Lead-Zinc Ore,7.0,28000.0,4000,high,-91.076667,37.755,zinc,exact_sic,Lead-zinc districts well documented,significant

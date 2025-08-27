@@ -1,0 +1,4 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,302023,"Huber Specialty Hydrates, LLC ",AR,Active,Facility,"Huber Specialty Hydrates, LLC ",Aluminum Ore-Bauxite,80.0,240000.0,3000,high,-92.535278,34.582778,bauxite,exact_sic,Aluminum ore (bauxite) mining operations
+2,301979,Section 27,AR,Active,Surface,SEMCOA,Aluminum Ore-Bauxite,27.0,81000.0,3000,high,-92.513611,34.535,bauxite,exact_sic,Aluminum ore (bauxite) mining operations
+3,300261,"U.S. Vanadium - Benton, LLC",AR,Active,Surface,"US Vanadium - Benton, LLC",Aluminum Ore-Bauxite,5.0,15000.0,3000,high,-92.516389,34.583889,bauxite,exact_sic,Aluminum ore (bauxite) mining operations

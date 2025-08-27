@@ -1,0 +1,6 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes,expected_us_production
+1,2800956,ASBURY PLANT,NJ,Active,Facility,Asbury Graphite Mills Inc,Graphite,63.0,220500.0,3500,low,-75.008056,40.693333,graphite,controlled_keyword,"Natural graphite, avoid synthetic/carbon confusion",limited
+2,1601267,DE QUINCY PLANT,LA,Active,Facility,Southwestern Graphite,Misc. Nonmetallic Mnls. NEC,50.0,175000.0,3500,low,-93.405556,30.453333,graphite,controlled_keyword,"Natural graphite, avoid synthetic/carbon confusion",limited
+3,3607653,KITTANNING PLANT,PA,Active,Facility,ASBURY GRAPHITE MILLS INC,Misc. Nonmetallic Mnls. NEC,45.0,157500.0,3500,low,-79.518611,40.800556,graphite,controlled_keyword,"Natural graphite, avoid synthetic/carbon confusion",limited
+4,3607028,"ANTHRACITE INDUSTRIES, INC.",PA,Active,Facility,Anthracite Industries Inc.,Graphite,35.0,122500.0,3500,low,-77.194444,41.203333,graphite,controlled_keyword,"Natural graphite, avoid synthetic/carbon confusion",limited
+5,405971,Capital Rock LLC,CA,Active,Surface,Capital Rock LLC,Graphite,15.0,52500.0,3500,low,-121.346389,39.023611,graphite,controlled_keyword,"Natural graphite, avoid synthetic/carbon confusion",limited

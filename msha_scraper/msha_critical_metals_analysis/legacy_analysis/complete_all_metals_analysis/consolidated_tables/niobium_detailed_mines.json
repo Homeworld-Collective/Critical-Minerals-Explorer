@@ -1,0 +1,56 @@
+{
+  "metal": "niobium",
+  "analysis_date": "2025-08-07T16:04:23.425027",
+  "search_methodology": {
+    "method": "controlled_keyword",
+    "confidence_level": "low",
+    "search_criteria": {
+      "exact_sic_codes": [],
+      "controlled_keywords": [
+        "niobium",
+        "columbium"
+      ],
+      "sic_patterns": [
+        "niobium",
+        "columbium"
+      ],
+      "operator_keywords": [],
+      "exclude_terms": []
+    }
+  },
+  "summary_statistics": {
+    "total_mines_identified": 1,
+    "active_production_mines": 0,
+    "inactive_or_non_producing_mines": 1,
+    "total_estimated_production_mt_per_year": 0,
+    "total_employment": 0,
+    "expected_us_production_level": "none"
+  },
+  "all_identified_mines": [
+    {
+      "mine_id": 3901283,
+      "mine_name": "Metals Division",
+      "operator": "Pacer Corp",
+      "state": "SD",
+      "county": "",
+      "status": "Abandoned",
+      "mine_type": "Facility",
+      "primary_sic": "Columbium Tantalum Ore",
+      "secondary_sic": NaN,
+      "longitude": NaN,
+      "latitude": NaN,
+      "employees_reported": 0,
+      "is_active_producer": false,
+      "estimated_annual_production_mt": 0,
+      "recent_production_records": [],
+      "company_type": "Corporation",
+      "primary_activity": "",
+      "operating_since": "",
+      "no_employees": NaN,
+      "avg_employees_5yr": 0
+    }
+  ],
+  "active_production_summary": [],
+  "analysis_notes": "No significant US niobium production",
+  "data_sources": "MSHA Mine Safety and Health Administration data"
+}

@@ -1,0 +1,3 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,2401490,STILLWATER MINE,MT,Active,Underground,Stillwater Mining Company,Platinum Group Ore,1123.0,561.5,0.5,low,-109.872778,45.383889,iridium,pgm_group,Rarest PGM
+2,2401879,EAST BOULDER MINE,MT,Active,Underground,Stillwater Mining Company,Platinum Group Ore,446.0,223.0,0.5,low,-110.085833,45.503611,iridium,pgm_group,Rarest PGM

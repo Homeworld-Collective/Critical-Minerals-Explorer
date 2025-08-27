@@ -1,0 +1,2 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes,expected_us_production
+1,402542,Mt Pass Mine & Mill,CA,Active,Surface,"MP Mine Operations, LLC.",Rare Earths Ore,685.0,27400.0,40,low,-115.574444,35.471944,gadolinium,rare_earth_group,Heavy REE with specialized uses,minimal

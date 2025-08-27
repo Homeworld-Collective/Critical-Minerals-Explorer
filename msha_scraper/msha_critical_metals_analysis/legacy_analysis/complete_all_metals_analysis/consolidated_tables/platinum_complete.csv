@@ -1,0 +1,4 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes,expected_us_production
+1,2401490,STILLWATER MINE,MT,Active,Underground,Stillwater Mining Company,Platinum Group Ore,1123.0,3369.0,3.0,high,-109.872778,45.383889,platinum,exact_sic,PGM operations well documented,limited
+2,2401879,EAST BOULDER MINE,MT,Active,Underground,Stillwater Mining Company,Platinum Group Ore,446.0,1338.0,3.0,high,-110.085833,45.503611,platinum,exact_sic,PGM operations well documented,limited
+3,2402295,Beartooth Pit,MT,Active,Surface,Stillwater Excavating,Construction Sand and Gravel,3.0,9.0,3.0,high,-109.318333,45.645556,platinum,exact_sic,PGM operations well documented,limited

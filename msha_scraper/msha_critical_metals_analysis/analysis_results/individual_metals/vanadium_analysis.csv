@@ -1,0 +1,3 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,300479,"US Vanadium, LLC",AR,Active,Surface,"US Vanadium, LLC",Vanadium Ore,73.0,87600.0,1200,medium,-92.9475,34.463611,vanadium,controlled_keyword,Vanadium from uranium operations and steel slag
+2,300261,"U.S. Vanadium - Benton, LLC",AR,Active,Surface,"US Vanadium - Benton, LLC",Aluminum Ore-Bauxite,5.0,6000.0,1200,medium,-92.516389,34.583889,vanadium,controlled_keyword,Vanadium from uranium operations and steel slag

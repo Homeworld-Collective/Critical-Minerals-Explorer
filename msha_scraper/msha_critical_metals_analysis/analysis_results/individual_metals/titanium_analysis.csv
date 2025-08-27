@@ -1,0 +1,2 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,800225,The Chemours Company FC LLC,FL,Active,Surface,The Chemours Company FC LLC,Titanium Ore,91.0,318500.0,3500,medium,-82.069167,29.938333,titanium,controlled_keyword,Titanium minerals and processing

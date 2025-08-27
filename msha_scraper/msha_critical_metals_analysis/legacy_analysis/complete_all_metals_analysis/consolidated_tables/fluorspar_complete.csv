@@ -1,0 +1,5 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes,expected_us_production
+1,1101023,Hastie Mine,IL,Active,Surface,Hastie Mining ,"Crushed, Broken Limestone NEC",36.0,144000.0,4000,medium,-88.165278,37.469167,fluorspar,controlled_keyword,"Industrial mineral, limited US production",limited
+2,1102998,Rosiclare Facility Hastie Mining,IL,Active,Facility,Hastie Mining & Trucking,Fluorspar,10.0,40000.0,4000,medium,-88.343333,37.428333,fluorspar,controlled_keyword,"Industrial mineral, limited US production",limited
+3,4200158,LOST SHEEP MINE,UT,Active,Underground,Ares Strategic Mining Inc.,Fluorspar,2.0,8000.0,4000,medium,-113.185,39.761111,fluorspar,controlled_keyword,"Industrial mineral, limited US production",limited
+4,1519209,Klondike II,KY,Active,Surface,Hastie Mining,Fluorspar,1.0,4000.0,4000,medium,-88.318611,37.2225,fluorspar,controlled_keyword,"Industrial mineral, limited US production",limited

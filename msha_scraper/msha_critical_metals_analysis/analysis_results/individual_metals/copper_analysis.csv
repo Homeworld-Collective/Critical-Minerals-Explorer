@@ -1,0 +1,32 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,200024,Freeport-McMoRan Morenci Inc.,AZ,Active,Surface,Freeport-McMoRan Morenci Inc.,Copper Ore NEC,5870.0,20545000.0,3500,high,-109.335,33.063333,copper,exact_sic,Major copper mining operations
+2,200137,Freeport-McMoRan Bagdad Inc ,AZ,Active,Surface,Freeport-McMoRan Bagdad Inc,Copper Ore NEC,1600.0,5600000.0,3500,high,-113.168611,34.594722,copper,exact_sic,Major copper mining operations
+3,200144,Freeport-McMoRan Sierrita Ops. ,AZ,Active,Surface,Freeport-McMoRan Sierrita Ops.,Copper Ore NEC,1074.0,3759000.0,3500,high,-109.335,33.062778,copper,exact_sic,Major copper mining operations
+4,203131,Freeport-McMoRan Safford Inc,AZ,Active,Surface,Freeport-McMoRan Safford Inc,Copper Ore NEC,1071.0,3748500.0,3500,high,-109.701111,32.955278,copper,exact_sic,Major copper mining operations
+5,4200149,Bingham Canyon Mine,UT,Active,Surface,Kennecott Utah Copper LLC,Copper Ore NEC,876.0,3066000.0,3500,high,-112.091111,40.560556,copper,exact_sic,Major copper mining operations
+6,200150,RAY MINE ,AZ,Active,Surface,Asarco LLC,Copper Ore NEC,630.0,2205000.0,3500,high,-110.988333,33.176667,copper,exact_sic,Major copper mining operations
+7,2601916,Robinson Operation,NV,Active,Surface,Robinson Nevada Mining Company,Copper Ore NEC,612.0,2142000.0,3500,high,-115.014167,39.255,copper,exact_sic,Major copper mining operations
+8,201049,Pinto Valley Mine,AZ,Active,Surface,Pinto Valley Mining Corp.,Copper Ore NEC,600.0,2100000.0,3500,high,-110.971111,33.393333,copper,exact_sic,Major copper mining operations
+9,2900159,TYRONE MINE,NM,Active,Surface,Freeport-McMoRan Tyrone Inc,Copper Ore NEC,585.0,2047500.0,3500,high,-108.3625,32.6525,copper,exact_sic,Major copper mining operations
+10,200135,MISSION/SAN XAVIER/EISENHOWER,AZ,Active,Surface,"ASARCO LLC, a Delaware Limited Liability Company",Copper Ore NEC,447.0,1564500.0,3500,high,-111.0525,31.998333,copper,exact_sic,Major copper mining operations
+11,2400338,Continental Mine,MT,Active,Surface,"Montana Resources, LLC",Copper Ore NEC,388.0,1358000.0,3500,high,-112.5225,46.013056,copper,exact_sic,Major copper mining operations
+12,2900708,Chino Mines Co Mine,NM,Active,Surface,Freeport-McMoRan Chino Mines Company,Copper Ore NEC,322.0,1127000.0,3500,high,-108.084444,32.789722,copper,exact_sic,Major copper mining operations
+13,4201996,Copperton Concentrator ,UT,Active,Facility,Rio Tinto Kennecott Copper LLC,Copper Ore NEC,233.0,815500.0,3500,high,-112.155833,40.550278,copper,exact_sic,Major copper mining operations
+14,2300409,Fletcher Mine and Mill,MO,Active,Underground,The Doe Run Company,Lead-Zinc Ore,189.0,661500.0,3500,high,-91.109167,37.466389,copper,exact_sic,Major copper mining operations
+15,200134,Silver Bell Mining LLC,AZ,Active,Surface,"ASARCO LLC, a Delaware Limited Liability Company",Copper Ore NEC,182.0,637000.0,3500,high,-111.099167,31.877778,copper,exact_sic,Major copper mining operations
+16,2003454,Eagle Mine,MI,Active,Underground,"Eagle Mine, LLC.",Nickel Ore,170.0,595000.0,3500,high,-87.879444,46.743056,copper,exact_sic,Major copper mining operations
+17,200112,Freeport McMoRan Miami Inc ,AZ,Active,Surface,Freeport McMoRan Miami Inc,Copper Ore NEC,150.0,525000.0,3500,high,-110.8525,33.409722,copper,exact_sic,Major copper mining operations
+18,2300499,Brushy Creek Mine/Mill,MO,Active,Underground,The Doe Run Company,Lead-Zinc Ore,139.0,486500.0,3500,high,-91.110833,37.4925,copper,exact_sic,Major copper mining operations
+19,200843,Mineral Park ,AZ,Active,Surface,"Origin Mining Company, LLC.",Copper Ore NEC,138.0,483000.0,3500,high,-114.178611,35.335,copper,exact_sic,Major copper mining operations
+20,200826,Hayden Concentrator,AZ,Active,Surface,Asarco LLC,Copper Ore NEC,135.0,472500.0,3500,high,-110.784444,33.007222,copper,exact_sic,Major copper mining operations
+21,2301800,Viburnum #35 (Casteel Mine),MO,Active,Underground, Doe Run Co,Lead-Zinc Ore,98.0,343000.0,3500,high,-91.1225,37.656389,copper,exact_sic,Major copper mining operations
+22,202653,Carlota Copper Company,AZ,Active,Surface,Carlota Copper Company,Copper Ore NEC,63.0,220500.0,3500,high,-110.868611,33.399167,copper,exact_sic,Major copper mining operations
+23,4202406,Lisbon Valley Mining Co,UT,Active,Surface,Lisbon Valley Mining Co LLC,Copper Ore NEC,60.0,210000.0,3500,high,-109.117778,37.995,copper,exact_sic,Major copper mining operations
+24,202824,Gunnison & Johnson Camp Mines ,AZ,Active,Surface, Gunnison Copper Corp.,Copper Ore NEC,42.0,147000.0,3500,high,-109.648333,31.880278,copper,exact_sic,Major copper mining operations
+25,4201392,Kennecott Keystone Underground,UT,Active,Underground,Kennecott Utah Copper LLC,Copper Ore NEC,31.0,108500.0,3500,high,-112.100278,40.564722,copper,exact_sic,Major copper mining operations
+26,202579,Cyprus Tohono Corporation,AZ,Active,Surface,Cyprus Tohono Corp,Copper Ore NEC,16.0,56000.0,3500,high,-111.888889,32.514444,copper,exact_sic,Major copper mining operations
+27,2103658,Northmet,MN,Active,Surface,"NewRange Copper Nickel, LLC",Copper Ore NEC,13.0,45500.0,3500,high,-92.121389,47.527778,copper,exact_sic,Major copper mining operations
+28,201656,Copper Queen Branch,AZ,Active,Surface,Freeport McMoRan Corporation,Copper Ore NEC,10.0,35000.0,3500,high,-109.894167,31.424444,copper,exact_sic,Major copper mining operations
+29,2300495,Viburnum #29 Mine,MO,Active,Underground,Doe Run Resources Corp dba Doe Run Company,Lead-Zinc Ore,7.0,24500.0,3500,high,-91.076667,37.755,copper,exact_sic,Major copper mining operations
+30,2401467,Troy Mine ,MT,Active,Underground,Troy Mine Inc.,Copper Ore NEC,3.0,10500.0,3500,high,-115.889722,48.463333,copper,exact_sic,Major copper mining operations
+31,4202431,OK and Hidden Treasure,UT,Active,Surface,"Milford Mining Company Utah, LLC",Copper Ore NEC,2.0,7000.0,3500,high,-113.014722,38.387778,copper,exact_sic,Major copper mining operations

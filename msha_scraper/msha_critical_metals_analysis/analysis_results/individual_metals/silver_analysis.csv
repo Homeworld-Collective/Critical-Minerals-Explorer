@@ -1,0 +1,26 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,503695,Cripple Creek and Victor Gold Mining Com,CO,Active,Surface,"Cripple Creek & Victor Gold Mining Company, LLC",Gold Ore,514.0,1028.0,2.0,medium,-105.145278,38.744722,silver,exact_sic,Silver mining operations
+2,2600550,Phoenix Mine,NV,Active,Surface,Nevada Gold Mines LLC,Gold Ore,495.0,990.0,2.0,medium,-117.146667,40.504722,silver,exact_sic,Silver mining operations
+3,2601962,Hycroft Mine,NV,Active,Surface,"Hycroft Resources & Development, LLC",Gold Ore,440.0,880.0,2.0,medium,-118.126389,40.953889,silver,exact_sic,Silver mining operations
+4,5001267,Hecla Greens Creek Mine,AK,Active,Underground,Hecla Greens Creek Mining Company,Silver Ore,410.0,820.0,2.0,medium,-134.745833,58.1175,silver,exact_sic,Silver mining operations
+5,1000088,Lucky Friday,ID,Active,Underground,Hecla Limited,Silver Ore,372.0,744.0,2.0,medium,-115.801944,47.470278,silver,exact_sic,Silver mining operations
+6,2601941,Rochester Mine,NV,Active,Surface,"Coeur Rochester, Inc.",Silver Ore,290.0,580.0,2.0,medium,-118.151667,40.284167,silver,exact_sic,Silver mining operations
+7,1000082,Galena,ID,Active,Underground,"U.S. Silver-Idaho, Inc.",Silver Ore,248.0,496.0,2.0,medium,-115.961389,47.485,silver,exact_sic,Silver mining operations
+8,3901282,Coeur Wharf,SD,Active,Surface,Wharf Resources (USA) Inc,Gold Ore,214.0,428.0,2.0,medium,-103.854167,44.348611,silver,exact_sic,Silver mining operations
+9,405319,Soledad Mountain Project,CA,Active,Surface,Golden Queen Mining Company,Gold Ore,179.0,358.0,2.0,medium,-118.180833,35.008889,silver,exact_sic,Silver mining operations
+10,2602657,Relief Canyon Mine,NV,Active,Surface,Gold Acquisition Corp.,Gold Ore,100.0,200.0,2.0,medium,-118.208611,40.204444,silver,exact_sic,Silver mining operations
+11,2601030,Denton-Rawhide Mine LLC,NV,Active,Surface,Rawhide Mine LLC,Gold Ore,67.0,134.0,2.0,medium,-118.386111,39.003611,silver,exact_sic,Silver mining operations
+12,202367,Moss Mine,AZ,Active,Surface,Golden Vertex Corp,Gold Ore,51.0,102.0,2.0,medium,-114.554444,35.074444,silver,exact_sic,Silver mining operations
+13,4609341,Witcher Creek Surface Mine,WV,Active,Surface,"Silver Horse Services, LLC",Coal (Bituminous),45.0,90.0,2.0,medium,-81.475,38.282778,silver,exact_sic,Silver mining operations
+14,404918,Castle Mountain Mine,CA,Active,Surface,Castle Mountain Venture,Gold Ore,38.0,76.0,2.0,medium,-115.176389,35.293333,silver,exact_sic,Silver mining operations
+15,2602307,Ruby Hill Mine,NV,Active,Surface,"Ruby Hill Mining Company, LLC",Gold Ore,25.0,50.0,2.0,medium,-115.987222,39.504722,silver,exact_sic,Silver mining operations
+16,4103531,SILVER CREEK MAT INC,TX,Active,Surface,Silver Creek Materials Inc,"Sand, Common",17.0,34.0,2.0,medium,-97.491667,32.791389,silver,exact_sic,Silver mining operations
+17,203445,Fraguita Mill Site,AZ,Active,Facility,GoodMark Capital Group Inc.,Gold Ore,4.0,8.0,2.0,medium,-111.321742,31.563017,silver,exact_sic,Silver mining operations
+18,2602767,Arturo,NV,Active,Surface,Nevada Gold Mines LLC,Gold Ore,4.0,8.0,2.0,medium,-116.431111,41.033889,silver,exact_sic,Silver mining operations
+19,3601708,Kassa Breaker,PA,Active,Facility,Silverbrook Anthracite Inc,Coal (Anthracite),4.0,8.0,2.0,medium,-75.801667,41.293056,silver,exact_sic,Silver mining operations
+20,2401467,Troy Mine ,MT,Active,Underground,Troy Mine Inc.,Copper Ore NEC,3.0,6.0,2.0,medium,-115.889722,48.463333,silver,exact_sic,Silver mining operations
+21,203336,Emerald Pit,AZ,Active,Surface,"Tombstone Gold and Silver, Inc",Construction Sand and Gravel,3.0,6.0,2.0,medium,-110.057222,31.706389,silver,exact_sic,Silver mining operations
+22,1400060,Silverdale Quality Stone,KS,Active,Surface,Silverdale Quality Stone,Dimension Limestone,3.0,6.0,2.0,medium,-96.904444,37.041667,silver,exact_sic,Silver mining operations
+23,3605591,Alden Cleaning Plant,PA,Active,Facility,Silverbrook Anthracite Inc,Coal (Anthracite),3.0,6.0,2.0,medium,-76.0175,41.183889,silver,exact_sic,Silver mining operations
+24,203423,Henrietta Mine,AZ,Active,Surface,"Henrietta Mine, LLC",Gold Ore,3.0,6.0,2.0,medium,-112.118333,34.368056,silver,exact_sic,Silver mining operations
+25,4105401,Spur Pit #3,TX,Active,Surface,"Silver Spur Energy Services, Inc","Crushed, Broken Stone NEC",2.0,4.0,2.0,medium,-101.477778,32.528611,silver,exact_sic,Silver mining operations

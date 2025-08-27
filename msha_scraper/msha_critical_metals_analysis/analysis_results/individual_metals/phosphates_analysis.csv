@@ -1,0 +1,13 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,3100212,Lee Creek Mine,NC,Active,Surface,PCS Phosphate Company Inc,Phosphate Rock,676.0,4056000.0,6000,medium,-76.788611,35.305556,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+2,801117,Four Corners,FL,Active,Surface,"Mosaic Fertilizer, LLC",Phosphate Rock,500.0,3000000.0,6000,medium,-81.971667,27.763056,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+3,800798,Swift Creek Mine,FL,Active,Surface,White Springs Ag Chems Inc dba Nutrien ,Phosphate Rock,247.0,1482000.0,6000,medium,-83.089167,30.483056,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+4,1001590,Smoky Canyon Mine,ID,Active,Surface,J R Simplot Company,Phosphate Rock,235.0,1410000.0,6000,medium,-111.071389,42.762778,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+5,801183,South Fort Meade Mine,FL,Active,Surface,"Mosaic Fertilizer, LLC",Phosphate Rock,216.0,1296000.0,6000,medium,-81.756389,27.647778,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+6,1001702,"EV, Ballard & Blackfoot Bridge Mines",ID,Active,Surface,N.A. Degerstrom,Phosphate Rock,147.0,882000.0,6000,medium,-111.505556,42.826667,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+7,4200998,Vernal Pit & Mill,UT,Active,Facility,Simplot Phosphates LLC,Phosphate Rock,140.0,840000.0,6000,medium,-109.528611,40.455556,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+8,800981,Wingate Creek Mine,FL,Active,Surface,"Mosaic Fertilizer, LLC",Phosphate Rock,126.0,756000.0,6000,medium,-82.124167,27.4975,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+9,1002177,Rasmussen Valley Mine,ID,Active,Surface,ITAFOS Conda LLC,Phosphate Rock,20.0,120000.0,6000,medium,-111.545,42.739444,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+10,1001854,"BFB, EV & Ballard Mines",ID,Active,Surface,"P4 Production, LLC",Phosphate Rock,19.0,114000.0,6000,medium,-111.505556,42.826667,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+11,800222,Manko Co Sec 5 Mine/Phos,FL,Active,Surface,Manko Company,Phosphate Rock,5.0,30000.0,6000,medium,-82.403056,28.944167,phosphates,controlled_keyword,Phosphate rock mining for fertilizers
+12,800903,South Pasture Mine,FL,Active,Surface,"Mosaic Fertilizer, LLC",Phosphate Rock,5.0,30000.0,6000,medium,-81.948611,27.644722,phosphates,controlled_keyword,Phosphate rock mining for fertilizers

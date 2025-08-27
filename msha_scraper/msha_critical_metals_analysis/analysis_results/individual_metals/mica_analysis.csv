@@ -1,0 +1,10 @@
+rank,mine_id,mine_name,state,status,mine_type,operator,primary_sic,employees,estimated_annual_production_mt,production_factor_mt_per_employee,confidence_level,longitude,latitude,metal,verification_method,verification_notes
+1,4800155,Tata Chemicals Mine,WY,Active,Underground,Tata Chemicals (Soda Ash) Partners LLC,Trona,539.0,1617000.0,3000,medium,-109.755,41.591389,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
+2,2600002,Premier Magnesia LLC,NV,Active,Surface,Premier Magnesia LLC,Industrial Inorg. Chemicals,115.0,345000.0,3000,medium,-117.643611,38.885833,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
+3,900241,HARTWELL MINE,GA,Active,Surface,Colors & Effects USA LLC,Mica,46.0,138000.0,3000,medium,-82.941944,34.325556,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
+4,3100273,Moss Mine & Mill ,NC,Active,Surface,Imerys Mica Kings Mountain Inc,Mica,14.0,42000.0,3000,medium,-81.376944,35.214722,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
+5,3102354,Flat Rock Plant,NC,Active,Surface,Luck Stone Corporation,"Crushed, Broken Mica",9.0,27000.0,3000,medium,-80.583672,36.511411,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
+6,3101955,KT Mica,NC,Active,Facility,The Quartz Corp USA,Mica,5.0,15000.0,3000,medium,-82.061667,35.906389,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
+7,901173,Duncan Plant,GA,Active,Facility,Deepstep Mineral Products LLC,Mica,4.0,12000.0,3000,medium,-82.963621,33.029848,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
+8,3100381,Battleground Mill ,NC,Active,Surface,Imerys Mica Kings Mountain,Mica,4.0,12000.0,3000,medium,-81.368889,35.219722,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
+9,3100274,Patterson Mine and Mill ,NC,Active,Facility,Imerys Mica Kings Mountain Inc.,Mica,2.0,6000.0,3000,medium,-81.346944,35.258611,mica,controlled_keyword,Mica mining for electrical and cosmetic industries
