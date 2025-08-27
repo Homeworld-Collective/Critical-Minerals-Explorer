@@ -33,3 +33,27 @@ msha_scraper/msha_critical_metals_analysis/raw_data/
 
 # Unused JSON summary files in detailed_reports  
 detailed_reports/summary_*.json
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+# Vercel
+.vercel
+
+# Node modules
+node_modules/
+npm-debug.log*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp

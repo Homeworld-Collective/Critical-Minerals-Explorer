@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/comments/index.js": {
+      "maxDuration": 10
+    },
+    "api/comments/moderate.js": {
+      "maxDuration": 10
+    }
+  }
+}

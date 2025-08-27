@@ -165,6 +165,11 @@ class CriticalMineralExplorer {
     }
 
     switchTab(tabName, metalName = null, updateHistory = true) {
+        // Deactivate commenting system when switching away from reports
+        if (window.commentingSystem && tabName !== 'reports') {
+            window.commentingSystem.deactivate();
+        }
+        
         // Update URL hash if updating history
         if (updateHistory) {
             const hash = metalName ? `#${tabName}/${metalName}` : `#${tabName}`;
@@ -342,7 +347,11 @@ class CriticalMineralExplorer {
         document.querySelectorAll('.metal-list-item').forEach(item => {
             item.classList.remove('active');
         });
-        event.target.classList.add('active');
+        // Find and activate the corresponding metal item
+        const targetItem = document.querySelector(`[data-metal="${metalName}"]`);
+        if (targetItem) {
+            targetItem.classList.add('active');
+        }
 
         // Check cache first
         if (this.reportsCache[metalName]) {
@@ -457,6 +466,16 @@ class CriticalMineralExplorer {
         
         // Add smooth scrolling to TOC links
         this.setupSmoothScrolling();
+        
+        // Activate commenting system for reports
+        if (window.commentingSystem) {
+            window.commentingSystem.activate();
+            // Load and display existing comments after a short delay to ensure DOM is ready
+            setTimeout(async () => {
+                await window.commentingSystem.loadCommentsFromAPI();
+                window.commentingSystem.displayComments();
+            }, 100);
+        }
     }
 
     generateTableOfContents(markdownText) {
@@ -957,6 +976,471 @@ class CriticalMineralExplorer {
 
 }
 
+// Commenting System for Detailed Reports
+class CommentingSystem {
+    constructor() {
+        this.comments = [];
+        this.currentSelection = null;
+        this.commentIcon = null;
+        this.isActive = false;
+        this.isSubmitting = false;
+        this.init();
+    }
+
+    init() {
+        this.createCommentIcon();
+        this.createModal();
+        this.setupEventListeners();
+    }
+
+    createCommentIcon() {
+        this.commentIcon = document.createElement('div');
+        this.commentIcon.className = 'comment-icon';
+        this.commentIcon.innerHTML = '<i class="fas fa-comment"></i>';
+        this.commentIcon.style.cssText = `
+            position: absolute;
+            background: #3498db;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        `;
+        document.body.appendChild(this.commentIcon);
+    }
+
+    createModal() {
+        const modal = document.createElement('div');
+        modal.className = 'comment-modal';
+        modal.innerHTML = `
+            <div class="comment-modal-content">
+                <div class="comment-modal-header">
+                    <h3>Add Comment</h3>
+                    <span class="comment-modal-close">&times;</span>
+                </div>
+                <div class="comment-context">
+                    <strong>Selected text:</strong>
+                    <div class="comment-selected-text"></div>
+                </div>
+                <textarea class="comment-textarea" placeholder="Share your feedback, corrections, or insights..." maxlength="500"></textarea>
+                <div class="comment-char-count">0/500</div>
+                <div class="comment-modal-actions">
+                    <button class="comment-cancel-btn">Cancel</button>
+                    <button class="comment-submit-btn">Add Comment</button>
+                </div>
+            </div>
+        `;
+        modal.style.cssText = `
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        `;
+        document.body.appendChild(modal);
+        this.modal = modal;
+    }
+
+    setupEventListeners() {
+        // Text selection handling
+        document.addEventListener('mouseup', (e) => {
+            if (this.isActive) {
+                setTimeout(() => this.handleTextSelection(e), 10);
+            }
+        });
+
+        document.addEventListener('mousedown', (e) => {
+            // Don't hide comment icon/selection if clicking on modal or comment icon
+            if (!this.commentIcon.contains(e.target) && !this.modal.contains(e.target)) {
+                // Only hide if not clicking to open the modal
+                if (!this.modal || this.modal.style.display !== 'block') {
+                    this.hideCommentIcon();
+                }
+            }
+        });
+
+        // Comment icon click
+        this.commentIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.showModal();
+        });
+
+        // Modal event listeners
+        const modal = this.modal;
+        const closeBtn = modal.querySelector('.comment-modal-close');
+        const cancelBtn = modal.querySelector('.comment-cancel-btn');
+        const submitBtn = modal.querySelector('.comment-submit-btn');
+        const textarea = modal.querySelector('.comment-textarea');
+        const charCount = modal.querySelector('.comment-char-count');
+
+        closeBtn.addEventListener('click', () => this.hideModal());
+        cancelBtn.addEventListener('click', () => this.hideModal());
+        submitBtn.addEventListener('click', (e) => {
+            console.log('Submit button clicked');
+            e.preventDefault();
+            this.submitComment();
+        });
+
+        textarea.addEventListener('input', (e) => {
+            const length = e.target.value.length;
+            charCount.textContent = `${length}/500`;
+            charCount.style.color = length > 450 ? '#e74c3c' : '#7f8c8d';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                this.hideModal();
+            }
+        });
+    }
+
+    activate() {
+        console.log('Comment system activated');
+        this.isActive = true;
+    }
+
+    deactivate() {
+        console.log('Comment system deactivated');
+        this.isActive = false;
+        this.hideCommentIcon();
+    }
+
+    handleTextSelection(e) {
+        console.log('handleTextSelection called');
+        const selection = window.getSelection();
+        const selectedText = selection.toString().trim();
+        
+        console.log('Selected text:', selectedText);
+        
+        if (selectedText.length > 0 && selectedText.length >= 10) {
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+            
+            // Only show if selection is within report content
+            const reportContent = document.getElementById('report-content');
+            if (reportContent && reportContent.contains(range.commonAncestorContainer)) {
+                this.currentSelection = {
+                    text: selectedText,
+                    context: this.getSelectionContext(range),
+                    range: range.cloneRange()
+                };
+                
+                this.showCommentIcon(rect);
+            }
+        } else {
+            this.hideCommentIcon();
+        }
+    }
+
+    getSelectionContext(range) {
+        const container = range.commonAncestorContainer;
+        let contextElement = container.nodeType === Node.TEXT_NODE ? container.parentNode : container;
+        
+        // Find the containing paragraph or section
+        while (contextElement && !['P', 'H2', 'H3', 'LI', 'DIV'].includes(contextElement.tagName)) {
+            contextElement = contextElement.parentNode;
+        }
+        
+        if (contextElement) {
+            const fullText = contextElement.textContent.trim();
+            const selectedText = range.toString().trim();
+            const startIndex = fullText.indexOf(selectedText);
+            
+            // Get surrounding context (50 chars before and after)
+            const contextStart = Math.max(0, startIndex - 50);
+            const contextEnd = Math.min(fullText.length, startIndex + selectedText.length + 50);
+            
+            return {
+                fullContext: fullText.substring(contextStart, contextEnd),
+                selectedText: selectedText,
+                sectionTitle: this.getSectionTitle(contextElement)
+            };
+        }
+        
+        return {
+            fullContext: range.toString().trim(),
+            selectedText: range.toString().trim(),
+            sectionTitle: 'Unknown Section'
+        };
+    }
+
+    getSectionTitle(element) {
+        // Find the nearest section header
+        let current = element;
+        while (current && current !== document.body) {
+            if (['H2', 'H3'].includes(current.tagName)) {
+                return current.textContent.trim();
+            }
+            current = current.previousElementSibling || current.parentNode;
+            if (current && current.previousElementSibling) {
+                const siblings = Array.from(current.parentNode.children);
+                const currentIndex = siblings.indexOf(current);
+                for (let i = currentIndex - 1; i >= 0; i--) {
+                    if (['H2', 'H3'].includes(siblings[i].tagName)) {
+                        return siblings[i].textContent.trim();
+                    }
+                }
+            }
+        }
+        return 'General';
+    }
+
+    showCommentIcon(rect) {
+        const icon = this.commentIcon;
+        const scrollY = window.scrollY;
+        
+        icon.style.left = `${rect.right + 10}px`;
+        icon.style.top = `${rect.top + scrollY + (rect.height / 2) - 16}px`;
+        icon.style.opacity = '1';
+    }
+
+    hideCommentIcon() {
+        this.commentIcon.style.opacity = '0';
+        // Only clear selection if modal is not open
+        if (!this.modal || this.modal.style.display !== 'block') {
+            this.currentSelection = null;
+        }
+    }
+
+    showModal() {
+        if (!this.currentSelection) return;
+        
+        const modal = this.modal;
+        const selectedTextDiv = modal.querySelector('.comment-selected-text');
+        const textarea = modal.querySelector('.comment-textarea');
+        
+        selectedTextDiv.innerHTML = `"${this.currentSelection.text}"`;
+        textarea.value = '';
+        modal.querySelector('.comment-char-count').textContent = '0/500';
+        
+        modal.style.display = 'block';
+        setTimeout(() => textarea.focus(), 100);
+    }
+
+    hideModal() {
+        this.modal.style.display = 'none';
+        this.currentSelection = null;
+        this.hideCommentIcon();
+    }
+
+    async submitComment() {
+        console.log('submitComment called');
+        
+        if (this.isSubmitting) return; // Prevent double submission
+        
+        const textarea = this.modal.querySelector('.comment-textarea');
+        const submitBtn = this.modal.querySelector('.comment-submit-btn');
+        const commentText = textarea.value.trim();
+        
+        console.log('Comment text:', commentText);
+        console.log('Current selection:', this.currentSelection);
+        
+        if (!commentText || !this.currentSelection) {
+            console.log('Submission blocked - missing text or selection');
+            this.showNotification('Please enter a comment', 'error');
+            return;
+        }
+        
+        // Show loading state
+        this.isSubmitting = true;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        
+        const comment = {
+            selectedText: this.currentSelection.text,
+            context: this.currentSelection.context,
+            comment: commentText,
+            metalName: this.getCurrentMetal()
+        };
+        
+        try {
+            const response = await fetch('/api/comments', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(comment)
+            });
+            
+            const result = await response.json();
+            
+            if (!response.ok) {
+                throw new Error(result.error || 'Failed to submit comment');
+            }
+            
+            this.hideModal();
+            
+            // Refresh comments display
+            await this.loadCommentsFromAPI();
+            this.displayComments();
+            
+            // Show success message
+            this.showNotification('Comment submitted! It will appear after moderation.');
+            
+        } catch (error) {
+            console.error('Error submitting comment:', error);
+            this.showNotification(error.message || 'Failed to submit comment. Please try again.', 'error');
+        } finally {
+            // Reset loading state
+            this.isSubmitting = false;
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Add Comment';
+        }
+    }
+
+    getCurrentMetal() {
+        // Extract metal name from current URL or page state
+        const hash = window.location.hash;
+        if (hash.includes('reports/')) {
+            return hash.split('reports/')[1];
+        }
+        return 'unknown';
+    }
+
+    showNotification(message, type = 'success') {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        
+        const backgroundColor = type === 'error' ? '#e74c3c' : '#27ae60';
+        
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${backgroundColor};
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            z-index: 3000;
+            transition: opacity 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-width: 400px;
+        `;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => notification.remove(), 300);
+        }, type === 'error' ? 5000 : 3000); // Show errors longer
+    }
+
+    async loadCommentsFromAPI() {
+        const currentMetal = this.getCurrentMetal();
+        if (currentMetal === 'unknown') return;
+        
+        try {
+            const response = await fetch(`/api/comments?metal=${encodeURIComponent(currentMetal)}`);
+            if (response.ok) {
+                this.comments = await response.json();
+            } else {
+                console.warn('Failed to load comments:', response.statusText);
+                this.comments = [];
+            }
+        } catch (error) {
+            console.error('Error loading comments:', error);
+            this.comments = [];
+        }
+    }
+
+    displayComments() {
+        const currentMetal = this.getCurrentMetal();
+        const metalComments = this.comments || [];
+        
+        if (metalComments.length === 0) return;
+        
+        const reportContent = document.getElementById('report-content');
+        if (!reportContent) return;
+        
+        // Remove existing comments section
+        const existingSection = document.querySelector('.community-feedback-section');
+        if (existingSection) {
+            existingSection.remove();
+        }
+        
+        // Create comments section
+        const commentsSection = document.createElement('div');
+        commentsSection.className = 'community-feedback-section';
+        commentsSection.innerHTML = `
+            <hr style="margin: 3rem 0 2rem 0; border: none; border-top: 1px solid #ddd;">
+            <h2 style="color: #2c3e50; margin-bottom: 1.5rem;">
+                <i class="fas fa-comments" style="margin-right: 0.5rem;"></i>
+                Community Feedback (${metalComments.length})
+            </h2>
+            <div class="comments-list">
+                ${metalComments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+                    .map(comment => this.renderComment(comment)).join('')}
+            </div>
+        `;
+        
+        reportContent.appendChild(commentsSection);
+    }
+
+    renderComment(comment) {
+        const date = new Date(comment.timestamp).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        
+        return `
+            <div class="comment-item" style="
+                border: 1px solid #e1e8ed;
+                border-radius: 8px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                background: #fafbfc;
+            ">
+                <div class="comment-context" style="
+                    background: #f8f9fa;
+                    border-left: 4px solid #3498db;
+                    padding: 12px 16px;
+                    margin-bottom: 12px;
+                    border-radius: 0 4px 4px 0;
+                ">
+                    <div style="font-weight: 600; color: #2c3e50; margin-bottom: 4px;">
+                        ${comment.context.sectionTitle}
+                    </div>
+                    <div style="font-style: italic; color: #5a6c7d; font-size: 0.9rem;">
+                        "${comment.selectedText}"
+                    </div>
+                </div>
+                <div class="comment-text" style="
+                    color: #2c3e50;
+                    line-height: 1.6;
+                    margin-bottom: 12px;
+                ">
+                    ${comment.comment}
+                </div>
+                <div class="comment-meta" style="
+                    color: #7f8c8d;
+                    font-size: 0.85rem;
+                ">
+                    ${date}
+                </div>
+            </div>
+        `;
+    }
+
+}
+
 // Initialize the application
 const explorer = new CriticalMineralExplorer();
 const app = explorer; // Alias for easier access in onclick handlers
+const commentingSystem = new CommentingSystem();
+
+// Make commenting system globally available
+window.commentingSystem = commentingSystem;

@@ -1,6 +1,8 @@
 # Where can Biotech help Critical Minerals in the US? 
 
-This explorer analyzes domestic mining capacity and supply chain bottlenecks for 63 critical minerals across the US, using comprehensive data from MSHA mining records. The analysis is based on the [USGS critical minerals list published August 25, 2025](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf) and was first made public on August 26, 2025.
+This explorer analyzes domestic mining capacity and supply chain bottlenecks for 63 critical minerals across the US, using comprehensive data from MSHA mining records. The AI-powered analysis is based on the [USGS critical minerals list published August 25, 2025](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf) and was first made public on August 26, 2025.
+
+Because this was made rapidly via an integration of AI tools, 
 
 ## High-Priority Targets for Biotechnology Applications
 
@@ -85,8 +87,6 @@ Each detailed report identifies specific constraints limiting domestic productio
 **Source code and methodology**: [https://github.com/dgoodwin208/Critical-Minerals-Explorer](https://github.com/dgoodwin208/Critical-Minerals-Explorer)
 
 ## Disclaimers and Transparency
-
-
 
 **Note**: The official mineral list from the [USGS report (published August 25, 2025)](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf) was simplified to match periodic table elements. For example, chromite and chromium are listed separately in the USGS report but appear as just chromium here. Similarly, titanium's five categories (ferroalloys, metal, mineral concentrates, pigment and sponge) are consolidated into a single titanium entry.
 
