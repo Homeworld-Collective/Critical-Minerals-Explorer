@@ -221,24 +221,14 @@ class CORSHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                         data = response.json()
                         result = data.get('result')
                         if result:
-                            print(f"Loaded comments from Upstash Redis, type: {type(result)}")
-                            
-                            # Handle the array format (from previous incorrect storage)
-                            if isinstance(result, list) and len(result) > 0:
-                                # Take the first element of the array
-                                result = result[0]
-                                print("Unwrapped array format from Upstash")
-                            
-                            # Now parse the JSON string
+                            print("Loaded comments from Upstash Redis")
+                            # Upstash should return a JSON string, parse it to dict
                             if isinstance(result, str):
                                 try:
-                                    parsed = json.loads(result)
-                                    print(f"Parsed type: {type(parsed)}")
-                                    return parsed if isinstance(parsed, dict) else {}
+                                    return json.loads(result)
                                 except json.JSONDecodeError:
                                     print("Failed to parse JSON from Upstash")
                                     return {}
-                            
                             # If it's already a dict, return it
                             return result if isinstance(result, dict) else {}
                         else:
@@ -268,12 +258,15 @@ class CORSHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                         'Content-Type': 'application/json'
                     }
                     
-                    # Upstash REST API expects: ["SET", "key", "value"]
-                    # But since we're using /set/comments endpoint, just send the value
-                    body = json.dumps(comments)  # Convert dict to JSON string
+                    # For /set/key endpoint, send the JSON directly as the body
+                    # Remove Content-Type header and send raw JSON string
+                    headers_no_json = {
+                        'Authorization': f"Bearer {redis_token}"
+                    }
+                    body = json.dumps(comments)
                     response = requests.post(url, 
                                            data=body,
-                                           headers=headers)
+                                           headers=headers_no_json)
                     if response.status_code == 200:
                         print("Saved comments to Upstash Redis")
                     else:

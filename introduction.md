@@ -2,7 +2,7 @@
 
 This explorer analyzes domestic mining capacity and supply chain bottlenecks for 63 critical minerals across the US, using comprehensive data from MSHA mining records. The AI-powered analysis is based on the [USGS critical minerals list published August 25, 2025](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf) and was first made public on August 26, 2025.
 
-*Because this was made with a rapid integration of AI tools, this site is best used as a tool to bridge the stated urgent needs and the technical bottlenecks ahead. Please validate ideas here for yourself and give us input as you go through! We need input to improve this offering to the community, so we built an anonymous commenting feature in the Detailed Reports section - anyone can highlight and comment (moderated for value and civility).* 
+*Because we made this with a rapid integration of AI tools, this site is best used as a tool to bridge the stated urgent needs to the technical bottlenecks ahead. Please validate ideas here for yourself and give us input as you go through! We built an anonymous commenting feature in the Detailed Reports section so anyone can highlight and comment (moderated for value and civility).* 
 
 ## High-Priority Targets for Biotechnology Applications
 
