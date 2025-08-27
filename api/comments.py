@@ -207,12 +207,8 @@ def save_comments(comments):
                 'Content-Type': 'application/json'
             }
             
-            # Upstash expects the value as a JSON string
-            data = {
-                'value': json.dumps(comments)
-            }
-            
-            response = requests.post(url, json=data, headers=headers)
+            # Upstash REST API expects an array format for SET command: [value]
+            response = requests.post(url, json=[json.dumps(comments)], headers=headers)
             if response.status_code != 200:
                 print(f"Failed to save comments: {response.text}")
         else:

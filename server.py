@@ -14,6 +14,15 @@ import time
 from pathlib import Path
 from datetime import datetime, timedelta
 
+# Try to import requests for Upstash Redis
+try:
+    import requests
+    HAS_REQUESTS = True
+except ImportError:
+    print("Warning: requests library not available. Install with: pip install requests")
+    print("Will use local JSON storage only.")
+    HAS_REQUESTS = False
+
 # Load environment variables from .env file
 def load_env_file():
     env_path = Path(__file__).parent / '.env'
@@ -33,7 +42,6 @@ class CORSHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     # Configuration
     MAX_COMMENTS_PER_HOUR = 3
     COMMENT_MAX_LENGTH = 500
-    COMMENTS_FILE = 'comments.json'
     
     def __init__(self, *args, **kwargs):
         # Load admin secret from environment
@@ -196,18 +204,84 @@ class CORSHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         return len(recent_comments) >= self.MAX_COMMENTS_PER_HOUR
     
     def load_comments(self):
+        """Load comments from Upstash Redis (same as production)"""
         try:
-            if os.path.exists(self.COMMENTS_FILE):
-                with open(self.COMMENTS_FILE, 'r') as f:
-                    return json.load(f)
+            if HAS_REQUESTS:
+                redis_url = os.getenv('KV_REST_API_URL')
+                redis_token = os.getenv('KV_REST_API_TOKEN')
+                
+                if redis_url and redis_token:
+                    url = f"{redis_url}/get/comments"
+                    headers = {
+                        'Authorization': f"Bearer {redis_token}"
+                    }
+                    
+                    response = requests.get(url, headers=headers)
+                    if response.status_code == 200:
+                        data = response.json()
+                        result = data.get('result')
+                        if result:
+                            print(f"Loaded comments from Upstash Redis, type: {type(result)}")
+                            
+                            # Handle the array format (from previous incorrect storage)
+                            if isinstance(result, list) and len(result) > 0:
+                                # Take the first element of the array
+                                result = result[0]
+                                print("Unwrapped array format from Upstash")
+                            
+                            # Now parse the JSON string
+                            if isinstance(result, str):
+                                try:
+                                    parsed = json.loads(result)
+                                    print(f"Parsed type: {type(parsed)}")
+                                    return parsed if isinstance(parsed, dict) else {}
+                                except json.JSONDecodeError:
+                                    print("Failed to parse JSON from Upstash")
+                                    return {}
+                            
+                            # If it's already a dict, return it
+                            return result if isinstance(result, dict) else {}
+                        else:
+                            print("No comments in Upstash Redis yet")
+                            return {}
+                    else:
+                        print(f"Failed to load from Upstash: {response.status_code}")
+                else:
+                    print("Upstash Redis credentials not configured")
+            else:
+                print("requests library not available - cannot connect to Upstash")
         except Exception as e:
             print(f"Error loading comments: {e}")
         return {}
     
     def save_comments(self, comments):
+        """Save comments to Upstash Redis (same as production)"""
         try:
-            with open(self.COMMENTS_FILE, 'w') as f:
-                json.dump(comments, f, indent=2)
+            if HAS_REQUESTS:
+                redis_url = os.getenv('KV_REST_API_URL')
+                redis_token = os.getenv('KV_REST_API_TOKEN')
+                
+                if redis_url and redis_token:
+                    url = f"{redis_url}/set/comments"
+                    headers = {
+                        'Authorization': f"Bearer {redis_token}",
+                        'Content-Type': 'application/json'
+                    }
+                    
+                    # Upstash REST API expects: ["SET", "key", "value"]
+                    # But since we're using /set/comments endpoint, just send the value
+                    body = json.dumps(comments)  # Convert dict to JSON string
+                    response = requests.post(url, 
+                                           data=body,
+                                           headers=headers)
+                    if response.status_code == 200:
+                        print("Saved comments to Upstash Redis")
+                    else:
+                        print(f"Failed to save to Upstash: {response.status_code}, {response.text}")
+                else:
+                    print("Upstash Redis credentials not configured")
+            else:
+                print("requests library not available - cannot save to Upstash")
         except Exception as e:
             print(f"Error saving comments: {e}")
     

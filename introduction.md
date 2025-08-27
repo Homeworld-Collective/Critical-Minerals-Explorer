@@ -2,7 +2,7 @@
 
 This explorer analyzes domestic mining capacity and supply chain bottlenecks for 63 critical minerals across the US, using comprehensive data from MSHA mining records. The AI-powered analysis is based on the [USGS critical minerals list published August 25, 2025](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf) and was first made public on August 26, 2025.
 
-Because this was made with an integration of AI tools, this is best used as an explroatory tool. Please validate ideas here for yourself and give us input as you go through! We built an anonymous commenting feature in the Detailed Reports section - anyone can highlight and comment. These comments will be moderated for value and civility. 
+*Because this was made with a rapid integration of AI tools, this site is best used as a tool to bridge the stated urgent needs and the technical bottlenecks ahead. Please validate ideas here for yourself and give us input as you go through! We need input to improve this offering to the community, so we built an anonymous commenting feature in the Detailed Reports section - anyone can highlight and comment (moderated for value and civility).* 
 
 ## High-Priority Targets for Biotechnology Applications
 
@@ -15,6 +15,8 @@ Because this was made with an integration of AI tools, this is best used as an e
 **Strategic Electronics Materials**: [Germanium](germanium), [Gallium](gallium), [Indium](indium), [Tellurium](tellurium) - Byproduct recovery challenges
 
 **Ultra-High-Value Specialty Metals**: [Rhenium](rhenium), [Thulium](thulium) - Extremely low-volume, high-GDP-impact materials with concentrated supply chains
+
+Generally, the Detailed Reports indicate that **processing and separation bottlenecks** offer far more biotechnology impact opportunities than raw resource availability constraints. One conclusion could be that metals like [Tin](tin) and [Tungsten](tungsten) that simply lack domestic high-grade deposits are less amenable to biological solutions than metals with complex separation chemistry challenges.
 
 ---
 
@@ -59,15 +61,6 @@ Some metals use extremely energy-intensive processes where biological alternativ
 ---
 
 ## Strategic Focus Areas
-
-The analysis reveals that **processing and separation bottlenecks** offer far more biotechnology opportunities than raw resource availability constraints. Metals like [Tin](tin) and [Tungsten](tungsten) that simply lack domestic high-grade deposits are less amenable to biological solutions than metals with complex separation chemistry challenges.
-
-**Highest-impact biotechnology applications** target:
-1. **Rare earth separation chemistry** - potentially revolutionary for domestic processing independence
-2. **Platinum group metal recovery** - critical for automotive and fuel cell applications  
-3. **Battery material extraction** - essential for energy storage supply chains
-4. **Electronic material recovery** - addressing critical supply vulnerabilities in semiconductors
-5. **Ultra-high-value specialty metals** - biotechnology could enable domestic production of materials with massive economic impact despite tiny volumes
 
 The detailed reports provide specific technical data on production capacities, mine locations, employment figures, and supply chain vulnerabilities for each metal. This technical foundation enables targeted biotechnology development focused on the most strategically important and technically feasible opportunities.
 
