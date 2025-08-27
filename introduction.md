@@ -12,6 +12,8 @@ This explorer analyzes domestic mining capacity and supply chain bottlenecks for
 
 **Strategic Electronics Materials**: [Germanium](germanium), [Gallium](gallium), [Indium](indium), [Tellurium](tellurium) - Byproduct recovery challenges
 
+**Ultra-High-Value Specialty Metals**: [Rhenium](rhenium), [Thulium](thulium) - Extremely low-volume, high-GDP-impact materials with concentrated supply chains
+
 ---
 
 ## Technical Bottleneck Clusters
@@ -63,6 +65,7 @@ The analysis reveals that **processing and separation bottlenecks** offer far mo
 2. **Platinum group metal recovery** - critical for automotive and fuel cell applications  
 3. **Battery material extraction** - essential for energy storage supply chains
 4. **Electronic material recovery** - addressing critical supply vulnerabilities in semiconductors
+5. **Ultra-high-value specialty metals** - biotechnology could enable domestic production of materials with massive economic impact despite tiny volumes
 
 The detailed reports provide specific technical data on production capacities, mine locations, employment figures, and supply chain vulnerabilities for each metal. This technical foundation enables targeted biotechnology development focused on the most strategically important and technically feasible opportunities.
 

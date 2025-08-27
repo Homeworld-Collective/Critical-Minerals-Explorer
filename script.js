@@ -16,6 +16,7 @@ class CriticalMineralExplorer {
     async init() {
         this.setupEventListeners();
         await this.loadData();
+        await this.loadCriticalMineralsData(); // Load the CSV data for domestic supply percentages
         this.hideLoading();
         this.renderDashboard();
         this.renderMetalList();
@@ -75,6 +76,31 @@ class CriticalMineralExplorer {
         } catch (error) {
             console.error('Error loading data:', error);
             this.showError('Failed to load mineral data');
+        }
+    }
+
+    async loadCriticalMineralsData() {
+        try {
+            const response = await fetch('./static-criticalminerals-2030estimates-GDP.csv');
+            if (response.ok) {
+                const csvText = await response.text();
+                this.criticalMineralsData = this.parseCriticalMineralsCSV(csvText);
+                
+                // Create a lookup map for domestic supply percentages
+                this.domesticSupplyMap = {};
+                this.criticalMineralsData.forEach(row => {
+                    const metalName = row.Metal?.toLowerCase();
+                    const domesticSupply = row['Percentage on Domestic Supply for Demand 2030'];
+                    if (metalName && domesticSupply) {
+                        this.domesticSupplyMap[metalName] = domesticSupply;
+                    }
+                });
+                
+                console.log('Loaded critical minerals data for domestic supply percentages');
+            }
+        } catch (error) {
+            console.error('Error loading critical minerals data:', error);
+            // Don't fail initialization if this data isn't available
         }
     }
 
@@ -207,12 +233,10 @@ class CriticalMineralExplorer {
     updateSummaryStats() {
         const totalMetals = this.filteredData.length;
         const activeMines = this.filteredData.reduce((sum, metal) => sum + metal.active_mines, 0);
-        const totalProduction = this.filteredData.reduce((sum, metal) => sum + metal.total_estimated_production_mt_per_year, 0);
         const totalEmployment = this.filteredData.reduce((sum, metal) => sum + metal.total_employment, 0);
 
         document.getElementById('total-metals').textContent = totalMetals.toLocaleString();
         document.getElementById('active-mines').textContent = activeMines.toLocaleString();
-        document.getElementById('total-production').textContent = this.formatNumber(totalProduction);
         document.getElementById('total-employment').textContent = totalEmployment.toLocaleString();
     }
 
@@ -246,21 +270,27 @@ class CriticalMineralExplorer {
         const productionClass = `production-${metal.expected_us_production}`;
         const confidenceClass = `confidence-${metal.confidence_level}`;
         
+        // Get domestic supply percentage from the critical minerals data
+        const domesticSupplyPct = this.domesticSupplyMap?.[metal.metal.toLowerCase()] || 'N/A';
+        
+        // Calculate color based on percentage
+        const percentageColor = this.getPercentageColor(domesticSupplyPct);
+        
         return `
             <div class="metal-card" onclick="explorer.showMineDetails('${metal.metal}')">
                 <div class="metal-header">
                     <h3 class="metal-name">${metal.metal}</h3>
-                    <span class="production-badge ${productionClass}">${metal.expected_us_production}</span>
+                    <span class="production-badge" style="background-color: ${percentageColor}; color: #fff; font-weight: bold;">${domesticSupplyPct}</span>
                 </div>
                 
                 <div class="metal-stats">
                     <div class="stat">
-                        <div class="stat-value">${metal.active_mines}</div>
-                        <div class="stat-label">Active Mines</div>
+                        <div class="stat-value" style="color: #000;">${metal.active_mines}</div>
+                        <div class="stat-label" style="color: #333;">Active Mines</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-value">${this.formatNumber(metal.total_estimated_production_mt_per_year)}</div>
-                        <div class="stat-label">Production (MT/yr)</div>
+                        <div class="stat-value" style="color: #000;">${this.formatNumber(metal.total_estimated_production_mt_per_year)}</div>
+                        <div class="stat-label" style="color: #333;">Est. Production (MT/yr)</div>
                     </div>
                 </div>
                 
@@ -477,6 +507,40 @@ class CriticalMineralExplorer {
         return tocHtml;
     }
 
+    getPercentageColor(percentageStr) {
+        // Handle non-numeric values
+        if (percentageStr === 'N/A' || !percentageStr) {
+            return '#6b7280'; // Gray for unknown values
+        }
+        
+        // Extract numeric value from percentage string
+        const numericValue = parseFloat(percentageStr.toString().replace('%', ''));
+        
+        if (isNaN(numericValue)) {
+            return '#6b7280'; // Gray for invalid values
+        }
+        
+        // Clamp value between 0 and 100 for color calculation
+        const clampedValue = Math.min(100, Math.max(0, numericValue));
+        
+        // Calculate color based on percentage
+        if (clampedValue <= 50) {
+            // Red to Yellow (0% to 50%)
+            const ratio = clampedValue / 50;
+            const red = 220; // Keep red high
+            const green = Math.round(ratio * 200); // Increase green from 0 to 200
+            const blue = 0;
+            return `rgb(${red}, ${green}, ${blue})`;
+        } else {
+            // Yellow to Green (50% to 100%)
+            const ratio = (clampedValue - 50) / 50;
+            const red = Math.round(220 - (ratio * 180)); // Decrease red from 220 to 40
+            const green = Math.round(200 + (ratio * 55)); // Increase green from 200 to 255
+            const blue = 0;
+            return `rgb(${red}, ${green}, ${blue})`;
+        }
+    }
+
     createHeaderId(text) {
         // Create a URL-safe ID from header text
         return text
@@ -653,7 +717,9 @@ class CriticalMineralExplorer {
         
         // Extract the mines array from the data structure
         let mines = [];
-        if (mineData && mineData.all_identified_mines && Array.isArray(mineData.all_identified_mines)) {
+        if (mineData && mineData.mines && Array.isArray(mineData.mines)) {
+            mines = mineData.mines;
+        } else if (mineData && mineData.all_identified_mines && Array.isArray(mineData.all_identified_mines)) {
             mines = mineData.all_identified_mines;
         } else if (Array.isArray(mineData)) {
             mines = mineData;
@@ -670,15 +736,15 @@ class CriticalMineralExplorer {
         } else {
             // Show summary statistics if available
             let summaryHtml = '';
-            if (mineData.summary_statistics) {
-                const stats = mineData.summary_statistics;
+            if (mineData.summary) {
+                const stats = mineData.summary;
                 summaryHtml = `
-                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; color: #000;">
                         <h4 style="margin-bottom: 0.5rem; color: #2c3e50;">Summary Statistics</h4>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; color: #333;">
                             <div><strong>Total Mines:</strong> ${stats.total_mines_identified || 0}</div>
-                            <div><strong>Active Mines:</strong> ${stats.active_production_mines || 0}</div>
-                            <div><strong>Total Production:</strong> ${this.formatNumber(stats.total_estimated_production_mt_per_year || 0)} MT/yr</div>
+                            <div><strong>Active Mines:</strong> ${stats.active_mines || 0}</div>
+                            <div><strong>Total Est. Production:</strong> ${this.formatNumber(stats.total_estimated_production_mt_per_year || 0)} MT/yr</div>
                             <div><strong>Total Employment:</strong> ${(stats.total_employment || 0).toLocaleString()}</div>
                         </div>
                     </div>
@@ -724,8 +790,8 @@ class CriticalMineralExplorer {
         const status = mine.status || 'N/A';
         const mineType = mine.mine_type || 'N/A';
         const operator = mine.operator || 'N/A';
-        const employees = mine.employees_reported || mine.employees || 0;
-        const production = mine.estimated_annual_production_mt || mine.estimated_annual_production_mt || 0;
+        const employees = mine.employees || mine.employees_reported || 0;
+        const production = mine.estimated_annual_production_mt || 0;
         const primarySic = mine.primary_sic || mine.sic || 'N/A';
         const isActive = mine.is_active_producer !== undefined ? (mine.is_active_producer ? 'Active' : 'Inactive') : status;
         

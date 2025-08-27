@@ -61,6 +61,22 @@
 
             <!-- Dashboard Tab -->
             <div id="dashboard-tab" class="tab-content">
+                <!-- MSHA Data Explanation Panel -->
+                <div class="report-viewer" style="margin-bottom: 2rem;">
+                    <div class="report-content" style="padding: 1.5rem;">
+                        <h2 style="margin-top: 0; margin-bottom: 1rem; color: #4ade80;">MSHA Mining Data Overview</h2>
+                        <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+                            This dashboard displays mining data extracted from the Mine Safety and Health Administration (MSHA) database, covering 91,307+ US mining operations. The data includes active mines, employment figures, and production estimates for critical minerals based on SIC codes and keyword matching, and filtered for the 63 critical minerals of interest here.
+                        </p>
+                        <p style="margin-bottom: 0; color: rgba(255, 255, 255, 0.8);">
+                            <strong>Technical details:</strong> 
+                            <a href="https://github.com/dgoodwin208/Critical-Minerals-Explorer/tree/main/msha_scraper" target="_blank" style="color: #4ade80; text-decoration: underline;">
+                                <i class="fab fa-github"></i> View code on GitHub
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                
                 <div class="dashboard-controls">
                     <div class="search-filter">
                         <input type="text" id="search-input" placeholder="Search metals..." />
@@ -92,10 +108,6 @@
                     <div class="stat-card">
                         <h3 id="active-mines">0</h3>
                         <p>Active Mines</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 id="total-production">0</h3>
-                        <p>Total Production (MT/yr)</p>
                     </div>
                     <div class="stat-card">
                         <h3 id="total-employment">0</h3>
@@ -155,9 +167,9 @@
                                 <thead>
                                     <tr>
                                         <th>Metal</th>
-                                        <th>Current Production (tons)</th>
+                                        <th>Current Est. Production (tons)</th>
                                         <th>Demand 2030 (tons)</th>
-                                        <th>Supply 2030 (tons)</th>
+                                        <th>Est. Supply 2030 (tons)</th>
                                         <th>Domestic Supply %</th>
                                         <th>Primary Bottleneck</th>
                                         <th>GDP Impact</th>
