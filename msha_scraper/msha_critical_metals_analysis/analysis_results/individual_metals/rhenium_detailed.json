@@ -1,0 +1,15 @@
+{
+  "metal": "rhenium",
+  "analysis_date": "2025-08-27T10:27:37.327263",
+  "summary": {
+    "metal": "rhenium",
+    "total_mines_identified": 0,
+    "active_mines": 0,
+    "total_estimated_production_mt_per_year": 0,
+    "total_employment": 0,
+    "confidence_level": "low",
+    "method": "controlled_keyword",
+    "notes": "Byproduct of molybdenum processing"
+  },
+  "mines": []
+}

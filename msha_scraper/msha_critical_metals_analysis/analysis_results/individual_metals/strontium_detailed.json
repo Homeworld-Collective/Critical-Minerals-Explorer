@@ -1,0 +1,15 @@
+{
+  "metal": "strontium",
+  "analysis_date": "2025-08-27T10:27:37.451698",
+  "summary": {
+    "metal": "strontium",
+    "total_mines_identified": 0,
+    "active_mines": 0,
+    "total_estimated_production_mt_per_year": 0,
+    "total_employment": 0,
+    "confidence_level": "low",
+    "method": "controlled_keyword",
+    "notes": "Limited US strontium mineral production"
+  },
+  "mines": []
+}

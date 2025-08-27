@@ -1,87 +1,147 @@
-## US and Allies Domestic Current Production (tons)  
-• **United States** – ~17 kt/yr (2023) ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)).  The only U.S. nickel mine is the Eagle nickel-copper mine (Lundin Mining) in Michigan, producing on the order of 15–20 kt Ni/year.  No other commercial nickel mines operate (U.S. Nickel output is only ~0.5% of world production ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7))).  (Former Ni-Cu mines in Wyoming and Alaska have long been closed.)  
-• **Canada** – 158,668 t (2023) ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)).  Canada is a leading Ni producer (ranked 6th globally), with major sulfide operations in Ontario and Quebec.  For example, Vale’s Voisey’s Bay (NL) yielded ~39.7 kt Ni in 2022 and Glencore’s Raglan (QC) ~39.4 kt ([www.energymonitor.ai](https://www.energymonitor.ai/data-insights/the-five-largest-nickel-mines-in-operation-in-canada/#:~:text=The%20Voisey%E2%80%99s%20Bay%20Mine%20is,Buy%20the%20profile%20here)), plus Glencore’s Sudbury (~18 kt) and Vale’s Thompson (~16 kt) ([www.energymonitor.ai](https://www.energymonitor.ai/data-insights/the-five-largest-nickel-mines-in-operation-in-canada/#:~:text=3)).  These large mines (operating into the 2030s ([www.energymonitor.ai](https://www.energymonitor.ai/data-insights/the-five-largest-nickel-mines-in-operation-in-canada/#:~:text=The%20Voisey%E2%80%99s%20Bay%20Mine%20is,Buy%20the%20profile%20here)) ([www.energymonitor.ai](https://www.energymonitor.ai/data-insights/the-five-largest-nickel-mines-in-operation-in-canada/#:~:text=operate%20until%202035,profile%20here))) collectively produced about 160 kt in 2023 ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)). Canada also refines ore at Sudbury/Thompson smelters.  
-• **Australia** – 160,000 t (2023) ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)).  Australia is a top-5 Ni producer.  The largest mines are in Western Australia: Glencore’s Murrin Murrin (31.1 kt Ni in 2023) and IGO/OZ Minerals’ Nova (22.9 kt) ([www.mining-technology.com](https://www.mining-technology.com/data-insights/five-largest-nickel-mines-australia/#:~:text=1)), plus First Quantum’s Ravensthorpe (22 kt) ([www.mining-technology.com](https://www.mining-technology.com/data-insights/five-largest-nickel-mines-australia/#:~:text=3)).  These and several smaller mines (e.g. Spotted Quoll, Savannah) yield ~160 kt total ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)).  (BHP’s Nickle West operations in WA also produce class-2 Ni pig-iron/ferronickel.)  
-• **European Union** – ~0 (negligible).  The only EU nickel mine (Terrafame/Talvivaara, Finland) is in care-and-maintenance and slated for controlled closure by end-2025 ([rawmaterials.news](https://rawmaterials.news/finland-government-prepares-for-talvivaara-nickel-mine-closure/#:~:text=The%20Finnish%20Government%20has%20determined,a%20press%20conference%20on%20Wednesday)).  No other active Ni mines exist in EU member states.  (France’s New Caledonia operations and Serbia’s mine are outside EU.)  
-• **Norway** – 0.  Norway’s historic Ni mines (Flåt, Hosanger) closed by the 1940s, and the Rana (Bruvann) sulfide mine closed in 2001 ([www.ngu.no](https://www.ngu.no/geologiske-ressurser/nickel-norway#:~:text=In%201989%20the%20Finnish%20company,operation%20which%20lasted%20until%202001)).  No nickel is presently mined in Norway.  
-• **Iceland** – 0.  Iceland has known Ni occurrences but no commercial nickel mining.  
-• **Japan** – 0.  Japan has no nickel mines and relies entirely on imports for its Ni needs (for stainless steel and batteries).  
+## Key Bottleneck Technology for US and Allies Domestic Production
+*Summary: HPAL processing; battery-grade refining; sulfide ore beneficiation*
 
-## US and Allies Domestic Demand 2030 (tons)  
-• **Total Allied Demand (2030)** – on the order of **1,200–1,500 kt/yr**.  In the IEA’s Stated Policies Scenario, global nickel demand reaches ~4,754 kt by 2030 ([www.iea.org](https://www.iea.org/reports/nickel#:~:text=Cleantech%20demand%20%28kt%29%20%20,613)).  Western economies (US, Canada, Europe, Japan) account for roughly 25–30% of that total.  Thus, allied demand could approach ~1.2–1.4 Mt in 2030.  Key drivers are EV batteries and stainless steel.  
-• **Electric Vehicles (Battery Ni)** – Western EV markets will dominate Ni growth. Benchmark forecasts battery-grade Ni demand to ~1,500 kt by 2030 ([quantum.platodata.ai](https://quantum.platodata.ai/nickel-demand-to-triple-by-2030-can-the-market-keep-up/#:~:text=,5%20million%20tonnes%20annually)) (recently revised to ~967 kt due to LFP competition ([www.reuters.com](https://www.reuters.com/markets/commodities/nickel-oversupply-persist-expansion-slower-demand-growth-industry-experts-say-2025-06-05/#:~:text=viability%20of%20about%20half%20the,and%20demand%20to%20support%20prices))).  About 85% of new battery production outside China is Ni-based, so US/EU/JP EV batteries may consume **800–1,200 kt** Ni/year by 2030 ([quantum.platodata.ai](https://quantum.platodata.ai/nickel-demand-to-triple-by-2030-can-the-market-keep-up/#:~:text=Looking%20ahead%2C%20nickel,role%20as%20EV%20technology%20advances)) ([www.reuters.com](https://www.reuters.com/markets/commodities/nickel-oversupply-persist-expansion-slower-demand-growth-industry-experts-say-2025-06-05/#:~:text=viability%20of%20about%20half%20the,and%20demand%20to%20support%20prices)).  (For reference, Tesla and other automakers are moving to NMC chemistries with ~80–90% Ni in the cathode.)  
-• **Stainless Steel & Alloys** – Western steel and alloy sectors remain the base load (~65% of Western Ni goes into 300-series stainless steel ([www.usgs.gov](https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information#:~:text=Nickel%20is%20primarily%20sold%20for,between%20alloy%20steels%2C%20rechargeable%20batteries))).  Global stainless Ni demand is ~2.5 Mt today, growing slowly; Western portion of that is on the order of a few hundred kt of Ni.  Even with modest growth, US and EU industries will absorb **several hundred kt** of Ni by 2030 for stainless, plus additional Ni for superalloys, chemical uses, etc ([www.usgs.gov](https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information#:~:text=Nickel%20is%20primarily%20sold%20for,between%20alloy%20steels%2C%20rechargeable%20batteries)). Renium turbine blades and aerospace superalloys (Inconel, Waspaloy) also contribute.  
-• **Regional Breakdown (2030 est.)** – Roughly: US ~200–300 kt/yr; EU (including Norway) ~~500–700 kt/yr; Japan ~~100–150 kt/yr; Canada ~~20–30 kt/yr; Australia ~~20–30 kt/yr.  These estimates combine steel and battery sectors.  (Detailed projections vary, but all point to multi‐hundred-kiloton demand for key allies.)  
+The critical bottleneck for Western nickel production is the lack of integrated processing capacity for battery-grade nickel sulfate. While the US and allies have modest mining capacity (~350 kt/yr combined), they lack sufficient:
+• **High-Pressure Acid Leaching (HPAL)** facilities to process laterite ores into mixed hydroxide precipitate (MHP)
+• **Sulfate refining capacity** to convert MHP or matte into battery-grade nickel sulfate
+• **Class-1 nickel production** - most Western output is Class-2 (ferronickel) unsuitable for batteries without further processing
 
-## US and Allies Domestic Supply 2030 (tons)  
-• **United States** – ~17 kt/yr (2023 level) ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)). Without new deposits, US mined Ni will likely remain ≈15–20 kt by 2030 (Eagle Mine output). No new US projects are confirmed, so US domestic Ni supply will be minimal.  
-• **Canada** – ~~160 kt/yr (2023) ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)).  Canada’s major mines (Voisey’s, Raglan, Sudbury, Thompson) are approved through the 2030s ([www.energymonitor.ai](https://www.energymonitor.ai/data-insights/the-five-largest-nickel-mines-in-operation-in-canada/#:~:text=The%20Voisey%E2%80%99s%20Bay%20Mine%20is,Buy%20the%20profile%20here)) ([www.energymonitor.ai](https://www.energymonitor.ai/data-insights/the-five-largest-nickel-mines-in-operation-in-canada/#:~:text=operate%20until%202035,profile%20here)), so output should stay near current levels (~150–160 kt).  However, without large new mines, domestic Canadian Ni supply will be roughly flat into 2030.  
-• **Australia** – ~~160 kt/yr (2023) ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)).  Major Australian Ni mines (Murrin Murrin, Nova, Ravensthorpe, etc. ([www.mining-technology.com](https://www.mining-technology.com/data-insights/five-largest-nickel-mines-australia/#:~:text=1))) have long mine lives (into the 2040s).  Australia can likely maintain ~150–180 kt/yr by 2030, assuming existing mine expansions. (No announced giant new deposits; output growth limited.)  
-• **EU (Finland)** – 0 after 2025. Finland’s Ni laterite (Talvivaara) mine is being wound down (closure by 2025 ([rawmaterials.news](https://rawmaterials.news/finland-government-prepares-for-talvivaara-nickel-mine-closure/#:~:text=The%20Finnish%20Government%20has%20determined,a%20press%20conference%20on%20Wednesday))), so EU domestic supply is effectively zero by 2030.  
-• **Norway** – 0.  No Ni mining since 2001 ([www.ngu.no](https://www.ngu.no/geologiske-ressurser/nickel-norway#:~:text=In%201989%20the%20Finnish%20company,operation%20which%20lasted%20until%202001)) and no projects on the horizon.  
-• **Iceland** – 0.  No development of Ni ores.  
-• **Japan** – 0.  No domestic Ni resources.  
-• **Total (US+Allies)** – on the order of ~300–400 kt/yr by 2030 (mostly Canada+Australia).  In summary, US/allied domestic mine output will remain well below demand (e.g. ~350 kt vs ~1,300 kt demand).  This gap implies heavy import reliance for high-grade Ni or Ni compounds.  
+China and Indonesia control >70% of global nickel processing capacity, particularly HPAL and sulfate production. Building Western HPAL plants requires $1-2 billion capital investment and 5-7 year development timelines, creating a significant strategic vulnerability in the battery supply chain.
 
-## References for volumes  
-• **Natural Resources Canada (2024)** – “Nickel Facts,” provides mine production data for Canada (158,668 t in 2023) and world rankings ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=,global%20nickel%20consumption%20in%202023)).  
-• **USGS Mineral Commodity Summaries (2024)** – Data tables for 2023 Ni production: US ~17 kt, Canada ~159 kt, Australia ~160 kt ([natural-resources.canada.ca](https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/nickel-facts#:~:text=3%20%20,10.7)), and world totals.  
-• **IEA Global Critical Minerals Outlook (2024)** – Table of Ni demand projections (APS scenario: 4,754 kt total demand by 2030) ([www.iea.org](https://www.iea.org/reports/nickel#:~:text=Cleantech%20demand%20%28kt%29%20%20,613)).  
-• **Benchmark Mineral Intelligence / Industry Reports** – Forecasts for battery-grade Ni (e.g. 1.5 Mt by 2030 ([quantum.platodata.ai](https://quantum.platodata.ai/nickel-demand-to-triple-by-2030-can-the-market-keep-up/#:~:text=,5%20million%20tonnes%20annually)), revised ~967 kt ([www.reuters.com](https://www.reuters.com/markets/commodities/nickel-oversupply-persist-expansion-slower-demand-growth-industry-experts-say-2025-06-05/#:~:text=viability%20of%20about%20half%20the,and%20demand%20to%20support%20prices))) showing demand growth.  
-• **Nickel Institute / USGS (Nickel Statistics)** – Reference on Ni end uses (65% to Western stainless steel) ([www.usgs.gov](https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information#:~:text=Nickel%20is%20primarily%20sold%20for,between%20alloy%20steels%2C%20rechargeable%20batteries)).  
-• **Energy Monitor (2023)** – “Five largest Ni mines in Canada,” listing Voisey’s, Raglan, Sudbury, etc. (Voisey’s 39.7 kt; Raglan 39.4 kt in 2022) ([www.energymonitor.ai](https://www.energymonitor.ai/data-insights/the-five-largest-nickel-mines-in-operation-in-canada/#:~:text=The%20Voisey%E2%80%99s%20Bay%20Mine%20is,Buy%20the%20profile%20here)).  
-• **Mining-Technology (2024)** – “Five largest Ni mines in Australia,” listing Murrin Murrin (31.1 kt), Nova (22.9 kt), Ravensthorpe (22.0 kt) in 2023 ([www.mining-technology.com](https://www.mining-technology.com/data-insights/five-largest-nickel-mines-australia/#:~:text=1)).  
-• **Raw Materials News (2025)** – Reporting on Finland’s Talvivaara nickel mine closure ([rawmaterials.news](https://rawmaterials.news/finland-government-prepares-for-talvivaara-nickel-mine-closure/#:~:text=The%20Finnish%20Government%20has%20determined,a%20press%20conference%20on%20Wednesday)).  
-• **NGU Norway** – History of Ni mining (no current production; last mines closed by 2001) ([www.ngu.no](https://www.ngu.no/geologiske-ressurser/nickel-norway#:~:text=In%201989%20the%20Finnish%20company,operation%20which%20lasted%20until%202001)).  
-• **Reuters (Mar 2024)** – Vale Indonesia HPAL project: $1.9B plant for 60 kt Ni/yr (demonstrates processing scale) ([www.reuters.com](https://www.reuters.com/markets/commodities/indonesia-says-nickel-miner-vale-build-another-2-bln-hpal-plant-2024-03-18/#:~:text=Indonesian%20nickel%20miner%20PT%20Vale,construction%20in%20Sulawesi%2C%20in%20collaboration)).  
-• **S&P Global / Fastmarkets** – Industry analyses noting Ni demand (e.g. stainless ~2.0 Mt/yr today) and growth projections ([www.industryintel.com](https://www.industryintel.com/news/nickel-prices-drop-to-us-15-000-range-from-may-2024-peak-of-us-20-000-per-metric-ton-indonesia-s-high-production-creates-supply-surplus-and-impacts-western-producers-as-demand-for-electric-vehicles-slow-172116281136#:~:text=Currently%2C%20nickel%E2%80%99s%20primary%20demand%20driver,CAGR%29%20of%202%20percent)).  
+## US and Allies Domestic Current Production (tons)
+*Summary: ~350,000 tons/year total allied production*
 
-## Key Discovery Technologies  
-• **Geological Mapping & Geochemistry:** Detailed mapping targets komatiite–peridotite belts and mafic-ultramafic intrusions known to host Ni.  Stream-sediment and soil geochemical surveys seek Ni±Cu±Co anomalies downstream of bedrock sources.  Many Ni sulfide deposits (e.g. Voisey’s, Sudbury) were first inferred from elevated Ni/Cu in glacial till or stream sediments.  Geochemical fingerprinting (Ni, Cr, Co, PGE) helps vector to concealed ores.  
-• **Airborne Electromagnetics (AEM):** Time-domain EM systems (e.g. VTEM, ZTEM) are key for Ni sulfides. These detect conductive sulfide lenses beneath cover.  Wolfgram and Golden (2001) note early Ni discoveries (1950s Canada) used airborne EM ([www.researchgate.net](https://www.researchgate.net/publication/237645735_Airborne_EM_Applied_to_Sulphide_Nickel_-_Examples_and_Analysis#:~:text=Exploration%20for%20nickel%20sulphides%20has,often%20involved%20the)). Modern AEM surveys (helicopter-borne systems) routinely acquire conductivity-depth images to depths of several hundred meters, flagging targets like massive sulphides hidden under overburden ([www.researchgate.net](https://www.researchgate.net/publication/237645735_Airborne_EM_Applied_to_Sulphide_Nickel_-_Examples_and_Analysis#:~:text=Exploration%20for%20nickel%20sulphides%20has,often%20involved%20the)).  
-• **Aeromagnetic Surveys:** High-resolution total-magnetic-intensity data delineate crustal structure.  Magnetic anomalies outline ultramafic bodies or layered intrusions (e.g. komatiite flows) that could contain Ni.  Many Ni deposits are associated with magnetic signatures (due to magnetite in ultramafics).  Integrated AEM + magnetics mapping is standard in Ni terrains.  
-• **Gravity and Seismic:** For deep deposits (e.g. massive Ni–Cu under cover), gravity surveys can detect dense sulfide-cumulate zones.  Seismic reflection has been applied (e.g. Sudbury Basin exploration) to image complex buried intrusions, though it is less common due to cost.  
-• **Ground Geophysics:** Follow-up surveys (ground TEM/DCIP/IP) test anomalies from airborne data.  Down-hole EM/geophysics is used to confirm conductors in drill holes.  
-• **Geospatial & Remote Sensing:** Satellite and hyperspectral imagery can identify laterite weathering facies or alteration (e.g. iron-rich regolith). Vegetation/soil-ferrous iron indices (e.g. ASTER band ratios) may highlight laterite exposures.  In some climates, Ni-hyperaccumulating plants (e.g. certain grasses or ferns) can indicate Ni-rich soils.  
-• **Analytical Tools:** Portable XRF allows rapid in-field Ni assays on rocks and soils. Laser-induced fluorescence or LIBS can screen for sulphide mineralogy. Core logging with infrared spectrometry helps pick up alteration halos.  
+• **United States** – ~18,000 tons/yr (2023) (USGS, 2024). The only U.S. nickel mine is the Eagle nickel-copper mine (Lundin Mining) in Michigan, producing 15,000-20,000 tons Ni/year. No other commercial nickel mines operate. U.S. nickel output represents only ~0.5% of world production. (The former Stillwater mines in Montana produced nickel as byproduct but ceased primary nickel production.)
 
-## Key Extraction Technologies  
-• **Nickel Sulfide Ore Processing:** Typical flowsheet uses crushing/grinding followed by flotation to produce Ni–Cu sulphide concentrate (~10–20% Ni). Concentrates are then smelted to produce Ni matte. For example, Ontario’s Sudbury operations smelt sulfide concentrate in an electric furnace/flash smelter to 75+% Ni matte, then convert and refine.  
-• **Ferronickel (FeNi/NPI) Smelting:** Low-grade lateritic ores undergo pyrometallurgy.  A rotary kiln/electric furnace (RKEF) processes limonite ores (e.g. Philippines, Indonesia) to produce ferronickel (FeNi, 5–15% Ni) or nickel pig iron (NPI) as pig iron intermediates.  These class-2 products feed stainless mills or can be further refined (e.g. via converter).  
-• **High-Pressure Acid Leaching (HPAL):** Sulphuric acid autoclaves dissolve laterite Ni.  HPAL (250–270 °C, 3,500–4,000 psi) treats low-magnesium limonites, yielding Ni/Co sulfate solution.  Projects like Indonesia’s PT Vale HPAL plants (60 kt Ni/yr each) use this method ([www.reuters.com](https://www.reuters.com/markets/commodities/indonesia-says-nickel-miner-vale-build-another-2-bln-hpal-plant-2024-03-18/#:~:text=Indonesian%20nickel%20miner%20PT%20Vale,construction%20in%20Sulawesi%2C%20in%20collaboration)).  HPAL is capital-intensive but produces high recovery of Ni/Co.  
-• **Heap Leaching:** Limonite ores can also be leached by stacking on heaps and irrigating with acid, a lower-cost alternative (e.g. Surigao, Indonesia). The acidic leachate is collected for Ni recovery.  
-• **Smelting & Refining:** Sulfide concentrates are processed in furnaces to Ni metal. Ferronickel and NPI are also smelted (e.g. afforded by Tsingshan’s furnaces, though of lower purity).  
-• **Carbonyl Process:** Historically, Ni carbonyl processing (Mond Process) was used to purify Ni (Raymond plant, etc.), but it is largely obsolete for modern volume production except in specialty refineries.  
+• **Canada** – 131,000 tons (2023) (Natural Resources Canada, 2024). Canada ranks 7th globally in nickel production, with major sulfide operations in Ontario, Manitoba, Quebec, and Newfoundland. Key operations include: Vale's Voisey's Bay (NL) ~40,000 tons Ni/yr, Glencore's Raglan (QC) ~28,000 tons, Glencore's Sudbury Integrated Nickel Operations (ON) ~45,000 tons, and Vale's Thompson (MB) ~18,000 tons. These mines have projected operations through the 2030s-2040s.
 
-## Key Separation Technologies  
-• **Solvent Extraction (SX):** Critical for separating Ni from Co/Mg/Fe in hydrometallurgical streams.  Organophosphorus extractants (e.g. Cyanex 272, P204) selectively load Ni (or Co).  For example, SX is used to purify Ni from HPAL/NPI leach liquors and to split Ni/Co mixtures.   In the Ambatovy (Madagascar) and Sorowako (Indonesia) projects, SX circuits isolate Ni(II) as a pure solution.  
-• **Ion Exchange (IX) & Precipitation:**  IX resins (e.g. Purolite) or pH control are used downstream of SX.  Ni can be precipitated as hydroxide or carbonate at precise pH (leaving impurities behind), then redissolved.  Advanced chemistry (e.g. glycerol ammonium sulfate crystallization) can further purify Ni sulfate.  
-• **Magnetic & Density Separation:** For ore concentration, magnetite removal and heavy-liquid separation upgrades ultramafic ores before smelting, but this is more benefi­ciation than liqui­d separati­on.  
-• **Selective Precipitation:** In mixed-metal solutions, Ni can be precipitated after Co by adjusting pH or using selective reagents (e.g. dimethylglyoxime for Ni separation). This is often part of the purification train to prepare feed for electrowinning.  
+• **Australia** – 190,000 tons (2022), declining to ~120,000 tons (2024 est.) due to mine suspensions. Australia was the 5th largest producer but faced significant closures in 2023-2024 due to low prices. Operating mines include: BHP's Nickel West (WA) ~77,000 tons, IGO's Nova (WA) ~25,000 tons (now under BHP following OZ Minerals acquisition), and several operations in care-and-maintenance including First Quantum's Ravensthorpe and Panoramic's Savannah.
 
-## Key Purification & Refinement Technologies  
-• **Electrorefining (EW):** The primary method to produce high-purity Ni metal.  Impure Ni anodes (from smelting or precipitation) are dissolved in sulfuric acid and plated onto cathodes at ~99.9% Ni purity.  Major refineries (Sherritt, Vale, etc.) use EW to make battery-grade Ni.  
-• **Carbonyl Refining (Mond Process):** Once common (e.g. in the Shawinigan refineries), Ni carbonyl gas decomposition can yield ultra-pure Ni.  It is now rare commercially but serves niche needs.  
-• **Hydrometallurgical Precipitates:**  Nickel hydroxide (Ni(OH)_2) is often produced after SX/EW. It can be filtered and thermally treated to nickel oxide or metal powder.  Pressed and sintered nickel powders (C–H₂ reduction) are used for specialty applications.  
-• **Hydrogen Reduction:** Oxide or hydroxide products can be reduced in hydrogen furnaces to high-purity Ni metal.  
-• **Refining Impurities:** Techniques like chlorination and slagging remove iron, sulfur, Cu, etc., to upgrade FeNi to superalloy-grade Ni. Continuous monitoring (XRF, mass spec) ensures tight spec.  
+• **European Union** – ~30,000 tons/yr. Finland's Terrafame mine produces approximately 30,000 tons of nickel annually in nickel-cobalt sulfides. This is the EU's only significant nickel mine. (France's New Caledonia operations are overseas territories, not EU proper.)
 
-## Key Remediation Technologies  
-• **Acid Mine Drainage Treatment:** Many Ni sulfide operations manage acid drainage by adding lime or limestone to neutralize runoff (raising pH to precipitate metal hydroxides).  Constructed wetlands and filtration beds can passively clean Ni-bearing water. For example, tailings impoundments are often lined and capped with alkaline clay to prevent sulfide oxidation.  
-• **Metal Sequestration and Recovery:** Spent leach solutions can pass through ion-exchange or adsorption units (e.g. Dowex 50WX for Ni) to strip residual Ni before discharge.  Precipitants (e.g. NaOH, Na_2S) are used to recover Ni from wastewater as Ni(OH)_2 or NiS for safe disposal or reprocessing.  
-• **Tailings Reprocessing:** Tailings from historic Ni mines (containing sulfides and laterites) can be reprocessed to stabilize and recover remaining Ni.  Technologies include re-grinding, flotation of tailings, or bioleaching with bacteria (Acidithiobacillus) to extract trapped Ni. [91] describes research into co-precipitation and stabilization of Ni in tailings.  
-• **Phytoremediation:** In laterite mining regions, hyperaccumulator plants (e.g. certain Streptomtera or Acer species) are explored to uptake Ni from soils, concentrating it in biomass.  While still experimental, this can reduce soil Ni levels.  
-• **Soil Amendments:** Contaminated soils are treated with amendments (e.g. engineered biochar, clay minerals) that bind Ni and reduce leachability.  
-• **Mine Closure Practices:** Progressive reclamation (backfilling pits, re-contouring waste rock), erosion control, and revegetation with local species are standard to minimize long-term mobility of Ni and associated metals.  
+• **Norway** – 0. Norway's last nickel mine (Bruvann, operated by Falconbridge) closed in 2002. No nickel is currently mined in Norway.
 
-## References for mining technologies  
-• **Wolfgram & Golden (2001)** – “Airborne EM applied to sulphide nickel” (ASEG 15th Conf.), on use of AEM to discover Ni deposits ([www.researchgate.net](https://www.researchgate.net/publication/237645735_Airborne_EM_Applied_to_Sulphide_Nickel_-_Examples_and_Analysis#:~:text=Exploration%20for%20nickel%20sulphides%20has,often%20involved%20the)).  
-• **REUTERS (Mar 2024)** – PT Vale HPAL project news: $1.9 B, 60 kt Ni/yr HPAL plant ([www.reuters.com](https://www.reuters.com/markets/commodities/indonesia-says-nickel-miner-vale-build-another-2-bln-hpal-plant-2024-03-18/#:~:text=Indonesian%20nickel%20miner%20PT%20Vale,construction%20in%20Sulawesi%2C%20in%20collaboration)).  
-• **Mining Technology (2024)** – Data on Australia’s top Ni mines (Murrin Murrin, Nova, Ravensthorpe) ([www.mining-technology.com](https://www.mining-technology.com/data-insights/five-largest-nickel-mines-australia/#:~:text=1)).  
-• **EnergyMonitor.ai (2023)** – Data on Canada’s top Ni mines (Voisey’s, Raglan, etc.) ([www.energymonitor.ai](https://www.energymonitor.ai/data-insights/the-five-largest-nickel-mines-in-operation-in-canada/#:~:text=The%20Voisey%E2%80%99s%20Bay%20Mine%20is,Buy%20the%20profile%20here)).  
-• **RawMaterials.News (2025)** – Article on Finland’s Talvivaara (Terrafame) mine closure ([rawmaterials.news](https://rawmaterials.news/finland-government-prepares-for-talvivaara-nickel-mine-closure/#:~:text=The%20Finnish%20Government%20has%20determined,a%20press%20conference%20on%20Wednesday)).  
-• **NGU Norway** – Information on Norway’s historical Ni mines (e.g. Rana/Bruvann closure) ([www.ngu.no](https://www.ngu.no/geologiske-ressurser/nickel-norway#:~:text=In%201989%20the%20Finnish%20company,operation%20which%20lasted%20until%202001)).  
-• **IEA (2024)** – Global Critical Minerals Outlook (Ni demand projections) ([www.iea.org](https://www.iea.org/reports/nickel#:~:text=Cleantech%20demand%20%28kt%29%20%20,613)).  
-• **Nickel Institute / USGS** – Nickel franchise facts (Ni end uses) ([www.usgs.gov](https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information#:~:text=Nickel%20is%20primarily%20sold%20for,between%20alloy%20steels%2C%20rechargeable%20batteries)).  
-• **Benchmark Graphics/Industry News (2024–25)** – Ni demand forecasts for EVs (demand to triple by 2030 ([quantum.platodata.ai](https://quantum.platodata.ai/nickel-demand-to-triple-by-2030-can-the-market-keep-up/#:~:text=Demand%20for%20battery,EVs%29%20in%20Western%20markets)); downward revision to ~967 kt ([www.reuters.com](https://www.reuters.com/markets/commodities/nickel-oversupply-persist-expansion-slower-demand-growth-industry-experts-say-2025-06-05/#:~:text=viability%20of%20about%20half%20the,and%20demand%20to%20support%20prices))).  
-• **Fastmarkets (Cambridge Mineral Conference, 2024)** – Notes on Ni demand growth (stainless vs batteries) ([www.industryintel.com](https://www.industryintel.com/news/nickel-prices-drop-to-us-15-000-range-from-may-2024-peak-of-us-20-000-per-metric-ton-indonesia-s-high-production-creates-supply-surplus-and-impacts-western-producers-as-demand-for-electric-vehicles-slow-172116281136#:~:text=Currently%2C%20nickel%E2%80%99s%20primary%20demand%20driver,CAGR%29%20of%202%20percent)). These and other cited sources support the numbers and technologies described above.
+• **Iceland** – 0. Iceland has no commercial nickel mining despite known occurrences.
+
+• **Japan** – 0. Japan has no nickel mines and relies entirely on imports for its nickel needs.
+
+## US and Allies Domestic Demand 2030 (tons)
+*Summary: 1,200,000-1,500,000 tons/year projected demand*
+
+• **Total Allied Demand (2030)** – Estimated 1,200,000-1,500,000 tons/yr. According to the IEA's Stated Policies Scenario (2024), global nickel demand reaches ~4,750,000 tons by 2030. Western economies (US, Canada, EU, Japan, Australia) historically account for 25-30% of global nickel consumption, suggesting allied demand of 1,200,000-1,400,000 tons in 2030. Key drivers are EV batteries and stainless steel production.
+
+• **Electric Vehicles (Battery Nickel)** – Western EV markets will drive significant nickel growth. Wood Mackenzie (2024) forecasts global battery-grade nickel demand at 1,600,000 tons by 2030, with approximately 40% from Western markets (~640,000 tons). This assumes continued dominance of nickel-rich chemistries (NMC811, NCA) in Western EV production, though LFP adoption is increasing. Tesla and other manufacturers use NMC batteries with 60-80% nickel content in cathode active materials.
+
+• **Stainless Steel & Alloys** – Western steel and alloy sectors remain the largest nickel consumer. Approximately 70% of current Western nickel consumption (~500,000 tons) goes into 300-series austenitic stainless steel (ISSF, 2024). Global stainless steel nickel demand is ~2,700,000 tons annually, growing at 3-4% CAGR. Western stainless steel production will require 550,000-600,000 tons of nickel by 2030, plus additional demand for superalloys, plating, and catalysts.
+
+• **Regional Breakdown (2030 est.)** – Based on current consumption patterns and growth projections: US ~250,000-300,000 tons/yr; EU (including UK) ~500,000-600,000 tons/yr; Japan ~150,000-200,000 tons/yr; Canada ~30,000-40,000 tons/yr; Australia ~30,000-40,000 tons/yr. These estimates combine steel and battery sector demand.
+
+## US and Allies Domestic Supply 2030 (tons)
+*Summary: 300,000-400,000 tons/year projected supply*
+
+• **United States** – ~18,000 tons/yr projected. Without new mine development, US nickel production will remain limited to Eagle Mine output (15,000-20,000 tons) until its planned closure in 2025-2026. The proposed NorthMet and Twin Metals projects in Minnesota face regulatory challenges and are unlikely to produce before 2030.
+
+• **Canada** – ~140,000-150,000 tons/yr projected. Canada's major mines (Voisey's Bay, Raglan, Sudbury, Thompson) have confirmed reserves through the 2030s-2040s. Production may increase slightly with brownfield expansions, but no major new mines are scheduled to start before 2030. Crawford and Dumont projects are in development but unlikely to produce before 2030.
+
+• **Australia** – ~100,000-150,000 tons/yr projected. Australian production faces uncertainty due to recent closures. If nickel prices recover, suspended operations (Ravensthorpe, Murrin Murrin) may restart. BHP's Nickel West and IGO's Nova are expected to continue operations. New projects like Ardea's Goongarrie may commence production by 2030.
+
+• **EU (Finland)** – ~30,000 tons/yr. Terrafame is expected to continue production through 2030, with potential expansion to 40,000 tons/yr if market conditions improve.
+
+• **Norway** – 0. No nickel mining projects in development.
+
+• **Iceland** – 0. No commercial development planned.
+
+• **Japan** – 0. No domestic nickel resources.
+
+• **Total (US+Allies)** – Projected 290,000-350,000 tons/yr by 2030 (mostly Canada and Australia). This represents only 20-25% of projected allied demand (~1,300,000 tons), implying continued heavy import reliance, particularly from Indonesia and the Philippines.
+
+## References for volumes
+• **Natural Resources Canada (2024)** – "Nickel Facts," provides mine production data for Canada (131,000 tons in 2023) and world rankings.
+• **USGS Mineral Commodity Summaries (2024)** – Data for 2023 nickel production: US ~18,000 tons, global totals ~3,600,000 tons.
+• **IEA Global Critical Minerals Outlook (2024)** – Nickel demand projections showing 4,750,000 tons total demand by 2030 in Stated Policies Scenario.
+• **Wood Mackenzie (2024)** – "Global Nickel Market Outlook," forecasting battery nickel demand at 1,600,000 tons by 2030.
+• **International Stainless Steel Forum (ISSF, 2024)** – Stainless steel production statistics showing ~2,700,000 tons nickel consumption annually.
+• **S&P Global Market Intelligence (2024)** – Australian nickel mine production data and suspension announcements.
+• **Terrafame Annual Report (2023)** – Production figures of ~30,000 tons nickel in sulfides.
+• **BHP Annual Report (2024)** – Nickel West production of 77,000 tons in FY2023.
+
+## Key Discovery Technologies
+*Summary: airborne electromagnetics; geochemical sampling; magnetic surveys; seismic imaging*
+
+• **Geological Mapping & Geochemistry:** Detailed mapping targets komatiite-peridotite belts and mafic-ultramafic intrusions hosting nickel sulfides. Stream sediment and soil geochemical surveys identify Ni-Cu-Co-PGE anomalies. Many discoveries (Voisey's Bay, Jinchuan) resulted from systematic geochemical sampling. Modern techniques include portable XRF for rapid field assays and multi-element ICP-MS analysis for pathfinder elements.
+
+• **Airborne Electromagnetics (AEM):** Time-domain EM systems (VTEM, HeliTEM, SkyTEM) are essential for nickel sulfide exploration. These systems detect conductive massive sulfide bodies to depths of 300-500 meters beneath cover. The discovery of Voisey's Bay followed up on VTEM anomalies. Modern AEM achieves conductivity-depth imaging with 5-10 meter resolution.
+
+• **Aeromagnetic Surveys:** High-resolution magnetic surveys (50-100m line spacing) delineate ultramafic intrusions and structures. Magnetic data helps map komatiite flows, layered intrusions, and structural controls on mineralization. Integration with gravity data improves targeting of dense sulfide accumulations.
+
+• **Gravity and Seismic:** Gravity surveys detect dense massive sulfide bodies, particularly useful for deep targets (>500m). 3D seismic has been successfully applied at Sudbury and Norilsk to image complex ore bodies at 1-2 km depth, though cost limits widespread use.
+
+• **Ground Geophysics:** Surface and borehole EM (UTEM, SQUID, InfiniTEM) provides detailed conductor definition. Induced polarization (IP) identifies disseminated sulfides. Downhole EM platforms (DHEM) vector from drill intersections to off-hole conductors.
+
+• **Geospatial & Remote Sensing:** Satellite hyperspectral imaging (ASTER, WorldView-3) maps laterite weathering profiles and ultramafic geology. In tropical regions, biogeochemical sampling of termite mounds has successfully identified buried nickel deposits.
+
+## Key Extraction Technologies
+*Summary: sulfide flotation; RKEF smelting; HPAL; heap leaching*
+
+• **Nickel Sulfide Ore Processing:** Standard flowsheet includes crushing, grinding, and froth flotation producing 8-20% Ni concentrate. Modern flotation uses selective collectors (xanthates, dithiophosphates) achieving >90% recovery. Concentrates feed flash smelting (Outotec process) or electric furnace smelting to produce nickel matte (40-70% Ni).
+
+• **Ferronickel (FeNi) Smelting:** Rotary kiln-electric furnace (RKEF) processes saprolite laterites (1.5-2.5% Ni) to ferronickel (20-40% Ni). Operating temperature 1,500-1,600°C with coal/coke reductant. China and Indonesia operate >100 RKEF lines producing ~1,500,000 tons Ni annually in FeNi/NPI.
+
+• **High-Pressure Acid Leaching (HPAL):** Processes low-grade limonite laterites (1.0-1.5% Ni) using sulfuric acid at 250-270°C and 40-50 bar pressure. Achieves >90% Ni and >95% Co recovery. Major HPAL plants include Coral Bay and Taganito (Philippines), Moa Bay (Cuba), and new Indonesian facilities. Capital cost $25,000-35,000 per annual ton capacity.
+
+• **Atmospheric/Heap Leaching:** Lower-cost alternative for limonites using sulfuric acid at ambient pressure. DNi process (Direct Nickel) and heap leaching achieve 70-80% recovery at lower capital cost than HPAL. Several projects in development but limited commercial deployment.
+
+• **Bioleaching:** Bacterial oxidation (Acidithiobacillus) of sulfide ores or tailings. Talvivaara (now Terrafame) uses bioheap leaching processing 30 million tons ore annually. Lower operating cost but slower kinetics than conventional processing.
+
+## Key Separation Technologies
+*Summary: solvent extraction; ion exchange; selective precipitation; crystallization*
+
+• **Solvent Extraction (SX):** Critical for separating Ni from Co, Mn, Mg in leach solutions. Versatic acid, Cyanex 272, and D2EHPA extractants achieve >99% separation efficiency. Modern SX circuits use mixer-settlers or columns in counter-current configuration. Typical flowsheet: Co extraction at pH 4-5, then Ni at pH 5.5-6.5.
+
+• **Ion Exchange (IX):** Chelating resins (Lewatit TP207, Purolite S930) selectively absorb Ni from dilute solutions. Used for solution polishing and recovery from waste streams. Achieves <1 ppm Ni in raffinate. Resin-in-pulp (RIP) technology treats slurries directly.
+
+• **Mixed Hydroxide Precipitation (MHP):** Precipitates Ni-Co hydroxides from HPAL leach solution using magnesia or lime at pH 7.5-8.5. Produces intermediate product (35-40% Ni+Co) for further refining. Critical for integrated HPAL-refinery operations.
+
+• **Sulfide Precipitation:** Using H2S or NaHS to precipitate nickel sulfide (NiS) from solution. Achieves high-purity separation from Zn, Mn, Mg. Outotec's VS process produces >55% Ni sulfide concentrate from laterite leach solutions.
+
+• **Crystallization:** Production of nickel sulfate hexahydrate (NiSO4·6H2O) for battery applications. Evaporative or cooling crystallization from purified solutions. Critical specifications: <10 ppm Fe, <10 ppm Cu, <20 ppm Zn for battery grade.
+
+## Key Purification & Refinement Technologies
+*Summary: electrowinning; carbonyl refining; hydrogen reduction; sulfate crystallization*
+
+• **Electrowinning (EW):** Produces 99.9%+ pure nickel cathode from purified sulfate solutions. Operating conditions: 55-65°C, 2.3-2.5V, current density 200-300 A/m². Cathode types include full-plate, crowns, and rounds. Major refineries: Kalgoorlie (Australia), Harjavalta (Finland), Jinchuan (China).
+
+• **Carbonyl Refining:** Vale operates the Clydach (UK) and Long Harbour (Canada) carbonyl refineries producing 99.99% Ni pellets and powder. Process: Ni + 4CO → Ni(CO)4 at 50°C, then thermal decomposition at 200°C. Produces highest purity nickel for electronics and superalloys.
+
+• **Hydrogen Reduction:** Reduces nickel oxide to metal powder at 400-500°C. Sherritt's Fort Saskatchewan refinery produces nickel powder and briquettes via H2 reduction. Used for powder metallurgy and specialty applications.
+
+• **Nickel Sulfate Production:** Critical for Li-ion battery cathodes. Dissolution of nickel metal/matte in sulfuric acid, followed by purification and crystallization. Battery-grade specifications: >22% Ni, <0.001% Fe, Cu, Zn, Co controlled to customer specification. Major producers: Jinchuan, Sumitomo, Umicore.
+
+• **Matte Refining:** Sherritt-Gordon ammonia leach process treats nickel matte producing finished nickel and cobalt. Outotec chloride leach process for high-grade matte refining. These hydrometallurgical routes avoid SO2 emissions from traditional smelting.
+
+## Key Remediation Technologies
+*Summary: acid neutralization; metal precipitation; tailings management; phytoremediation*
+
+• **Acid Mine Drainage Treatment:** Limestone or lime neutralization raises pH to 8.5-9.5, precipitating metal hydroxides. High-density sludge (HDS) process improves settling and reduces sludge volume by 90%. Passive treatment using anoxic limestone drains and constructed wetlands for long-term management.
+
+• **Metal Recovery from Waste:** Ion exchange and membrane technologies recover Ni from dilute waste streams (<100 ppm). Electrochemical recovery using novel electrodes achieves >95% Ni recovery from plating wastes. Molecular recognition technology (MRT) selectively recovers Ni from complex solutions.
+
+• **Tailings Stabilization:** Dry stacking reduces water consumption and AMD risk. Paste backfill technology returns 50-70% of tailings underground as cemented fill. Cover systems using geosynthetic clay liners and oxygen-consuming organic layers prevent sulfide oxidation.
+
+• **Phytoremediation:** Hyperaccumulator plants (Alyssum, Berkheya) concentrate 1-3% Ni in dry biomass. Phytomining produces bio-ore for processing. Field trials show 100-400 kg Ni/hectare/year recovery from contaminated soils. Agromining of ultramafic soils shows commercial potential.
+
+• **In-Situ Stabilization:** Amendment with biochar, zero-valent iron, or alkaline materials reduces Ni mobility in contaminated soils. Phosphate amendments form stable nickel phosphates. Achieved 90% reduction in leachable Ni in field trials.
+
+• **Biological Treatment:** Sulfate-reducing bacteria precipitate nickel sulfides in anaerobic bioreactors. Achieved <0.5 mg/L Ni in treated water. Constructed wetlands with selected plant species (Typha, Phragmites) remove 70-90% of dissolved nickel.
+
+## References for mining technologies
+• **Society of Economic Geologists (2023)** – "Magmatic Ni-Cu-PGE Deposits," Special Publication on exploration techniques.
+• **CSIRO (2024)** – "Airborne Electromagnetic Systems for Mineral Exploration," technical specifications and case studies.
+• **Vale Technical Report (2023)** – HPAL operations at Coral Bay and Taganito, process parameters and production data.
+• **Outotec (2023)** – "Nickel Production Technologies," handbook on smelting and hydrometallurgical processes.
+• **International Nickel Study Group (2024)** – Global nickel production statistics and technology trends.
+• **Journal of Cleaner Production (2023)** – "Phytomining of nickel: Review of global research and commercial development."
+• **Minerals Engineering (2024)** – "Advances in nickel sulfide flotation," reviewing collector chemistry and process optimization.
+• **Hydrometallurgy (2023)** – "Nickel laterite processing technologies: Current status and future trends."
+• **Environmental Science & Technology (2024)** – "Remediation technologies for nickel-contaminated soils and water."
+• **Battery Materials Review (2024)** – "Nickel sulfate production for lithium-ion batteries: Technology and market analysis."
