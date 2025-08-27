@@ -1,148 +1,219 @@
-# Critical Mineral Explorer Website
+# Critical Mineral Explorer
 
-A comprehensive web application for exploring critical mineral supply chain data for the US and allied nations.
+A comprehensive web application for exploring critical mineral supply chain data for the US and allied nations, built on top of official MSHA (Mine Safety and Health Administration) mining data.
+
+🌐 **Live Demo**: [https://critical-minerals-explorer.vercel.app](https://critical-minerals-explorer.vercel.app)
+
+## Overview
+
+This project analyzes **63 critical metals** across **91,307+ US mining operations** to identify domestic mining capacity, production estimates, and strategic supply chain information. The analysis focuses on metals critical to national security, clean energy, and high-tech manufacturing.
+
+**Key Focus**: Where can biotechnology help critical minerals production in the US? Each report identifies specific constraints limiting domestic production and processing capacity, highlighting opportunities where biological systems could address processing, separation, or environmental challenges.
+
+### What Makes This Unique
+
+- **Comprehensive Data**: Built on the complete MSHA mining database - both active and historical operations
+- **Interactive Exploration**: Web-based dashboard with filtering, search, and detailed mine information
+- **Biotechnology Focus**: Analysis specifically identifies opportunities for biotech applications in mining and processing
+- **Strategic Intelligence**: Identifies domestic production gaps and supply chain vulnerabilities
+- **Production Estimates**: Employment-based modeling provides production capacity estimates
 
 ## Features
 
-### 🏗️ Dashboard
-- **Overview of all 49+ critical minerals** from the MSHA analysis
-- **Interactive filtering** by production level and confidence
+### 🏗️ Interactive Dashboard
+- **Overview of 63 critical metals** with production-level filtering
 - **Search functionality** to quickly find specific metals
 - **Summary statistics** showing total mines, production, and employment
 - **Color-coded production levels**: Significant, Moderate, Limited, Minimal, None, Byproduct, Emerging
 
-### 📊 Detailed Reports
-- **Comprehensive supply chain analysis** for each metal
-- **Technical analysis** including discovery, extraction, separation, purification, and remediation technologies
-- **Market analysis** with production volumes, demand forecasts, and bottlenecks
-- **Source citations** and references
-- **Markdown rendering** of the detailed reports
+### 📊 Detailed Supply Chain Reports
+- **Comprehensive analysis** for each metal including:
+  - Key discovery, extraction, separation, and purification technologies
+  - Production volumes, demand forecasts, and market analysis
+  - Supply chain bottlenecks and technical challenges
+  - **Biotechnology opportunities** where biological systems could improve processes
+- **Source citations** and technical references
+- **Last updated dates** for data freshness
 
-### 🏭 Mine Information
-- **Detailed mine data** from the MSHA database
+### 🏭 Mine Information Database
+- **Detailed mine data** from MSHA database (91,307+ operations)
 - **Mine-specific information**: location, operator, employees, production estimates
-- **Interactive modals** with complete mine details
-- **Confidence levels** and verification methods
+- **Interactive modals** with complete operational details
+- **Geographic coordinates** for mapping applications
+- **Confidence levels** and verification methodologies
 
-### 📈 Analysis
+### 📈 Analysis & Visualization
 - **Production level distribution** charts
-- **Confidence level analysis**
+- **Confidence level analysis** 
 - **Visual data representation** using Chart.js
+- **Employment and capacity metrics**
 
-## File Structure
+## Data Sources & Methodology
 
-```
-GBT/
-├── index.html                  # Main website file
-├── styles.css                  # All styling and responsive design
-├── script.js                   # Application logic and functionality
-├── server.py                   # Local development server
-├── README_website.md           # This file
-│
-├── detailed_reports/           # Generated metal reports
-│   ├── aluminum_report.md
-│   ├── antimony_report.md
-│   ├── summary_aluminum.json
-│   └── ...
-│
-└── msha_scraper/
-    └── msha_critical_metals_analysis/
-        └── analysis_results/
-            ├── summary_reports/
-            │   └── metals_summary.csv    # Main data source
-            └── individual_metals/
-                ├── aluminum_detailed.json
-                ├── antimony_detailed.json
-                └── ...
-```
+### MSHA Mining Database
+- **Source**: Official MSHA Open Government Data Portal
+- **Coverage**: Complete US mining registry (91,307+ operations)
+- **Includes**: Both active (5%) and historical/abandoned (95%) mines
+- **Data Fields**: 59 fields including location, employment, SIC codes, operational status
 
-## Data Sources
+### Critical Metals Selection
+The 63 metals analyzed are based on the August 2025 USGS report "Methodology and Technical Input for the 2025 U.S. List of Critical Minerals" ([USGS OFR 2025-1047](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf)).
 
-1. **metals_summary.csv**: Primary data source containing:
-   - Metal names and production levels
-   - Mine counts and employment figures
-   - Production estimates and confidence levels
-   - Analysis methods used
+### Analysis Methods
+1. **Exact SIC Code Matching** (Highest confidence)
+2. **Controlled Keyword Matching** (Medium confidence)  
+3. **Rare Earth Element Group Analysis**
+4. **Employment-Based Production Estimation**
 
-2. **{metal}_detailed.json**: Individual mine data including:
-   - Mine names, locations, and operators
-   - Production estimates and employee counts
-   - Mine types and operational status
+## Quick Start
 
-3. **{metal}_report.md**: Comprehensive supply chain reports with:
-   - Technical analysis of mining technologies
-   - Market analysis and demand forecasts
-   - Supply chain bottlenecks and challenges
-   - References and citations
+### Option 1: View Online
+Visit [https://critical-minerals-explorer.vercel.app](https://critical-minerals-explorer.vercel.app) to explore the data immediately.
 
-## Running the Website
-
-### Option 1: Local Server (Recommended)
+### Option 2: Run Locally
 ```bash
-python server.py
-```
-This will:
-- Start a local HTTP server on port 8080 (or next available)
-- Automatically open your browser
-- Handle CORS issues for local file access
+# Clone the repository
+git clone https://github.com/dgoodwin208/Critical-Minerals-Explorer.git
+cd Critical-Minerals-Explorer
 
-### Option 2: Direct File Access
-Open `index.html` directly in your browser. Note: Some features may not work due to browser security restrictions with local files.
+# Start local server
+python server.py
+
+# Open browser to http://localhost:8080
+```
+
+### Option 3: Static Files
+Open `index.html` directly in your browser (some features may not work due to CORS restrictions).
 
 ## Technology Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: Custom CSS with Flexbox and Grid
-- **Charts**: Chart.js for data visualization
-- **Markdown**: Marked.js for report rendering
+- **Data Processing**: Python analysis scripts using pandas
+- **Visualization**: Chart.js for interactive charts
+- **Markdown Rendering**: markdown-it for report display
 - **Icons**: Font Awesome
-- **Server**: Python built-in HTTP server
+- **Deployment**: Vercel for hosting
+
+## Project Structure
+
+```
+Critical-Minerals-Explorer/
+├── index.html                          # Main web application
+├── script.js                          # Application logic
+├── styles.css                         # Styling and responsive design
+├── server.py                          # Local development server
+├── introduction.md                     # Biotechnology analysis introduction
+│
+├── detailed_reports/                   # Generated supply chain reports
+│   ├── aluminum_report.md             # Technical analysis per metal
+│   ├── lithium_report.md              # Market analysis & bottlenecks
+│   └── ... (63 metal reports)
+│
+└── msha_scraper/                      # Data analysis backend
+    ├── critical_metals_analyzer.py    # Main analysis engine (63 metals)
+    ├── msha_data_downloader.py       # MSHA data acquisition
+    └── msha_critical_metals_analysis/
+        └── analysis_results/
+            ├── summary_reports/
+            │   └── metals_summary.csv    # Cross-metal statistics
+            └── individual_metals/
+                ├── aluminum_detailed.json  # Mine-level data
+                └── ... (63 metal files)
+```
+
+## Key Findings
+
+### Metals with Strong US Production
+- **Aluminum**: 8 active operations (1.9M MT/year) - major refineries
+- **Zinc**: 15 active mines (8.9M MT/year) - distributed production  
+- **Barite**: 24 active operations (1.9M MT/year) - industrial mineral
+- **Lithium**: Emerging capacity in Nevada and Arkansas
+
+### Critical Supply Chain Gaps
+- **Rare Earth Elements**: Only 17 US operations, concentrated production
+- **Platinum Group Metals**: Limited to Stillwater Complex (Montana)
+- **Strategic Metals**: Heavy import dependence for most specialty metals
+- **Tin**: Zero active US production (verified)
+
+### Biotechnology Opportunities
+The analysis identifies where biological systems could address:
+- **Separation challenges** in rare earth processing
+- **Environmental remediation** of mining waste
+- **Metal recovery** from low-grade ores
+- **Sustainable processing** alternatives to harsh chemicals
+
+## Applications
+
+### Supply Chain Intelligence
+- Identify domestic production capacity by metal
+- Map geographic distribution of critical operations
+- Assess strategic supply vulnerabilities
+- Track industry consolidation trends
+
+### Investment & Policy Analysis  
+- Critical minerals supply security assessment
+- Domestic production capacity gap analysis
+- Regional economic impact evaluation
+- Trade policy scenario planning
+
+### Biotechnology Research
+- Target identification for bio-processing applications
+- Market sizing for biotech mining solutions
+- Technical challenge prioritization
+- Partnership opportunity mapping
 
 ## Browser Compatibility
 
 - ✅ Chrome (recommended)
-- ✅ Firefox
+- ✅ Firefox  
 - ✅ Safari
 - ✅ Edge
 
-## Performance Notes
+## Contributing
 
-- Data is loaded asynchronously for better user experience
-- Reports and mine data are cached after first load
-- Responsive design works on mobile and desktop
-- Charts are rendered only when needed
+We welcome contributions! Areas of particular interest:
+- Additional biotechnology opportunity analysis
+- Enhanced data visualization features
+- Mobile responsiveness improvements
+- Data accuracy verification and updates
 
 ## Data Updates
 
-To update the website with new data:
+To update with new data:
+1. Run the MSHA analysis scripts: `python run_analysis.py`
+2. Update metal reports in `detailed_reports/`
+3. Refresh summary statistics in `metals_summary.csv`
+4. Deploy updated files
 
-1. **Add new metal reports**: Place `{metal}_report.md` files in `detailed_reports/`
-2. **Update mine data**: Place `{metal}_detailed.json` files in the appropriate directory
-3. **Update summary**: Modify `metals_summary.csv` with new/updated metal data
-4. **Refresh the website**: The application will automatically load the new data
+## Limitations & Accuracy
 
-## Troubleshooting
+### Strengths
+- Official MSHA regulatory data source
+- Comprehensive US mining operations coverage
+- Multiple verification methods with confidence scoring
+- Employment-based methodology using industry benchmarks
 
-### CORS Errors
-- Use the provided `server.py` instead of opening files directly
-- Make sure all data files are in the correct directories
+### Limitations
+- Production estimates are modeling-based, not directly reported
+- Some byproduct production may not be captured
+- MSHA focuses on safety/employment, not production volumes
+- Timing lags in database updates
 
-### Missing Data
-- Check that CSV and JSON files are properly formatted
-- Verify file paths match the expected structure
-- Check browser console for specific error messages
+## Citation
 
-### Performance Issues
-- Clear browser cache if data seems outdated
-- Check network tab for failed file loads
-- Reduce number of metals if needed for testing
+When using this analysis:
+```
+Critical Mineral Explorer - MSHA Mining Analysis
+Data Source: Mine Safety and Health Administration (MSHA)
+Analysis Date: August 2025
+Methodology: Employment-based production estimation with metal-specific factors
+URL: https://github.com/dgoodwin208/Critical-Minerals-Explorer
+```
 
-## Future Enhancements
+## License
 
-- [ ] Export functionality for filtered data
-- [ ] Advanced filtering and sorting options
-- [ ] Geographic visualization of mines
-- [ ] Comparison tools between metals
-- [ ] Real-time data updates
-- [ ] User preferences and saved views
+This project analyzes publicly available MSHA government data. The analysis code and methodologies are provided for research and strategic planning purposes.
 
+---
+
+**Built by Daniel Goodwin and Jayme Feyhl-Buska** | [GitHub Repository](https://github.com/dgoodwin208/Critical-Minerals-Explorer)
