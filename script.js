@@ -915,7 +915,7 @@ class CriticalMineralExplorer {
             const supply2030 = this.formatNumber(parseFloat(row['Supply 2030 (tons)'].replace(/,/g, '')) || 0);
             const domesticSupplyPct = row['Percentage on Domestic Supply for Demand 2030'] || '0%';
             const bottleneck = row.Bottleneck || '';
-            const gdpImpact = row['Net decrease in U.S. GDP'] || '0';
+            const gdpImpact = (parseFloat(row['Net decrease in U.S. GDP']) || 0).toLocaleString();
 
             return [
                 `<a href="#reports/${metalName.toLowerCase()}" onclick="app.switchToMetalReport('${metalName.toLowerCase()}'); return false;" style="color: #3498db; text-decoration: underline;">${metalName}</a>`,
