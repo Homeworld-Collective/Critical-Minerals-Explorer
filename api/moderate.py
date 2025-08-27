@@ -4,11 +4,13 @@ import os
 from urllib.parse import parse_qs, urlparse
 
 # Try to import Vercel KV, fall back to dict if not available
+HAS_KV = False
+kv = None
+
 try:
-    from vercel_kv import kv
+    from vercel import kv
     HAS_KV = True
 except ImportError:
-    HAS_KV = False
     print("Warning: Vercel KV not available, using in-memory storage")
 
 class handler(BaseHTTPRequestHandler):
