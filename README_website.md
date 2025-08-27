@@ -46,24 +46,25 @@ GBT/
 │   └── ...
 │
 └── msha_scraper/
-    └── complete_all_metals_analysis/
-        ├── summary_reports/
-        │   └── complete_all_metals_summary.csv    # Main data source
-        └── consolidated_tables/
-            ├── aluminum_detailed_mines.json
-            ├── antimony_detailed_mines.json
-            └── ...
+    └── msha_critical_metals_analysis/
+        └── analysis_results/
+            ├── summary_reports/
+            │   └── metals_summary.csv    # Main data source
+            └── individual_metals/
+                ├── aluminum_detailed.json
+                ├── antimony_detailed.json
+                └── ...
 ```
 
 ## Data Sources
 
-1. **complete_all_metals_summary.csv**: Primary data source containing:
+1. **metals_summary.csv**: Primary data source containing:
    - Metal names and production levels
    - Mine counts and employment figures
    - Production estimates and confidence levels
    - Analysis methods used
 
-2. **{metal}_detailed_mines.json**: Individual mine data including:
+2. **{metal}_detailed.json**: Individual mine data including:
    - Mine names, locations, and operators
    - Production estimates and employee counts
    - Mine types and operational status
@@ -116,8 +117,8 @@ Open `index.html` directly in your browser. Note: Some features may not work due
 To update the website with new data:
 
 1. **Add new metal reports**: Place `{metal}_report.md` files in `detailed_reports/`
-2. **Update mine data**: Place `{metal}_detailed_mines.json` files in the appropriate directory
-3. **Update summary**: Modify `complete_all_metals_summary.csv` with new/updated metal data
+2. **Update mine data**: Place `{metal}_detailed.json` files in the appropriate directory
+3. **Update summary**: Modify `metals_summary.csv` with new/updated metal data
 4. **Refresh the website**: The application will automatically load the new data
 
 ## Troubleshooting

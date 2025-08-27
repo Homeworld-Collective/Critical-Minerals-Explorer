@@ -64,7 +64,7 @@ class CriticalMineralExplorer {
     async loadData() {
         try {
             // Load the CSV data
-            const csvResponse = await fetch('msha_scraper/complete_all_metals_analysis/summary_reports/complete_all_metals_summary.csv');
+            const csvResponse = await fetch('msha_scraper/msha_critical_metals_analysis/analysis_results/summary_reports/metals_summary.csv');
             const csvText = await csvResponse.text();
             this.metalsData = this.parseCSV(csvText);
             this.filteredData = [...this.metalsData];
@@ -471,7 +471,7 @@ class CriticalMineralExplorer {
         this.showLoadingModal(metalName);
 
         try {
-            const response = await fetch(`msha_scraper/complete_all_metals_analysis/consolidated_tables/${metalName}_detailed_mines.json`);
+            const response = await fetch(`msha_scraper/msha_critical_metals_analysis/analysis_results/individual_metals/${metalName}_detailed.json`);
             if (!response.ok) {
                 throw new Error(`Mine data not found for ${metalName}`);
             }
