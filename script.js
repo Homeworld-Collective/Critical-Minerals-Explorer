@@ -7,6 +7,8 @@ class CriticalMineralExplorer {
         this.mineDataCache = {};
         this.introductionCache = null;
         this.currentMetal = null;
+        this.criticalMineralsData = [];
+        this.dataTable = null;
         
         this.init();
     }
@@ -157,7 +159,7 @@ class CriticalMineralExplorer {
 
         // Load tab-specific content if needed
         if (tabName === 'analysis') {
-            this.renderAnalysisCharts();
+            this.loadCriticalMineralsTable();
         } else if (tabName === 'introduction') {
             this.loadIntroduction();
         } else if (tabName === 'reports' && metalName) {
@@ -291,7 +293,12 @@ class CriticalMineralExplorer {
     renderMetalList() {
         const metalList = document.getElementById('metal-list');
         
-        metalList.innerHTML = this.metalsData.map(metal => `
+        // Sort metals alphabetically by name
+        const sortedMetals = [...this.metalsData].sort((a, b) => 
+            a.metal.toLowerCase().localeCompare(b.metal.toLowerCase())
+        );
+        
+        metalList.innerHTML = sortedMetals.map(metal => `
             <div class="metal-list-item" onclick="app.switchToMetalReport('${metal.metal}')">
                 ${metal.metal}
             </div>
@@ -380,6 +387,23 @@ class CriticalMineralExplorer {
             breaks: true
         });
         
+        // Add custom renderer for headers to include IDs
+        md.renderer.rules.heading_open = (tokens, idx, options, env, renderer) => {
+            const token = tokens[idx];
+            const level = token.tag.substr(1); // Extract number from h1, h2, etc.
+            
+            if (level === '2' || level === '3') {
+                // Find the next token which should be the inline text
+                const nextToken = tokens[idx + 1];
+                if (nextToken && nextToken.type === 'inline') {
+                    const headerId = this.createHeaderId(nextToken.content);
+                    return `<${token.tag} id="${headerId}">`;
+                }
+            }
+            
+            return `<${token.tag}>`;
+        };
+        
         // Insert the last updated date at the beginning of the markdown content before conversion
         let modifiedMarkdown = markdownText;
         if (lastModifiedDate) {
@@ -387,13 +411,127 @@ class CriticalMineralExplorer {
             modifiedMarkdown = lastUpdatedLine + markdownText;
         }
         
+        // Generate Table of Contents
+        const tocHtml = this.generateTableOfContents(markdownText);
+        
         // Convert markdown to HTML using markdown-it
         const htmlContent = md.render(modifiedMarkdown);
         
+        // Insert TOC after the horizontal line
+        const htmlWithToc = this.insertTableOfContents(htmlContent, tocHtml);
+        
         reportContent.innerHTML = `
             <h1 style="border-bottom: none; margin-bottom: 0;"><i class="fas fa-gem"></i> ${metalName.charAt(0).toUpperCase() + metalName.slice(1)} Supply Chain Analysis</h1>
-            <div>${htmlContent}</div>
+            <div>${htmlWithToc}</div>
         `;
+        
+        // Add smooth scrolling to TOC links
+        this.setupSmoothScrolling();
+    }
+
+    generateTableOfContents(markdownText) {
+        // Extract headers from markdown content (## and ###)
+        const headerRegex = /^(#{2,3})\s+(.+)$/gm;
+        const headers = [];
+        let match;
+        
+        while ((match = headerRegex.exec(markdownText)) !== null) {
+            const level = match[1].length; // 2 for ##, 3 for ###
+            const text = match[2].trim();
+            const id = this.createHeaderId(text);
+            
+            headers.push({
+                level: level,
+                text: text,
+                id: id
+            });
+        }
+        
+        if (headers.length === 0) {
+            return '';
+        }
+        
+        // Generate TOC HTML with minimal styling to match report text
+        let tocHtml = `
+            <div class="table-of-contents" style="margin: 1rem 0;">
+                <h2>Table of Contents</h2>
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+        `;
+        
+        headers.forEach(header => {
+            const indentStyle = header.level === 3 ? 'padding-left: 1.5rem;' : '';
+            tocHtml += `
+                <li style="${indentStyle} margin: 0; line-height: 1.3;">
+                    <a href="#${header.id}" class="toc-link" style="color: inherit; text-decoration: underline;">
+                        ${header.text}
+                    </a>
+                </li>
+            `;
+        });
+        
+        tocHtml += `
+                </ul>
+            </div>
+        `;
+        
+        return tocHtml;
+    }
+
+    createHeaderId(text) {
+        // Create a URL-safe ID from header text
+        return text
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, '') // Remove non-alphanumeric characters except spaces and hyphens
+            .replace(/\s+/g, '-')      // Replace spaces with hyphens
+            .replace(/-+/g, '-')       // Replace multiple hyphens with single hyphen
+            .trim();
+    }
+
+    insertTableOfContents(htmlContent, tocHtml) {
+        // Find the first <hr> tag (horizontal line) and insert TOC after it
+        const hrRegex = /<hr\s*\/?>/i;
+        const match = htmlContent.match(hrRegex);
+        
+        if (match && tocHtml) {
+            const hrIndex = match.index + match[0].length;
+            return htmlContent.slice(0, hrIndex) + tocHtml + htmlContent.slice(hrIndex);
+        }
+        
+        return htmlContent;
+    }
+
+    setupSmoothScrolling() {
+        // Add smooth scrolling behavior to TOC links
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Add a visual highlight to the target header
+                    targetElement.style.transition = 'background-color 0.3s';
+                    targetElement.style.backgroundColor = '#e3f2fd';
+                    setTimeout(() => {
+                        targetElement.style.backgroundColor = '';
+                    }, 1500);
+                }
+            });
+            
+            // Simple hover effect - just change text decoration
+            link.addEventListener('mouseenter', () => {
+                link.style.textDecoration = 'none';
+            });
+            
+            link.addEventListener('mouseleave', () => {
+                link.style.textDecoration = 'underline';
+            });
+        });
     }
 
     async loadIntroduction() {
@@ -653,82 +791,104 @@ class CriticalMineralExplorer {
         document.getElementById('mine-modal').style.display = 'none';
     }
 
-    renderAnalysisCharts() {
-        this.renderProductionChart();
-        this.renderConfidenceChart();
-    }
+    async loadCriticalMineralsTable() {
+        // Check if data is already loaded
+        if (this.criticalMineralsData.length > 0 && this.dataTable) {
+            return;
+        }
 
-    renderProductionChart() {
-        const ctx = document.getElementById('production-chart');
-        if (!ctx) return;
-
-        const productionCounts = {};
-        this.metalsData.forEach(metal => {
-            const prod = metal.expected_us_production;
-            productionCounts[prod] = (productionCounts[prod] || 0) + 1;
-        });
-
-        new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: Object.keys(productionCounts),
-                datasets: [{
-                    data: Object.values(productionCounts),
-                    backgroundColor: [
-                        '#27ae60', '#f39c12', '#e67e22', '#e74c3c', 
-                        '#95a5a6', '#9b59b6', '#1abc9c'
-                    ]
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom'
-                    }
-                }
+        try {
+            const response = await fetch('./static-criticalminerals-2030estimates-GDP.csv');
+            if (!response.ok) {
+                throw new Error('Failed to load critical minerals data');
             }
-        });
+            
+            const csvText = await response.text();
+            this.criticalMineralsData = this.parseCriticalMineralsCSV(csvText);
+            
+            this.initializeDataTable();
+            
+        } catch (error) {
+            console.error('Error loading critical minerals data:', error);
+            document.querySelector('#analysis-tab .analysis-container').innerHTML = `
+                <h2>Critical Minerals Data Table</h2>
+                <div class="text-center" style="padding: 4rem; color: #e74c3c;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <h3>Error loading data table</h3>
+                    <p>Could not load critical minerals data.</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d;">Error: ${error.message}</p>
+                </div>
+            `;
+        }
     }
 
-    renderConfidenceChart() {
-        const ctx = document.getElementById('confidence-chart');
-        if (!ctx) return;
+    parseCriticalMineralsCSV(csvText) {
+        const lines = csvText.trim().split('\n');
+        const headers = this.parseCSVLine(lines[0]);
+        
+        return lines.slice(1).map(line => {
+            if (!line.trim()) return null;
+            
+            const values = this.parseCSVLine(line);
+            const row = {};
+            
+            headers.forEach((header, index) => {
+                row[header.trim()] = values[index] ? values[index].trim() : '';
+            });
+            
+            return row;
+        }).filter(row => row !== null);
+    }
 
-        const confidenceCounts = {};
-        this.metalsData.forEach(metal => {
-            const conf = metal.confidence_level;
-            confidenceCounts[conf] = (confidenceCounts[conf] || 0) + 1;
+    initializeDataTable() {
+        // Prepare data for DataTable
+        const tableData = this.criticalMineralsData.map(row => {
+            const metalName = row.Metal || '';
+            const currentProduction = this.formatNumber(parseFloat(row['Current Production (tons)'].replace(/,/g, '')) || 0);
+            const demand2030 = this.formatNumber(parseFloat(row['Demand 2030 (tons)'].replace(/,/g, '')) || 0);
+            const supply2030 = this.formatNumber(parseFloat(row['Supply 2030 (tons)'].replace(/,/g, '')) || 0);
+            const domesticSupplyPct = row['Percentage on Domestic Supply for Demand 2030'] || '0%';
+            const bottleneck = row.Bottleneck || '';
+            const gdpImpact = row['Net decrease in U.S. GDP'] || '0';
+
+            return [
+                `<a href="#reports/${metalName.toLowerCase()}" onclick="app.switchToMetalReport('${metalName.toLowerCase()}'); return false;" style="color: #3498db; text-decoration: underline;">${metalName}</a>`,
+                currentProduction,
+                demand2030,
+                supply2030,
+                domesticSupplyPct,
+                bottleneck,
+                gdpImpact
+            ];
         });
 
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: Object.keys(confidenceCounts),
-                datasets: [{
-                    label: 'Number of Metals',
-                    data: Object.values(confidenceCounts),
-                    backgroundColor: ['#27ae60', '#f39c12', '#e74c3c']
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: false
-                    }
+        // Initialize DataTable
+        if (this.dataTable) {
+            this.dataTable.destroy();
+        }
+
+        this.dataTable = $('#minerals-table').DataTable({
+            data: tableData,
+            paging: false, // Remove pagination
+            order: [[6, 'desc']], // Sort by GDP Impact descending by default
+            responsive: true,
+            columnDefs: [
+                {
+                    targets: [1, 2, 3, 6], // Numeric columns
+                    className: 'text-right'
                 },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1
-                        }
-                    }
+                {
+                    targets: [4], // Percentage column
+                    className: 'text-center'
                 }
+            ],
+            language: {
+                search: "Search metals:",
+                info: "Showing all _TOTAL_ critical minerals"
             }
         });
     }
+
 }
 
 // Initialize the application

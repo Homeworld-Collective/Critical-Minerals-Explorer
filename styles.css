@@ -644,6 +644,108 @@ body {
     font-weight: 600;
 }
 
+/* DataTable Custom Styling */
+#minerals-table {
+    background: transparent !important;
+    border: none !important;
+}
+
+#minerals-table thead th {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #4ade80 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 12px 8px !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#minerals-table tbody td {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 10px 8px !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#minerals-table tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+#minerals-table tbody tr:nth-child(odd) td {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+#minerals-table tbody tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dataTables_wrapper {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.dataTables_filter input {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+    padding: 6px 12px !important;
+    margin-left: 8px !important;
+}
+
+.dataTables_filter input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.dataTables_length select {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+    padding: 4px 8px !important;
+    margin: 0 8px !important;
+}
+
+.dataTables_info {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dataTables_paginate .paginate_button {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 6px !important;
+    margin: 0 2px !important;
+    padding: 6px 12px !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: rgba(74, 222, 128, 0.3) !important;
+    border-color: #4ade80 !important;
+    color: #4ade80 !important;
+}
+
+.dataTables_paginate .paginate_button.disabled {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Make table headers sortable cursor */
+#minerals-table thead th {
+    cursor: pointer !important;
+}
+
+#minerals-table thead th.sorting:after,
+#minerals-table thead th.sorting_asc:after, 
+#minerals-table thead th.sorting_desc:after {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
 /* Modal */
 .modal {
     display: none;

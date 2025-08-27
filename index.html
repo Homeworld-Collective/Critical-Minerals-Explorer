@@ -22,7 +22,7 @@
         <header class="app-header">
             <div class="header-content">
                 <h1><i class="fas fa-gem"></i> Critical Mineral Explorer</h1>
-                <p>[Work in Progress] Comprehensive analysis of critical mineral supply chains for the US and allied nations</p>
+                <p>Prototype analysis tool for critical mineral supply chains</p>
             </div>
         </header>
 
@@ -31,14 +31,14 @@
             <button class="nav-tab active" data-tab="introduction">
                 <i class="fas fa-info-circle"></i> Introduction
             </button>
-            <button class="nav-tab" data-tab="dashboard">
-                <i class="fas fa-chart-bar"></i> Dashboard
+            <button class="nav-tab" data-tab="analysis">
+                <i class="fas fa-table"></i> Summary Table
             </button>
             <button class="nav-tab" data-tab="reports">
                 <i class="fas fa-file-alt"></i> Detailed Reports
             </button>
-            <button class="nav-tab" data-tab="analysis">
-                <i class="fas fa-analytics"></i> Analysis
+            <button class="nav-tab" data-tab="dashboard">
+                <i class="fas fa-chart-bar"></i> MSHA Data
             </button>
         </nav>
 
@@ -132,16 +132,41 @@
 
             <!-- Analysis Tab -->
             <div id="analysis-tab" class="tab-content">
-                <div class="analysis-container">
-                    <h2>Supply Chain Analysis Overview</h2>
-                    <div class="analysis-charts">
-                        <div class="chart-container">
-                            <h3>Production by Metal Category</h3>
-                            <canvas id="production-chart"></canvas>
+                <div class="report-viewer">
+                    <div class="report-content">
+                        <h1 style="border-bottom: none; margin-bottom: 0;"><i class="fas fa-table"></i> Critical Minerals Summary Table</h1>
+                        
+                        <!-- Explanation Panel -->
+                        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 1.5rem; margin: 2rem 0; border: 1px solid rgba(255, 255, 255, 0.2);">
+                            <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+                                This table contains comprehensive data for all 63 critical minerals from the USGS 2025 list, including current production, 2030 demand/supply projections, domestic supply percentages, primary bottlenecks, and estimated GDP impact of supply disruptions.
+                            </p>
+                            <p style="margin-bottom: 0; color: rgba(255, 255, 255, 0.8);">
+                                <strong>Download raw data:</strong> 
+                                <a href="./static-criticalminerals-2030estimates-GDP.csv" download style="color: #4ade80; text-decoration: underline;">
+                                    <i class="fas fa-download"></i> CSV file
+                                </a> 
+                                | Click any metal name to view detailed supply chain analysis
+                            </p>
                         </div>
-                        <div class="chart-container">
-                            <h3>Confidence Level Distribution</h3>
-                            <canvas id="confidence-chart"></canvas>
+                        
+                        <div class="table-container" style="overflow-x: auto; margin-top: 2rem; border-radius: 10px; background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                            <table id="minerals-table" class="table" style="width: 100%; color: #ffffff;">
+                                <thead>
+                                    <tr>
+                                        <th>Metal</th>
+                                        <th>Current Production (tons)</th>
+                                        <th>Demand 2030 (tons)</th>
+                                        <th>Supply 2030 (tons)</th>
+                                        <th>Domestic Supply %</th>
+                                        <th>Primary Bottleneck</th>
+                                        <th>GDP Impact</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Table data will be populated by JavaScript -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -164,6 +189,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"></script>
+    <!-- jQuery and DataTables -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
