@@ -1,0 +1,35 @@
+{
+  "metal": "holmium",
+  "analysis_date": "2025-08-26T21:45:38.320678",
+  "summary": {
+    "metal": "holmium",
+    "total_mines_identified": 17,
+    "active_mines": 1,
+    "total_estimated_production_mt_per_year": 3425.0,
+    "total_employment": 685.0,
+    "confidence_level": "low",
+    "method": "rare_earth_group",
+    "notes": "Rare heavy REE"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 402542,
+      "mine_name": "Mt Pass Mine & Mill",
+      "state": "CA",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "MP Mine Operations, LLC.",
+      "primary_sic": "Rare Earths Ore",
+      "employees": 685.0,
+      "estimated_annual_production_mt": 3425.0,
+      "production_factor_mt_per_employee": 5,
+      "confidence_level": "low",
+      "longitude": -115.574444,
+      "latitude": 35.471944,
+      "metal": "holmium",
+      "verification_method": "rare_earth_group",
+      "verification_notes": "Rare heavy REE"
+    }
+  ]
+}

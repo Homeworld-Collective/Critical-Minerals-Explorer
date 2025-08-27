@@ -1,0 +1,35 @@
+{
+  "metal": "cobalt",
+  "analysis_date": "2025-08-26T21:45:37.270666",
+  "summary": {
+    "metal": "cobalt",
+    "total_mines_identified": 10,
+    "active_mines": 1,
+    "total_estimated_production_mt_per_year": 10400.0,
+    "total_employment": 13.0,
+    "confidence_level": "medium",
+    "method": "controlled_keyword",
+    "notes": "Cobalt as byproduct of copper/nickel mining"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 2301770,
+      "mine_name": "Madison Mine",
+      "state": "MO",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "US Strategic Metals",
+      "primary_sic": "Cobalt Ore",
+      "employees": 13.0,
+      "estimated_annual_production_mt": 10400.0,
+      "production_factor_mt_per_employee": 800,
+      "confidence_level": "medium",
+      "longitude": -90.293889,
+      "latitude": 37.559722,
+      "metal": "cobalt",
+      "verification_method": "controlled_keyword",
+      "verification_notes": "Cobalt as byproduct of copper/nickel mining"
+    }
+  ]
+}

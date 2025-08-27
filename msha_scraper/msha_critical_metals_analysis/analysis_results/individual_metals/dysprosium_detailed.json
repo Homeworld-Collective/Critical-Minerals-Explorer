@@ -1,0 +1,35 @@
+{
+  "metal": "dysprosium",
+  "analysis_date": "2025-08-26T21:45:38.051549",
+  "summary": {
+    "metal": "dysprosium",
+    "total_mines_identified": 17,
+    "active_mines": 1,
+    "total_estimated_production_mt_per_year": 34250.0,
+    "total_employment": 685.0,
+    "confidence_level": "low",
+    "method": "rare_earth_group",
+    "notes": "Critical heavy REE"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 402542,
+      "mine_name": "Mt Pass Mine & Mill",
+      "state": "CA",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "MP Mine Operations, LLC.",
+      "primary_sic": "Rare Earths Ore",
+      "employees": 685.0,
+      "estimated_annual_production_mt": 34250.0,
+      "production_factor_mt_per_employee": 50,
+      "confidence_level": "low",
+      "longitude": -115.574444,
+      "latitude": 35.471944,
+      "metal": "dysprosium",
+      "verification_method": "rare_earth_group",
+      "verification_notes": "Critical heavy REE"
+    }
+  ]
+}

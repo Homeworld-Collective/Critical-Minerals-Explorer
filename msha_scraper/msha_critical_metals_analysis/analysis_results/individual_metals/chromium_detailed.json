@@ -1,0 +1,35 @@
+{
+  "metal": "chromium",
+  "analysis_date": "2025-08-26T21:45:37.554223",
+  "summary": {
+    "metal": "chromium",
+    "total_mines_identified": 8,
+    "active_mines": 1,
+    "total_estimated_production_mt_per_year": 21000.0,
+    "total_employment": 7.0,
+    "confidence_level": "low",
+    "method": "controlled_keyword",
+    "notes": "No significant US chromium mining"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 3607535,
+      "mine_name": "PENN MAG INC. PLANT #2",
+      "state": "PA",
+      "status": "Active",
+      "mine_type": "Facility",
+      "operator": "Penn Mag, Inc.",
+      "primary_sic": "Chromite Chromium Ore",
+      "employees": 7.0,
+      "estimated_annual_production_mt": 21000.0,
+      "production_factor_mt_per_employee": 3000,
+      "confidence_level": "low",
+      "longitude": -78.4675,
+      "latitude": 40.270833,
+      "metal": "chromium",
+      "verification_method": "controlled_keyword",
+      "verification_notes": "No significant US chromium mining"
+    }
+  ]
+}

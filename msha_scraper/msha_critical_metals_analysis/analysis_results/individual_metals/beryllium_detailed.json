@@ -1,0 +1,35 @@
+{
+  "metal": "beryllium",
+  "analysis_date": "2025-08-26T21:45:37.223941",
+  "summary": {
+    "metal": "beryllium",
+    "total_mines_identified": 10,
+    "active_mines": 1,
+    "total_estimated_production_mt_per_year": 4000.0,
+    "total_employment": 80.0,
+    "confidence_level": "medium",
+    "method": "controlled_keyword",
+    "notes": "Beryllium mining - highly specialized"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 4200706,
+      "mine_name": "Materion Natural Resources",
+      "state": "UT",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "Materion Natural Resources",
+      "primary_sic": "Beryl-Beryllium Ore",
+      "employees": 80.0,
+      "estimated_annual_production_mt": 4000.0,
+      "production_factor_mt_per_employee": 50,
+      "confidence_level": "medium",
+      "longitude": -112.438611,
+      "latitude": 39.465833,
+      "metal": "beryllium",
+      "verification_method": "controlled_keyword",
+      "verification_notes": "Beryllium mining - highly specialized"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "metal": "platinum",
+  "analysis_date": "2025-08-26T21:45:38.782367",
+  "summary": {
+    "metal": "platinum",
+    "total_mines_identified": 21,
+    "active_mines": 3,
+    "total_estimated_production_mt_per_year": 4716.0,
+    "total_employment": 1572.0,
+    "confidence_level": "high",
+    "method": "exact_sic",
+    "notes": "Stillwater Complex primary PGM operation"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 2401490,
+      "mine_name": "STILLWATER MINE",
+      "state": "MT",
+      "status": "Active",
+      "mine_type": "Underground",
+      "operator": "Stillwater Mining Company",
+      "primary_sic": "Platinum Group Ore",
+      "employees": 1123.0,
+      "estimated_annual_production_mt": 3369.0,
+      "production_factor_mt_per_employee": 3.0,
+      "confidence_level": "high",
+      "longitude": -109.872778,
+      "latitude": 45.383889,
+      "metal": "platinum",
+      "verification_method": "exact_sic",
+      "verification_notes": "Stillwater Complex primary PGM operation"
+    },
+    {
+      "rank": 2,
+      "mine_id": 2401879,
+      "mine_name": "EAST BOULDER MINE",
+      "state": "MT",
+      "status": "Active",
+      "mine_type": "Underground",
+      "operator": "Stillwater Mining Company",
+      "primary_sic": "Platinum Group Ore",
+      "employees": 446.0,
+      "estimated_annual_production_mt": 1338.0,
+      "production_factor_mt_per_employee": 3.0,
+      "confidence_level": "high",
+      "longitude": -110.085833,
+      "latitude": 45.503611,
+      "metal": "platinum",
+      "verification_method": "exact_sic",
+      "verification_notes": "Stillwater Complex primary PGM operation"
+    },
+    {
+      "rank": 3,
+      "mine_id": 2402295,
+      "mine_name": "Beartooth Pit",
+      "state": "MT",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "Stillwater Excavating",
+      "primary_sic": "Construction Sand and Gravel",
+      "employees": 3.0,
+      "estimated_annual_production_mt": 9.0,
+      "production_factor_mt_per_employee": 3.0,
+      "confidence_level": "high",
+      "longitude": -109.318333,
+      "latitude": 45.645556,
+      "metal": "platinum",
+      "verification_method": "exact_sic",
+      "verification_notes": "Stillwater Complex primary PGM operation"
+    }
+  ]
+}

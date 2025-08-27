@@ -1,0 +1,35 @@
+{
+  "metal": "yttrium",
+  "analysis_date": "2025-08-26T21:45:37.979827",
+  "summary": {
+    "metal": "yttrium",
+    "total_mines_identified": 17,
+    "active_mines": 1,
+    "total_estimated_production_mt_per_year": 82200.0,
+    "total_employment": 685.0,
+    "confidence_level": "medium",
+    "method": "rare_earth_group",
+    "notes": "Heavy rare earth element"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 402542,
+      "mine_name": "Mt Pass Mine & Mill",
+      "state": "CA",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "MP Mine Operations, LLC.",
+      "primary_sic": "Rare Earths Ore",
+      "employees": 685.0,
+      "estimated_annual_production_mt": 82200.0,
+      "production_factor_mt_per_employee": 120,
+      "confidence_level": "medium",
+      "longitude": -115.574444,
+      "latitude": 35.471944,
+      "metal": "yttrium",
+      "verification_method": "rare_earth_group",
+      "verification_notes": "Heavy rare earth element"
+    }
+  ]
+}

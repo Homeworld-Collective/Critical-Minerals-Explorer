@@ -1,0 +1,73 @@
+{
+  "metal": "nickel",
+  "analysis_date": "2025-08-26T21:45:36.006981",
+  "summary": {
+    "metal": "nickel",
+    "total_mines_identified": 25,
+    "active_mines": 3,
+    "total_estimated_production_mt_per_year": 858000.0,
+    "total_employment": 286.0,
+    "confidence_level": "high",
+    "method": "exact_sic",
+    "notes": "Primary nickel ore mining"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 2003454,
+      "mine_name": "Eagle Mine",
+      "state": "MI",
+      "status": "Active",
+      "mine_type": "Underground",
+      "operator": "Eagle Mine, LLC.",
+      "primary_sic": "Nickel Ore",
+      "employees": 170.0,
+      "estimated_annual_production_mt": 510000.0,
+      "production_factor_mt_per_employee": 3000,
+      "confidence_level": "high",
+      "longitude": -87.879444,
+      "latitude": 46.743056,
+      "metal": "nickel",
+      "verification_method": "exact_sic",
+      "verification_notes": "Primary nickel ore mining"
+    },
+    {
+      "rank": 2,
+      "mine_id": 2000420,
+      "mine_name": "Humboldt Mill",
+      "state": "MI",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "Eagle Mine, LLC.",
+      "primary_sic": "Nickel Ore",
+      "employees": 103.0,
+      "estimated_annual_production_mt": 309000.0,
+      "production_factor_mt_per_employee": 3000,
+      "confidence_level": "high",
+      "longitude": -87.835556,
+      "latitude": 46.411111,
+      "metal": "nickel",
+      "verification_method": "exact_sic",
+      "verification_notes": "Primary nickel ore mining"
+    },
+    {
+      "rank": 3,
+      "mine_id": 2103658,
+      "mine_name": "Northmet",
+      "state": "MN",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "NewRange Copper Nickel, LLC",
+      "primary_sic": "Copper Ore NEC",
+      "employees": 13.0,
+      "estimated_annual_production_mt": 39000.0,
+      "production_factor_mt_per_employee": 3000,
+      "confidence_level": "high",
+      "longitude": -92.121389,
+      "latitude": 47.527778,
+      "metal": "nickel",
+      "verification_method": "exact_sic",
+      "verification_notes": "Primary nickel ore mining"
+    }
+  ]
+}

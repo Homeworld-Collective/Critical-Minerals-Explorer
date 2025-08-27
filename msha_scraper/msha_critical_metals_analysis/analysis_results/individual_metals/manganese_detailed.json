@@ -1,0 +1,54 @@
+{
+  "metal": "manganese",
+  "analysis_date": "2025-08-26T21:45:37.457511",
+  "summary": {
+    "metal": "manganese",
+    "total_mines_identified": 11,
+    "active_mines": 2,
+    "total_estimated_production_mt_per_year": 1582000.0,
+    "total_employment": 452.0,
+    "confidence_level": "low",
+    "method": "controlled_keyword",
+    "notes": "Mostly imported, limited US operations"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 2400338,
+      "mine_name": "Continental Mine",
+      "state": "MT",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "Montana Resources, LLC",
+      "primary_sic": "Copper Ore NEC",
+      "employees": 388.0,
+      "estimated_annual_production_mt": 1358000.0,
+      "production_factor_mt_per_employee": 3500,
+      "confidence_level": "low",
+      "longitude": -112.5225,
+      "latitude": 46.013056,
+      "metal": "manganese",
+      "verification_method": "controlled_keyword",
+      "verification_notes": "Mostly imported, limited US operations"
+    },
+    {
+      "rank": 2,
+      "mine_id": 700100,
+      "mine_name": "Wilmington Plant",
+      "state": "DE",
+      "status": "Active",
+      "mine_type": "Facility",
+      "operator": "Vibrantz Minerals LLC",
+      "primary_sic": "Manganese Ore",
+      "employees": 64.0,
+      "estimated_annual_production_mt": 224000.0,
+      "production_factor_mt_per_employee": 3500,
+      "confidence_level": "low",
+      "longitude": -75.534167,
+      "latitude": 39.711944,
+      "metal": "manganese",
+      "verification_method": "controlled_keyword",
+      "verification_notes": "Mostly imported, limited US operations"
+    }
+  ]
+}

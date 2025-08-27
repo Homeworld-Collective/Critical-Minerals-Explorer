@@ -1,0 +1,54 @@
+{
+  "metal": "palladium",
+  "analysis_date": "2025-08-26T21:45:38.877402",
+  "summary": {
+    "metal": "palladium",
+    "total_mines_identified": 14,
+    "active_mines": 2,
+    "total_estimated_production_mt_per_year": 3138.0,
+    "total_employment": 1569.0,
+    "confidence_level": "medium",
+    "method": "pgm_group",
+    "notes": "Platinum group metal, limited US production"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 2401490,
+      "mine_name": "STILLWATER MINE",
+      "state": "MT",
+      "status": "Active",
+      "mine_type": "Underground",
+      "operator": "Stillwater Mining Company",
+      "primary_sic": "Platinum Group Ore",
+      "employees": 1123.0,
+      "estimated_annual_production_mt": 2246.0,
+      "production_factor_mt_per_employee": 2,
+      "confidence_level": "medium",
+      "longitude": -109.872778,
+      "latitude": 45.383889,
+      "metal": "palladium",
+      "verification_method": "pgm_group",
+      "verification_notes": "Platinum group metal, limited US production"
+    },
+    {
+      "rank": 2,
+      "mine_id": 2401879,
+      "mine_name": "EAST BOULDER MINE",
+      "state": "MT",
+      "status": "Active",
+      "mine_type": "Underground",
+      "operator": "Stillwater Mining Company",
+      "primary_sic": "Platinum Group Ore",
+      "employees": 446.0,
+      "estimated_annual_production_mt": 892.0,
+      "production_factor_mt_per_employee": 2,
+      "confidence_level": "medium",
+      "longitude": -110.085833,
+      "latitude": 45.503611,
+      "metal": "palladium",
+      "verification_method": "pgm_group",
+      "verification_notes": "Platinum group metal, limited US production"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "metal": "titanium",
+  "analysis_date": "2025-08-26T21:45:37.021038",
+  "summary": {
+    "metal": "titanium",
+    "total_mines_identified": 15,
+    "active_mines": 1,
+    "total_estimated_production_mt_per_year": 318500.0,
+    "total_employment": 91.0,
+    "confidence_level": "medium",
+    "method": "controlled_keyword",
+    "notes": "Titanium minerals and processing"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 800225,
+      "mine_name": "The Chemours Company FC LLC",
+      "state": "FL",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "The Chemours Company FC LLC",
+      "primary_sic": "Titanium Ore",
+      "employees": 91.0,
+      "estimated_annual_production_mt": 318500.0,
+      "production_factor_mt_per_employee": 3500,
+      "confidence_level": "medium",
+      "longitude": -82.069167,
+      "latitude": 29.938333,
+      "metal": "titanium",
+      "verification_method": "controlled_keyword",
+      "verification_notes": "Titanium minerals and processing"
+    }
+  ]
+}

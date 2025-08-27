@@ -11,9 +11,12 @@ detailed_reports/summary_*.json
 msha_scraper/msha_critical_metals_analysis/analysis_results/summary_reports/analysis_report.json
 example_output_row_lanthanum.csv
 *.py
-msha_scraper/
-!msha_scraper/msha_critical_metals_analysis/analysis_results/summary_reports/metals_summary.csv
-!msha_scraper/msha_critical_metals_analysis/analysis_results/individual_metals/*_detailed.json
+# Exclude most of msha_scraper but keep the essential data files
+msha_scraper/*.py
+msha_scraper/requirements.txt
+msha_scraper/README.md
+msha_scraper/msha_critical_metals_analysis/raw_data/
+msha_scraper/msha_critical_metals_analysis/legacy_analysis/
 
 # Python environment and dependencies
 msha_env/

@@ -1,0 +1,54 @@
+{
+  "metal": "iridium",
+  "analysis_date": "2025-08-26T21:45:39.143542",
+  "summary": {
+    "metal": "iridium",
+    "total_mines_identified": 14,
+    "active_mines": 2,
+    "total_estimated_production_mt_per_year": 784.5,
+    "total_employment": 1569.0,
+    "confidence_level": "low",
+    "method": "pgm_group",
+    "notes": "Rarest PGM"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 2401490,
+      "mine_name": "STILLWATER MINE",
+      "state": "MT",
+      "status": "Active",
+      "mine_type": "Underground",
+      "operator": "Stillwater Mining Company",
+      "primary_sic": "Platinum Group Ore",
+      "employees": 1123.0,
+      "estimated_annual_production_mt": 561.5,
+      "production_factor_mt_per_employee": 0.5,
+      "confidence_level": "low",
+      "longitude": -109.872778,
+      "latitude": 45.383889,
+      "metal": "iridium",
+      "verification_method": "pgm_group",
+      "verification_notes": "Rarest PGM"
+    },
+    {
+      "rank": 2,
+      "mine_id": 2401879,
+      "mine_name": "EAST BOULDER MINE",
+      "state": "MT",
+      "status": "Active",
+      "mine_type": "Underground",
+      "operator": "Stillwater Mining Company",
+      "primary_sic": "Platinum Group Ore",
+      "employees": 446.0,
+      "estimated_annual_production_mt": 223.0,
+      "production_factor_mt_per_employee": 0.5,
+      "confidence_level": "low",
+      "longitude": -110.085833,
+      "latitude": 45.503611,
+      "metal": "iridium",
+      "verification_method": "pgm_group",
+      "verification_notes": "Rarest PGM"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "metal": "erbium",
+  "analysis_date": "2025-08-26T21:45:38.116245",
+  "summary": {
+    "metal": "erbium",
+    "total_mines_identified": 17,
+    "active_mines": 1,
+    "total_estimated_production_mt_per_year": 20550.0,
+    "total_employment": 685.0,
+    "confidence_level": "low",
+    "method": "rare_earth_group",
+    "notes": "Heavy REE for fiber optics"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 402542,
+      "mine_name": "Mt Pass Mine & Mill",
+      "state": "CA",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "MP Mine Operations, LLC.",
+      "primary_sic": "Rare Earths Ore",
+      "employees": 685.0,
+      "estimated_annual_production_mt": 20550.0,
+      "production_factor_mt_per_employee": 30,
+      "confidence_level": "low",
+      "longitude": -115.574444,
+      "latitude": 35.471944,
+      "metal": "erbium",
+      "verification_method": "rare_earth_group",
+      "verification_notes": "Heavy REE for fiber optics"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "metal": "vanadium",
+  "analysis_date": "2025-08-26T21:45:37.326323",
+  "summary": {
+    "metal": "vanadium",
+    "total_mines_identified": 119,
+    "active_mines": 2,
+    "total_estimated_production_mt_per_year": 93600.0,
+    "total_employment": 78.0,
+    "confidence_level": "medium",
+    "method": "controlled_keyword",
+    "notes": "Vanadium from uranium operations and steel slag"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 300479,
+      "mine_name": "US Vanadium, LLC",
+      "state": "AR",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "US Vanadium, LLC",
+      "primary_sic": "Vanadium Ore",
+      "employees": 73.0,
+      "estimated_annual_production_mt": 87600.0,
+      "production_factor_mt_per_employee": 1200,
+      "confidence_level": "medium",
+      "longitude": -92.9475,
+      "latitude": 34.463611,
+      "metal": "vanadium",
+      "verification_method": "controlled_keyword",
+      "verification_notes": "Vanadium from uranium operations and steel slag"
+    },
+    {
+      "rank": 2,
+      "mine_id": 300261,
+      "mine_name": "U.S. Vanadium - Benton, LLC",
+      "state": "AR",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "US Vanadium - Benton, LLC",
+      "primary_sic": "Aluminum Ore-Bauxite",
+      "employees": 5.0,
+      "estimated_annual_production_mt": 6000.0,
+      "production_factor_mt_per_employee": 1200,
+      "confidence_level": "medium",
+      "longitude": -92.516389,
+      "latitude": 34.583889,
+      "metal": "vanadium",
+      "verification_method": "controlled_keyword",
+      "verification_notes": "Vanadium from uranium operations and steel slag"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "metal": "bauxite",
+  "analysis_date": "2025-08-26T21:45:35.858119",
+  "summary": {
+    "metal": "bauxite",
+    "total_mines_identified": 27,
+    "active_mines": 3,
+    "total_estimated_production_mt_per_year": 336000.0,
+    "total_employment": 112.0,
+    "confidence_level": "high",
+    "method": "exact_sic",
+    "notes": "Aluminum ore (bauxite) mining operations"
+  },
+  "mines": [
+    {
+      "rank": 1,
+      "mine_id": 302023,
+      "mine_name": "Huber Specialty Hydrates, LLC ",
+      "state": "AR",
+      "status": "Active",
+      "mine_type": "Facility",
+      "operator": "Huber Specialty Hydrates, LLC ",
+      "primary_sic": "Aluminum Ore-Bauxite",
+      "employees": 80.0,
+      "estimated_annual_production_mt": 240000.0,
+      "production_factor_mt_per_employee": 3000,
+      "confidence_level": "high",
+      "longitude": -92.535278,
+      "latitude": 34.582778,
+      "metal": "bauxite",
+      "verification_method": "exact_sic",
+      "verification_notes": "Aluminum ore (bauxite) mining operations"
+    },
+    {
+      "rank": 2,
+      "mine_id": 301979,
+      "mine_name": "Section 27",
+      "state": "AR",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "SEMCOA",
+      "primary_sic": "Aluminum Ore-Bauxite",
+      "employees": 27.0,
+      "estimated_annual_production_mt": 81000.0,
+      "production_factor_mt_per_employee": 3000,
+      "confidence_level": "high",
+      "longitude": -92.513611,
+      "latitude": 34.535,
+      "metal": "bauxite",
+      "verification_method": "exact_sic",
+      "verification_notes": "Aluminum ore (bauxite) mining operations"
+    },
+    {
+      "rank": 3,
+      "mine_id": 300261,
+      "mine_name": "U.S. Vanadium - Benton, LLC",
+      "state": "AR",
+      "status": "Active",
+      "mine_type": "Surface",
+      "operator": "US Vanadium - Benton, LLC",
+      "primary_sic": "Aluminum Ore-Bauxite",
+      "employees": 5.0,
+      "estimated_annual_production_mt": 15000.0,
+      "production_factor_mt_per_employee": 3000,
+      "confidence_level": "high",
+      "longitude": -92.516389,
+      "latitude": 34.583889,
+      "metal": "bauxite",
+      "verification_method": "exact_sic",
+      "verification_notes": "Aluminum ore (bauxite) mining operations"
+    }
+  ]
+}
