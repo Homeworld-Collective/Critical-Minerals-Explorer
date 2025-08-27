@@ -1,59 +1,47 @@
+from http.server import BaseHTTPRequestHandler
 import json
 import os
 import time
 from datetime import datetime, timedelta
-from urllib.parse import parse_qs
-
-# Try to import Redis client for Upstash
-HAS_REDIS = False
-redis_client = None
-
-try:
-    import redis
-    # Use Upstash Redis from environment variables
-    REDIS_URL = os.getenv('KV_REST_API_URL') or os.getenv('REDIS_URL')
-    REDIS_TOKEN = os.getenv('KV_REST_API_TOKEN')
-    
-    if REDIS_URL and REDIS_TOKEN:
-        # For REST API, we'll use requests instead
-        import requests
-        HAS_REDIS = True
-        print("Using Upstash Redis REST API")
-    else:
-        print("Redis credentials not found in environment")
-except ImportError:
-    print("Warning: Redis not available, using in-memory storage")
 
 # Configuration
 MAX_COMMENTS_PER_HOUR = int(os.getenv('MAX_COMMENTS_PER_HOUR', '3'))
 COMMENT_MAX_LENGTH = int(os.getenv('COMMENT_MAX_LENGTH', '500'))
 
-# In-memory storage fallback (for development)
+# Try to import requests for Upstash REST API
+HAS_REDIS = False
+try:
+    import requests
+    REDIS_URL = os.getenv('KV_REST_API_URL')
+    REDIS_TOKEN = os.getenv('KV_REST_API_TOKEN')
+    
+    if REDIS_URL and REDIS_TOKEN:
+        HAS_REDIS = True
+        print(f"Using Upstash Redis at {REDIS_URL}")
+    else:
+        print("Redis credentials not found in environment")
+except ImportError:
+    print("Warning: requests not available, using in-memory storage")
+
+# In-memory storage fallback
 _memory_storage = {}
 
-def handler(request, response):
-    """Vercel serverless function handler"""
-    # Set CORS headers
-    response.headers = {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-        'Content-Type': 'application/json'
-    }
-    
-    if request.method == 'OPTIONS':
-        response.status_code = 200
-        return ""
-    
-    try:
-        if request.method == 'GET':
+class handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        if self.path.startswith('/api/comments'):
             # Parse query parameters
-            query_params = dict(request.query_params)
-            metal = query_params.get('metal')
+            from urllib.parse import urlparse, parse_qs
+            parsed_path = urlparse(self.path)
+            query_params = parse_qs(parsed_path.query)
+            metal = query_params.get('metal', [None])[0]
             
             if not metal:
-                response.status_code = 400
-                return json.dumps({'error': 'Metal parameter is required'})
+                self.send_response(400)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({'error': 'Metal parameter is required'}).encode())
+                return
             
             # Load comments
             comments = load_comments()
@@ -64,27 +52,42 @@ def handler(request, response):
                 if comment.get('approved', False)
             ]
             
-            response.status_code = 200
-            return json.dumps(metal_comments)
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.end_headers()
+            self.wfile.write(json.dumps(metal_comments).encode())
+    
+    def do_POST(self):
+        if self.path.startswith('/api/comments'):
+            # Read request body
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
             
-        elif request.method == 'POST':
-            # Get request body
             try:
-                comment_data = json.loads(request.body)
+                comment_data = json.loads(post_data.decode('utf-8'))
             except json.JSONDecodeError:
-                response.status_code = 400
-                return json.dumps({'error': 'Invalid JSON'})
+                self.send_response(400)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({'error': 'Invalid JSON'}).encode())
+                return
             
             # Validate comment data
             if not validate_comment(comment_data):
-                response.status_code = 400
-                return json.dumps({'error': 'Invalid comment data'})
+                self.send_response(400)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({'error': 'Invalid comment data'}).encode())
+                return
             
             # Sanitize comment
             sanitized_comment = sanitize_comment(comment_data)
             
             # Get client IP
-            client_ip = request.headers.get('x-forwarded-for', '').split(',')[0].strip() or 'unknown'
+            client_ip = self.headers.get('X-Forwarded-For', '').split(',')[0].strip() or 'unknown'
             sanitized_comment['ip'] = client_ip
             
             # Load existing comments
@@ -96,10 +99,14 @@ def handler(request, response):
             
             # Check rate limiting
             if check_rate_limit(comments[metal], client_ip):
-                response.status_code = 429
-                return json.dumps({
+                self.send_response(429)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({
                     'error': f'Too many comments. Please wait before commenting again. (Limit: {MAX_COMMENTS_PER_HOUR} per hour)'
-                })
+                }).encode())
+                return
             
             # Add comment
             comments[metal].append(sanitized_comment)
@@ -107,21 +114,22 @@ def handler(request, response):
             # Save comments
             save_comments(comments)
             
-            response.status_code = 201
-            return json.dumps({
+            self.send_response(201)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.end_headers()
+            self.wfile.write(json.dumps({
                 'success': True,
                 'message': 'Comment submitted successfully! It will appear after moderation.',
                 'id': sanitized_comment['id']
-            })
-            
-        else:
-            response.status_code = 405
-            return json.dumps({'error': 'Method not allowed'})
-            
-    except Exception as e:
-        print(f"Handler error: {e}")
-        response.status_code = 500
-        return json.dumps({'error': 'Internal server error', 'details': str(e)})
+            }).encode())
+    
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+        self.end_headers()
 
 def validate_comment(comment):
     required = ['selectedText', 'comment', 'metalName', 'context']
@@ -162,6 +170,8 @@ def check_rate_limit(metal_comments, client_ip):
 
 def load_comments():
     """Load comments from Upstash Redis or memory"""
+    global _memory_storage
+    
     try:
         if HAS_REDIS:
             import requests
@@ -186,6 +196,8 @@ def load_comments():
 
 def save_comments(comments):
     """Save comments to Upstash Redis or memory"""
+    global _memory_storage
+    
     try:
         if HAS_REDIS:
             import requests
@@ -205,7 +217,6 @@ def save_comments(comments):
                 print(f"Failed to save comments: {response.text}")
         else:
             # Use in-memory storage for development
-            global _memory_storage
             _memory_storage = comments
     except Exception as e:
         print(f"Error saving comments: {e}")
