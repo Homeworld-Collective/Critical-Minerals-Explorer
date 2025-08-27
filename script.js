@@ -652,10 +652,16 @@ class CriticalMineralExplorer {
             // Convert markdown to HTML and make links clickable for detailed reports
             let processedMarkdown = this.introductionCache;
             
-            // Replace [metal](metalname) links with clickable report links
-            processedMarkdown = processedMarkdown.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, metalName) => {
-                // Convert the metal name to lowercase for consistency with file names
-                const normalizedMetalName = metalName.toLowerCase().trim();
+            // Replace [metal](metalname) links with clickable report links, but leave external URLs alone
+            processedMarkdown = processedMarkdown.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+                // Check if it's an external URL (contains :// or starts with http)
+                if (url.includes('://') || url.startsWith('http')) {
+                    // Keep external links as-is, just make them open in new tab
+                    return `<a href="${url}" target="_blank" style="color: #4ade80; text-decoration: underline;">${text}</a>`;
+                }
+                
+                // Convert internal metal name links to report links
+                const normalizedMetalName = url.toLowerCase().trim();
                 return `<a href="#reports/${normalizedMetalName}" onclick="app.switchToMetalReport('${normalizedMetalName}'); return false;" style="color: #3498db; text-decoration: underline;">${text}</a>`;
             });
             

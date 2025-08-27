@@ -1,4 +1,4 @@
-# Where can Biotech help Critical Minerals in the US? 
+# Where can biotechnology help Critical Minerals in the US? 
 
 This explorer analyzes domestic mining capacity and supply chain bottlenecks for 63 critical minerals across the US, using comprehensive data from MSHA mining records. The AI-powered analysis is based on the [USGS critical minerals list published August 25, 2025](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf) and was first made public on August 26, 2025.
 
@@ -21,6 +21,8 @@ Generally, the Detailed Reports indicate that **processing and separation bottle
 ---
 
 ## Technical Bottleneck Clusters
+
+The detailed reports provide specific technical data on production capacities, mine locations, employment figures, and supply chain vulnerabilities for each metal. Each report opens with a summary of technical bottlenecks for that metal, with trends emerging that include:
 
 ### 1. **Chemical Separation and Purification Challenges**
 
@@ -57,12 +59,6 @@ Many critical metals are obtained only as byproducts, where biological enhanceme
 Some metals use extremely energy-intensive processes where biological alternatives might reduce energy requirements:
 
 **Alternative Processing Routes**: [Titanium](titanium) relies on the energy-intensive Kroll process, [Aluminum](aluminum) requires massive electrical inputs for smelting, and [Magnesium](magnesium) uses similar high-energy reduction processes. While biological reduction faces thermodynamic challenges, biocatalytic approaches could potentially reduce energy requirements.
-
----
-
-## Strategic Focus Areas
-
-The detailed reports provide specific technical data on production capacities, mine locations, employment figures, and supply chain vulnerabilities for each metal. This technical foundation enables targeted biotechnology development focused on the most strategically important and technically feasible opportunities.
 
 ---
 
