@@ -330,7 +330,7 @@ class CriticalMineralExplorer {
 
         try {
             console.log('Fetching report for:', metalName);
-            const response = await fetch(`detailed_reports/${metalName}_report.md`);
+            const response = await fetch(`./detailed_reports/${metalName}_report.md`);
             if (!response.ok) {
                 throw new Error(`Report not found for ${metalName}`);
             }
@@ -471,7 +471,7 @@ class CriticalMineralExplorer {
         this.showLoadingModal(metalName);
 
         try {
-            const response = await fetch(`msha_scraper/msha_critical_metals_analysis/analysis_results/individual_metals/${metalName}_detailed.json`);
+            const response = await fetch(`./msha_scraper/msha_critical_metals_analysis/analysis_results/individual_metals/${metalName}_detailed.json`);
             if (!response.ok) {
                 throw new Error(`Mine data not found for ${metalName}`);
             }

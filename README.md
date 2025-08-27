@@ -15,6 +15,21 @@ This prototype analyzes 63 critical metals across 91,307+ US mining operations f
 - **Supply chain reports** for each metal with technology analysis and bottlenecks
 - **Production estimates** based on employment data and industry benchmarks
 
+## Data Processing Workflow
+
+This project follows a 4-step pipeline to generate comprehensive critical mineral reports:
+
+1. **Metal Selection** → USGS critical minerals list (63 metals)
+2. **Data Collection** → MSHA database scraping for current US mining operations  
+3. **Report Generation** → OpenAI 4o-mini-deep-research creates detailed supply chain reports
+4. **Fact-Checking & Enhancement** → Claude Opus 4.1 validates accuracy and adds structured summaries
+
+**Key Scripts:**
+- `msha_scraper/` - Downloads and processes MSHA mining data
+- `process_all_metals.py` - Batch generates initial reports using OpenAI
+- `check_and_improve.py` - Fact-checks and enhances reports using Claude
+- `report_review_reformat.py` - Integrates expert fact-checking critiques
+
 ## Quick Start
 
 **View online**: [https://critical-minerals-explorer.vercel.app](https://critical-minerals-explorer.vercel.app)
