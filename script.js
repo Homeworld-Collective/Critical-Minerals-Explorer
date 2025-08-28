@@ -81,7 +81,7 @@ class CriticalMineralExplorer {
 
     async loadCriticalMineralsData() {
         try {
-            const response = await fetch('./static-criticalminerals-2030estimates-GDP.csv');
+            const response = await fetch('./static-criticalminerals-2030estimates-GDP-v2.csv');
             if (response.ok) {
                 const csvText = await response.text();
                 this.criticalMineralsData = this.parseCriticalMineralsCSV(csvText);
@@ -90,7 +90,7 @@ class CriticalMineralExplorer {
                 this.domesticSupplyMap = {};
                 this.criticalMineralsData.forEach(row => {
                     const metalName = row.Metal?.toLowerCase();
-                    const domesticSupply = row['Percentage on Domestic Supply for Demand 2030'];
+                    const domesticSupply = row['Supply Percentage of Domestic Demand in 2030'];
                     if (metalName && domesticSupply) {
                         this.domesticSupplyMap[metalName] = domesticSupply;
                     }
@@ -889,7 +889,7 @@ class CriticalMineralExplorer {
         }
 
         try {
-            const response = await fetch('./static-criticalminerals-2030estimates-GDP.csv');
+            const response = await fetch('./static-criticalminerals-2030estimates-GDP-v2.csv');
             if (!response.ok) {
                 throw new Error('Failed to load critical minerals data');
             }
@@ -938,9 +938,9 @@ class CriticalMineralExplorer {
             const currentProduction = this.formatNumber(parseFloat(row['Current Production (tons)'].replace(/,/g, '')) || 0);
             const demand2030 = this.formatNumber(parseFloat(row['Demand 2030 (tons)'].replace(/,/g, '')) || 0);
             const supply2030 = this.formatNumber(parseFloat(row['Supply 2030 (tons)'].replace(/,/g, '')) || 0);
-            const domesticSupplyPct = row['Percentage on Domestic Supply for Demand 2030'] || '0%';
+            const domesticSupplyPct = row['Supply Percentage of Domestic Demand in 2030'] || '0%';
             const bottleneck = row.Bottleneck || '';
-            const gdpImpact = (parseFloat(row['Net decrease in U.S. GDP']) || 0).toLocaleString();
+            const gdpImpact = (parseFloat(row['Net decrease in U.S. GDP ($M, from USGS 2025-1047)']?.replace(/,/g, '')) || 0).toLocaleString();
 
             return [
                 `<a href="#reports/${metalName.toLowerCase()}" onclick="app.switchToMetalReport('${metalName.toLowerCase()}'); return false;" style="color: #3498db; text-decoration: underline;">${metalName}</a>`,
