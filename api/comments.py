@@ -36,36 +36,35 @@ _memory_storage = {}
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        try:
-            if self.path.startswith('/api/comments'):
-                # Parse query parameters
-                from urllib.parse import urlparse, parse_qs
-                parsed_path = urlparse(self.path)
-                query_params = parse_qs(parsed_path.query)
-                metal = query_params.get('metal', [None])[0]
-            
-            if not metal:
-                self.send_response(400)
-                self.send_header('Content-Type', 'application/json')
-                self.send_header('Access-Control-Allow-Origin', '*')
-                self.end_headers()
-                self.wfile.write(json.dumps({'error': 'Metal parameter is required'}).encode())
-                return
-            
-            # Load comments
-            comments = load_comments()
-            
-            # Filter by metal and only return approved comments
-            metal_comments = [
-                comment for comment in comments.get(metal.lower(), [])
-                if comment.get('approved', False)
-            ]
-            
-            self.send_response(200)
+        if self.path.startswith('/api/comments'):
+            # Parse query parameters
+            from urllib.parse import urlparse, parse_qs
+            parsed_path = urlparse(self.path)
+            query_params = parse_qs(parsed_path.query)
+            metal = query_params.get('metal', [None])[0]
+        
+        if not metal:
+            self.send_response(400)
             self.send_header('Content-Type', 'application/json')
             self.send_header('Access-Control-Allow-Origin', '*')
             self.end_headers()
-            self.wfile.write(json.dumps(metal_comments).encode())
+            self.wfile.write(json.dumps({'error': 'Metal parameter is required'}).encode())
+            return
+        
+        # Load comments
+        comments = load_comments()
+        
+        # Filter by metal and only return approved comments
+        metal_comments = [
+            comment for comment in comments.get(metal.lower(), [])
+            if comment.get('approved', False)
+        ]
+        
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        self.wfile.write(json.dumps(metal_comments).encode())
     
     def do_POST(self):
         if self.path.startswith('/api/comments'):
