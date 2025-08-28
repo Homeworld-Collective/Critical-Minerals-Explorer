@@ -998,6 +998,22 @@ body {
     }
 }
 
+/* Homeworld panel responsive styling */
+@media (max-width: 768px) {
+    .homeworld-panel-content {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    .homeworld-logo {
+        text-align: center;
+    }
+    
+    .homeworld-logo img {
+        max-width: 150px !important;
+    }
+}
+
 /* Utility classes */
 .hidden {
     display: none !important;
