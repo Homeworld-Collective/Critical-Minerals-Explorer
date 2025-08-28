@@ -1,8 +1,13 @@
 from http.server import BaseHTTPRequestHandler
 import json
 import os
+import sys
 import time
 from datetime import datetime, timedelta
+
+# Debug: Print Python version and environment
+print(f"Python version: {sys.version}")
+print(f"Environment variables present: {list(os.environ.keys())}")
 
 # Configuration
 MAX_COMMENTS_PER_HOUR = int(os.getenv('MAX_COMMENTS_PER_HOUR', '3'))
@@ -15,25 +20,29 @@ try:
     REDIS_URL = os.getenv('KV_REST_API_URL')
     REDIS_TOKEN = os.getenv('KV_REST_API_TOKEN')
     
+    print(f"Redis URL present: {bool(REDIS_URL)}")
+    print(f"Redis TOKEN present: {bool(REDIS_TOKEN)}")
+    
     if REDIS_URL and REDIS_TOKEN:
         HAS_REDIS = True
-        print(f"Using Upstash Redis at {REDIS_URL}")
+        print(f"Using Upstash Redis")
     else:
         print("Redis credentials not found in environment")
-except ImportError:
-    print("Warning: requests not available, using in-memory storage")
+except ImportError as e:
+    print(f"Warning: requests not available, using in-memory storage. Error: {e}")
 
 # In-memory storage fallback
 _memory_storage = {}
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path.startswith('/api/comments'):
-            # Parse query parameters
-            from urllib.parse import urlparse, parse_qs
-            parsed_path = urlparse(self.path)
-            query_params = parse_qs(parsed_path.query)
-            metal = query_params.get('metal', [None])[0]
+        try:
+            if self.path.startswith('/api/comments'):
+                # Parse query parameters
+                from urllib.parse import urlparse, parse_qs
+                parsed_path = urlparse(self.path)
+                query_params = parse_qs(parsed_path.query)
+                metal = query_params.get('metal', [None])[0]
             
             if not metal:
                 self.send_response(400)
@@ -185,7 +194,12 @@ def load_comments():
                 data = response.json()
                 result = data.get('result')
                 if result:
-                    return json.loads(result)
+                    parsed = json.loads(result)
+                    # Handle if data is stored as a list (old format issue)
+                    if isinstance(parsed, list):
+                        print("Warning: Comments stored as list, returning empty dict to avoid crash")
+                        return {}
+                    return parsed
             return {}
         else:
             # Use in-memory storage for development
@@ -207,8 +221,10 @@ def save_comments(comments):
                 'Content-Type': 'application/json'
             }
             
-            # Upstash REST API expects an array format for SET command: [value]
-            response = requests.post(url, json=[json.dumps(comments)], headers=headers)
+            # Send the JSON string directly as the body to Upstash
+            response = requests.post(url, 
+                                   data=json.dumps(comments),
+                                   headers=headers)
             if response.status_code != 200:
                 print(f"Failed to save comments: {response.text}")
         else:
