@@ -285,7 +285,7 @@ class CriticalMineralExplorer {
             <div class="metal-card" onclick="explorer.showMineDetails('${metal.metal}')">
                 <div class="metal-header">
                     <h3 class="metal-name">${metal.metal}</h3>
-                    <span class="production-badge" style="background-color: ${percentageColor}; color: #fff; font-weight: bold;">${domesticSupplyPct}</span>
+                    <span class="production-badge" style="background-color: ${percentageColor}; color: #fff; font-weight: bold;">${domesticSupplyPct} covered</span>
                 </div>
                 
                 <div class="metal-stats">

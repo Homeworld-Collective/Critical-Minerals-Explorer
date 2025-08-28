@@ -581,7 +581,7 @@ body {
 }
 
 .report-content {
-    padding: 1rem;
+    padding: 0;
     line-height: 1.7;
 }
 
@@ -910,10 +910,11 @@ body {
 @media (max-width: 768px) {
     .app-container {
         margin: 0;
+        padding: 0 16px;
     }
 
     .main-content {
-        padding: 1rem;
+        padding: 0;
     }
 
     .dashboard-controls {
@@ -951,15 +952,49 @@ body {
         width: 95%;
     }
 
+    .app-header {
+        padding: 2rem 1.5rem;
+        margin: 1rem 0;
+    }
+
     .header-content h1 {
         font-size: 2rem;
         flex-direction: column;
         gap: 0.5rem;
     }
+    
+    .header-content p {
+        font-size: 1rem;
+    }
+    
+    .report-viewer {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 0.5rem;
+        gap: 0.25rem;
+    }
 
     .nav-tab {
         padding: 0.75rem 1rem;
         font-size: 0.9rem;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+    
+    /* Hide scrollbar but allow scrolling */
+    .nav-tabs::-webkit-scrollbar {
+        height: 0;
+        background: transparent;
+    }
+    
+    .nav-tabs {
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
     }
 }
 
