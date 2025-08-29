@@ -1,8 +1,10 @@
 # Where can biotechnology help Critical Minerals in the US? 
 
-This explorer analyzes domestic mining capacity and supply chain bottlenecks for 63 critical minerals across the US, using comprehensive data from MSHA mining records. The AI-powered analysis is based on the [USGS critical minerals list published August 25, 2025](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf) and was first made public on August 26, 2025.
+The AI-powered explorer is based on the [USGS critical minerals list published August 25, 2025](https://pubs.usgs.gov/of/2025/1047/ofr20251047.pdf). We published this tool the day after the USGS report to help others map the urgent needs of 63 critical minerals to technological bottlenecks. While we focus in this introduction on biotechnology, the detailed reports in this tool are technology agnostic.
 
-*Because we made this with a rapid integration of AI tools, this site is best used as a tool to bridge the stated urgent needs to the technical bottlenecks ahead. Please validate ideas here for yourself and give us input as you go through! We built an anonymous commenting feature in the Detailed Reports section so anyone can highlight and comment (moderated for value and civility).* 
+**Every metal below links to a structured report (ex: [Rhodium](rhodium)). The Summary Table is modified version of the USGS table that ranks metals by GDP impact.**
+
+*Because we made this with a rapid integration of AI tools (see the Data Generation section below), treat the data as a rough draft. Please validate ideas here for yourself and give us input as you go through! We built an anonymous commenting feature in the Detailed Reports section so anyone can highlight and comment (moderated for value and civility).* 
 
 ## High-Priority Targets for Biotechnology Applications
 
