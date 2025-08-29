@@ -12,7 +12,9 @@ import time
 
 def get_metal_list():
     """Get list of all metals from CSV files, excluding aluminum."""
-    consolidated_dir = Path("msha_scraper/msha_critical_metals_analysis/analysis_results/individual_metals")
+    # Get the parent directory (repository root)
+    repo_root = Path(__file__).parent.parent
+    consolidated_dir = repo_root / "msha_scraper/msha_critical_metals_analysis/analysis_results/individual_metals"
     
     metals = []
     for csv_file in consolidated_dir.glob("*_analysis.csv"):
@@ -32,7 +34,7 @@ def run_metal_analysis(metal_name, total_count, current_index):
     try:
         # Run the analysis script with real-time output
         result = subprocess.run([
-            sys.executable, "generate_metal_report.py", metal_name
+            sys.executable, os.path.join(os.path.dirname(__file__), "generate_metal_report.py"), metal_name
         ], timeout=7200)  # 2 hour timeout, no capture_output so we see real-time output
         
         if result.returncode == 0:
@@ -54,7 +56,9 @@ def run_metal_analysis(metal_name, total_count, current_index):
 
 def get_completed_metals():
     """Get list of metals that have already been processed."""
-    reports_dir = Path("detailed_reports")
+    # Get the parent directory (repository root)
+    repo_root = Path(__file__).parent.parent
+    reports_dir = repo_root / "detailed_reports"
     if not reports_dir.exists():
         return []
     
@@ -91,7 +95,8 @@ def main():
         print(f"  {i:2d}. {metal}")
     
     # Create detailed_reports directory if it doesn't exist
-    Path("detailed_reports").mkdir(exist_ok=True)
+    repo_root = Path(__file__).parent.parent
+    (repo_root / "detailed_reports").mkdir(exist_ok=True)
     
     # Process each metal
     total_count = len(metals_to_process)
@@ -138,7 +143,7 @@ failed_metals = {failed_metals}
 
 for metal in failed_metals:
     print(f"Retrying {{metal}}...")
-    result = subprocess.run([sys.executable, "generate_metal_report.py", metal])
+    result = subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "generate_metal_report.py"), metal])
     if result.returncode != 0:
         print(f"Failed again: {{metal}}")
 '''

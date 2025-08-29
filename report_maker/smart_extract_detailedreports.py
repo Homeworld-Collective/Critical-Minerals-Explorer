@@ -260,10 +260,11 @@ def main():
     
     client = anthropic.Anthropic(api_key=api_key)
     
-    # Paths
-    reports_dir = "detailed_reports"
-    input_csv = "static-criticalminerals-2030estimates-GDP.csv"
-    output_csv = "enhanced-criticalminerals-2030estimates-GDP.csv"
+    # Paths - use parent directory (repository root)
+    repo_root = Path(__file__).parent.parent
+    reports_dir = str(repo_root / "detailed_reports")
+    input_csv = str(repo_root / "static-criticalminerals-2030estimates-GDP.csv")
+    output_csv = str(repo_root / "enhanced-criticalminerals-2030estimates-GDP.csv")
     
     print("🚀 Starting Enhanced CSV Creation with Smart LLM Extraction")
     print("="*60)
