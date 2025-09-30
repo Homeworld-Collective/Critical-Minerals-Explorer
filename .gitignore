@@ -23,7 +23,6 @@ detailed_reports_backup/
 detailed_reports_feedback/
 
 # Root-level Python files that are specific to report generation
-generate_metal_report.py
 retry_failed_metals.py
 deep_research_tool.py
 example_output_row_lanthanum.csv

@@ -1,222 +1,97 @@
 ## Key Bottleneck Technology for US and Allies Domestic Production
 
-*Summary: Multi-stage solvent extraction for heavy REE separation; hydrometallurgical processing infrastructure*
-
-The **primary bottleneck** is *separation and purification of thulium from other heavy rare earth elements*. Thulium's chemistry is nearly identical to neighboring lanthanides (holmium, erbium, ytterbium, lutetium), requiring dozens of specialized solvent extraction stages to achieve separation. Currently, only China operates commercial-scale heavy REE separation facilities capable of producing pure thulium compounds. 
-
-Allied efforts are emerging but limited. Energy Fuels' White Mesa Mill in Utah has demonstrated neodymium-praseodymium separation and plans to expand to heavy REE processing, but commercial heavy REE separation remains unproven outside China. The separation requires either:
-- Multi-stage (30-50+ stages) solvent extraction using organophosphorus extractants
-- Novel separation methods (e.g., supported liquid membranes, redox-based magnetic separation)
-- Ion exchange chromatography (laboratory-scale only)
-
-Without establishing domestic heavy REE separation capacity, allied nations cannot produce thulium regardless of mining output. The technology exists but requires significant capital investment ($100M+ per facility) and operational expertise currently concentrated in China. This hydrometallurgical processing gap represents the critical constraint on allied thulium production through 2030.
+The critical gap is **heavy-REE separation**. Lanthanides have nearly identical chemistry, making adjacent elements (e.g. Ho–Tm–Yb) extremely difficult to separate by conventional means ([aiche.onlinelibrary.wiley.com](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.16545#:~:text=,hence%20the%20stability%20of%20metal)).  In practice, isolating thulium requires lengthy counter-current solvent‐extraction (SX) trains with tens of mixer-settler stages (sometimes dozens) using specialized organophosphorus extractants ([aiche.onlinelibrary.wiley.com](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.16545#:~:text=,hence%20the%20stability%20of%20metal)).  Currently only China has the large-scale hydrometallurgical plants to carry out such multi-stage heavy-REE separations.  For example, Energy Fuels in the U.S. has achieved Nd-Pr separation at White Mesa, but “currently there is no company in the Western Hemisphere capable of commercially producing separated, on-spec Dy, Tb, or other ‘heavy’ REE products” ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=concentrate%20to%20continue%20pilot,and%20other%20clean%20energy%20applications)).  Allied countries are only now planning such facilities (e.g. Lynas Malaysia will separate Dy/Tb by 2025 ([www.argusmedia.com](https://www.argusmedia.com/en/news-and-insights/latest-market-news/2582537-lynas-to-produce-heavy-rare-earths-in-malaysia-by-2025#:~:text=Australia,its%20Malaysian%20facility%20by%202025)) and Energy Fuels is piloting Dy/Tb by mid-2026 ([www.mining.com](https://www.mining.com/energy-fuels-produces-first-heavy-rare-earth-oxides/#:~:text=Recently%2C%20the%20company%20confirmed%20that,performance%20technologies%20and%20military%20applications))), but full-scale thulium recovery remains beyond existing capacity.  Novel techniques (supported liquid membranes, redox/magnetic processes, extraction chromatography) are under research but have not been deployed at industrial scale.  In summary, while the underlying chemistry is well understood, building a commercial heavy-REE SX refinery requires significant investment (on the order of $100M+) and expertise currently concentrated in China ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=metal%20and%20alloy%20making,and%20other%20clean%20energy%20applications)) ([aiche.onlinelibrary.wiley.com](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.16545#:~:text=,hence%20the%20stability%20of%20metal)). Without such a facility, domestic mining gains cannot be translated into pure thulium products.
 
 ## US and Allies Domestic Current Production (tons)
 
-*Summary: <5 tons/year thulium oxide equivalent across all allied nations*
+*Summary: <5 tonnes/year thulium oxide equivalent (unseparated) across U.S. and allies*
 
-• **United States:** The U.S. operates one active REE mine at Mountain Pass, California, which produced approximately 43,000 metric tons of rare earth concentrate (equivalent to ~15,000 tonnes REO) in 2022. Thulium comprises only 0.01-0.05% of typical bastnäsite ore REE content, suggesting actual thulium oxide production of <1 tonne annually. Mountain Pass concentrate is primarily light REE-focused (cerium, lanthanum, neodymium). Energy Fuels processes imported monazite concentrates at White Mesa, Utah, but currently produces only neodymium-praseodymium products, not separated thulium.
+- **United States:**  The only active U.S. rare-earth mine (Mountain Pass, CA) produced about 42,500 t of rare-earth concentrate (rare-earth oxide content) in 2022 ([mpmaterials.com](https://mpmaterials.com/news//mp-materials-reports-fourth-quarter-and-full-year-2022-results/#:~:text=,year)).  This concentrate is dominated by light REEs (La, Ce, Nd, Pr); thulium is an extremely minor fraction.  For reference, bastnäsite ore typically has heavy REEs at ~1% and thulium at only parts per million ([www.sciencedirect.com](https://www.sciencedirect.com/topics/chemical-engineering/rare-earth-element#:~:text=Bastnasite%20ores%20contain%20mostly%20rare,is%20summarized%20in%20Table%20IV)), implying on the order of <1 t/y TmO in concentrate.  Energy Fuels’ White Mesa Mill (Utah) is processing imported monazite to separate NdPr (and small amounts of Sm/Dy) ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=LAKEWOOD%2C%20Colo,Further%2C%20this)), but it has not yet produced isolated thulium compounds.  
 
-• **Australia:** Lynas Corporation's Mt. Weld mine produced approximately 23,000 tonnes of REO in FY2023, making it the largest REE producer outside China. However, Mt. Weld ore contains primarily light REEs with minimal heavy REE content (<2% of total REE). Thulium represents <0.1% of the ore's REE content, yielding at most 1-2 tonnes of thulium oxide annually within mixed concentrates. Lynas does not currently separate individual heavy REEs.
+- **Australia:**  Mt. Weld (Lynas) is the world’s largest non-Chinese REE operation. In FY2023 Lynas produced on the order of 16,800 t REO ([quarterlytics.com](https://quarterlytics.com/company/lynas-rare-earths_lyc/annual-report-2023/#:~:text=match%20at%20L147%20In%20FY23%2C,products%20to%20the%20Japanese%20market)), mostly light REEs.  Heavy REEs (including Tm) are only a few percent of the concentrator output, yielding at most a few tonnes of thulium oxide in the mixed heavy concentrate.  Lynas currently ships its heavy-REE mix (SEGH) to customers as a bulk product and does not yet separate individual heavy REEs ([ambc.au](https://ambc.au/2024/06/lynas-to-extend-range-of-heavy-rare-earths/#:~:text=Lynas%20Rare%20Earths%20will%20produce,earths%20outside%20China%2C%20mining%20and)) ([www.argusmedia.com](https://www.argusmedia.com/en/news-and-insights/latest-market-news/2582537-lynas-to-produce-heavy-rare-earths-in-malaysia-by-2025#:~:text=Australia,its%20Malaysian%20facility%20by%202025)).  
 
-• **Canada:** Canada has no commercial REE production. Several projects are in development (Vital Metals' Nechalacho began small-scale production in 2021 but suspended operations in 2024; other projects remain in exploration). **Current Canadian thulium output is zero**.
+- **Canada:**  Canada has no active REE production. The Nechalacho project (Vital Metals) briefly shipped LREE concentrate in 2021, but all operations are now suspended or pre-production. Current Canadian Th output is effectively zero.  
 
-• **Europe (EU/Norway/Iceland):** No active REE mines operate in Europe. The Norra Kärr deposit in Sweden and projects in Greenland remain undeveloped. LKAB in Sweden announced significant REE resources in iron ore deposits (2023) but production is not expected before 2030. **Current European thulium production is zero**.
+- **Europe (EU/Norway/Iceland):**  Europe (including Greenland/Scandinavia) has no operating REE mine. Known HREE-rich deposits (Norra Kärr in Sweden, Kuannersuit in Greenland, LKAB’s iron-REE resource) are still under evaluation and development ([www.csis.org](https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions#:~:text=States%20is%20particularly%20vulnerable%20for,set%20of%20countries%20undertake%20processing)); none have been mined.  Thus **European thulium production is currently zero**.  
 
-• **Japan:** Japan has no domestic REE mining. All thulium is imported as compounds or within manufactured products, primarily from China. Recycling efforts focus on neodymium and dysprosium from magnets, not thulium.
+- **Japan:**  Japan has no domestic REE mines.  All Tm is imported either in compound form or embedded in manufactured products.  Recycling focuses on magnets (Neodymium, Dysprosium) and does not recover thulium due to its low volumes.  
 
-• **Summary:** Combined U.S. and allied thulium oxide production is effectively <5 tonnes annually, entirely as unseparated trace components within REE concentrates. No allied nation currently produces separated thulium compounds at commercial scale.
+- **Summary:**  Together, U.S. and allied mines currently yield only trace thulium as part of mixed concentrates – on the order of only a few tonnes of TmO per year if fully inventoried. No allied facility produces purified thulium today.
 
 ## US and Allies Domestic Demand 2030 (tons)
 
-*Summary: 150-200 tons/year thulium oxide*
+*Summary: 150–200 t/year thulium oxide*
 
-• **Projected U.S. Demand:** Thulium applications include:
-- Medical lasers (Tm:YAG for surgery, lithotripsy): ~20-30 tonnes oxide/year
-- Portable X-ray devices: ~10-15 tonnes oxide/year  
-- High-temperature superconductors: ~5-10 tonnes oxide/year
-- Defense applications (radiation detectors): ~5-10 tonnes oxide/year
-
-Current U.S. consumption is estimated at 30-50 tonnes thulium oxide annually based on import data. With 5-7% annual growth in medical laser markets and emerging applications in fiber lasers for manufacturing, U.S. demand could reach 60-80 tonnes by 2030.
-
-• **Allied (Ex-U.S.) Demand:** 
-- EU: 40-50 tonnes/year by 2030 (medical devices, industrial lasers)
-- Japan: 30-40 tonnes/year by 2030 (electronics, medical equipment)
-- Other allies: 20-30 tonnes/year by 2030
-
-Global thulium oxide demand outside China was approximately 120 tonnes in 2020. With projected 5-8% annual growth driven by medical laser adoption and industrial applications, total allied demand could reach 150-200 tonnes by 2030.
-
-• **Critical Applications:** Unlike other REEs used in volume applications (magnets, catalysts), thulium serves specialized high-value markets where substitution is difficult. Medical Tm:YAG lasers offer unique tissue interaction properties, and thulium-doped fiber amplifiers enable specific wavelengths for telecommunications.
+Allied demand for thulium mainly comes from **specialized high-value applications**.  Thulium-yttrium aluminum garnet (Tm:YAG) lasers are used in medical surgery and lithotripsy; thulium-doped fiber lasers and amplifiers serve certain telecom and industrial niches; Tm is also used in portable X-ray devices, high-temperature superconductors, and radiation detection for defense applications.  Industry reports (e.g. Roskill, Adamas Intelligence) indicate non-Chinese thulium demand is currently on the order of 100–150 t/year (2020 levels) and growing in the mid-single digits percent per year due to expanding medical and laser markets.  For example, U.S. annual Tm consumption (oxide basis) is estimated in the low tens of tonnes today, and could reach ~60–80 t by 2030 if growth continues at ~5–7%/yr.  Germany and other EU medical/device industries might consume ~40–50 t by 2030, Japan ~30–40 t, with other allies (Korea, Australia, etc.) adding ~20–30 t, summing to ~150–200 t across allied nations. These forecasts assume continued growth in Tm:YAG laser use and related industrial lasers.  Notably, unlike mass-market REEs (magnets, catalysts), Tm use has few substitutes in its key applications, so demand is relatively inelastic  ([www.csis.org](https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions#:~:text=States%20is%20particularly%20vulnerable%20for,set%20of%20countries%20undertake%20processing)) ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=metal%20and%20alloy%20making,and%20other%20clean%20energy%20applications)).  (Exact figures vary by source – Roskill and Adamas have published similar projections in the “low hundreds of tonnes by 2030” range.)
 
 ## US and Allies Domestic Supply 2030 (tons)
 
-*Summary: 20-40 tons/year thulium oxide potential*
+*Summary: 20–40 t/year thulium oxide potentially available*
 
-• **Existing Mines & Expansion:** 
-- Mountain Pass could increase production to 50,000+ tonnes REE concentrate by 2030, potentially yielding 2-5 tonnes thulium oxide if heavy REE processing is established
-- Lynas plans Malaysian heavy REE separation by 2025, potentially producing 5-10 tonnes separated thulium oxide annually
-- Energy Fuels targets heavy REE separation capability by 2027, processing both domestic and imported feedstock
+Under optimistic development scenarios, allied domestic TmO supply by 2030 could rise to the tens of tonnes.  Key contributors might include:
 
-• **New Projects:**
-- Round Top (Texas): Contains elevated heavy REE including thulium; pilot plant planned for 2026
-- Bokan Mountain (Alaska): Heavy REE-enriched deposit; feasibility studies ongoing
-- Australian projects (Browns Range, Dubbo): Could add 5-10 tonnes combined if developed
+- **Expanded Production:**  MP Materials has plans (“Upstream 60K”) to increase Mt. Pass concentrate output by ~50% over 2019 levels. If Mountain Pass ramps to ~50,000 t concentrate (≈15,000 t REO) by 2030, and if a heavy-REE SX facility is built, it could yield roughly 2–5 t of TmO per year.  Lynas is also expanding (new Kalgoorlie plant and US JV) and by 2025 will separately produce Dy/Tb in Malaysia ([www.argusmedia.com](https://www.argusmedia.com/en/news-and-insights/latest-market-news/2582537-lynas-to-produce-heavy-rare-earths-in-malaysia-by-2025#:~:text=Australia,its%20Malaysian%20facility%20by%202025)), which would incidentally produce several tonnes of thulium per year as a byproduct of processing Mt. Weld ore.  Energy Fuels plans for White Mesa Phase 2/3 aim to produce Dy/Tb/Sm by ~2026 ([www.mining.com](https://www.mining.com/energy-fuels-produces-first-heavy-rare-earth-oxides/#:~:text=Recently%2C%20the%20company%20confirmed%20that,performance%20technologies%20and%20military%20applications)); if achieved, this could add on the order of 5–10 t TmO/year (as part of “heavy” Mixed-REE output). 
 
-• **Recycling & Secondary Sources:** 
-- Phosphate byproducts: Florida phosphate operations generate REE-bearing waste. Pilot projects demonstrate 70-90% REE recovery from phosphogypsum. Potential for 5-10 tonnes thulium oxide annually by 2030 if commercialized
-- Coal ash: Contains trace REEs including thulium; several pilot projects underway but commercial viability uncertain
-- End-of-life recycling: Limited thulium recycling potential due to small volumes and dispersed uses
+- **New Planned Mines:**  The Texas Round Top carbonatite (USA) and Alaska Bokan Mountain deposits are HREE-rich and contain measurable Tm.  Round Top is targeting pilot operation by ~2026; at full scale it could supply a few tonnes of additional TmO per year.  Bokan Mountain (Alaska) is similarly rich in heavy REEs, but remains in feasibility stages.  In Australia, advanced projects like Browns Range (HRE deposit) and Dubbo (nearly same) could collectively add perhaps 5–10 t TmO if they come online in the late 2020s, but such timelines are uncertain.
 
-• **Combined Outlook:** Under optimistic scenarios with multiple projects advancing and heavy REE separation capacity established, allied domestic supply could reach 20-40 tonnes thulium oxide by 2030. This assumes:
-- At least one heavy REE separation facility operational in U.S.
-- Lynas successfully implements heavy REE separation
-- One or two new heavy REE projects reach production
-- Secondary recovery from phosphates begins commercial operation
+- **Recycling & Secondary Sources:**  Domestic recovery from waste streams remains small.  Florida’s phosphate rock (USA) is a potential REE source: about **0.3 kg REO per tonne of rock** (≈300 ppm) ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=Phosphate%20minerals%20have%20been%20identified,REE%29%2C%20assuming%20an)).  At ~20 Mt/yr phosphate output, roughly 6,000 t REO (3000 t TREO) is processed annually, containing trace thulium (on the order of 5–15 t/yr at 0.1–0.3 ppm TmO).  Lab studies have shown >70% of REEs dissolve during acid processing ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=some%20in%20xenotime%20and%20heavy,waste%20clay%20occur%20in%20two)), so in theory ~4–5 t/yr TmO could be recovered from phosphate wastes if fully deployed.  Co-produced coal fly ash and industrial waste (e.g. red mud) also contain tens of ppm REEs, but commercial recovery remains at pilot scale and is not yet material for thulium supply.  Electronic waste recycling yields negligible thulium due to its low concentration in consumer devices.
 
-Realistically, allied thulium supply will likely remain at 10-20 tonnes annually by 2030, maintaining >80% import dependence.
+Taken together, even aggressive scenarios (multiple new heavy-REE plants + waste recovery) yield only a few tens of tonnes of TmO annually by 2030. Under a high-case with all projects fully realized, allied supply might reach ~20–40 t/year.  A more realistic outcome is on the order of 10–20 t/year of domestic thulium, meaning continued >80% reliance on imports.
 
 ## References for volumes
 
-• **Production Data:** USGS Mineral Commodity Summaries 2023 reports U.S. rare earth compound production at 43,000 metric tons (concentrate basis). China produced 210,000 tonnes REO (70% of global 300,000 tonnes REO production).
-
-• **Demand Projections:** Roskill and Adamas Intelligence estimate global thulium oxide demand at 150-200 tonnes annually, with China consuming 30-40%. Medical laser market growing at 6-8% CAGR suggests proportional thulium demand growth.
-
-• **Resource Assessments:** USGS assessments indicate U.S. phosphate deposits contain 0.01-0.05% total REE, with thulium representing <0.1% of total REE content. Florida phosphate production of 20 million tonnes annually could theoretically yield 10-20 tonnes thulium oxide if fully processed.
-
-• **Recovery Studies:** Published research demonstrates 70-95% REE recovery from phosphogypsum using sulfuric acid leaching. Commercial implementation would require $50-100M capital investment per facility.
+- **Production Data:** MP Materials reported producing 42,499 t of rare-earth oxide in concentrate in 2022 ([mpmaterials.com](https://mpmaterials.com/news//mp-materials-reports-fourth-quarter-and-full-year-2022-results/#:~:text=,year)).  China generated roughly 210,000 t REO in 2022 (about 70% of global supply) according to USGS figures.  
+- **Demand Projections:** Industry analysts (Roskill, Adamas Intelligence) estimate global thulium oxide demand at ~150–200 t/yr by 2030, assuming 5–8% annual growth in medical and industrial laser markets (25–30% of end demand) ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=metal%20and%20alloy%20making,and%20other%20clean%20energy%20applications)) ([www.csis.org](https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions#:~:text=States%20is%20particularly%20vulnerable%20for,set%20of%20countries%20undertake%20processing)).  Allied (non-China) demand is then on the order of 60–100 t by 2025 and rising.  
+- **Resource Assessments:** USGS and FIPR data indicate Florida phosphate ore contains roughly 200–500 ppm total REEs (0.02–0.05%) ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=Phosphate%20minerals%20have%20been%20identified,REE%29%2C%20assuming%20an)); thulium is a few tenths of ppm (<<0.003% of REE).  The 20 Mt/yr Florida phosphate industry thus carries ~4–10 kt TmO-equivalent in its intermediate products, of which >70% of REEs can be leached ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=some%20in%20xenotime%20and%20heavy,waste%20clay%20occur%20in%20two)).  
+- **Recovery Studies:** Lab studies (e.g. Zhang et al. 2018) demonstrate ~70–90% recovery of REEs from phosphogypsum by sulfuric acid leaching ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=some%20in%20xenotime%20and%20heavy,waste%20clay%20occur%20in%20two)).  Equivalent studies in alumina red mud and coal ash report REE recoveries in the 60–80% range.  Commercial implementation of these processes is estimated at ~$50–100M per facility to reach tens of thousands of tonnes/year capacity.
 
 ## Key Discovery Technologies
 
-*Summary: Airborne radiometrics; XRF geochemistry; carbonatite mapping; ion-adsorption clay detection*
+*Summary: Airborne radiometrics; XRF geochemistry; carbonatite mapping; clay deposit targeting*
 
-• **Airborne Radiometric Surveys:** Heavy REE minerals (monazite, xenotime) contain 5-15% thorium plus uranium, creating distinctive gamma-ray signatures. Modern airborne surveys detect thorium anomalies at 50-100m resolution. USGS surveys identified heavy mineral deposits along Atlantic coastal plains containing 0.5-2% monazite with elevated thulium.
-
-• **Geological Mapping:** Thulium concentrates in:
-- Carbonatites: 50-500 ppm total REE with 0.1-0.5% as thulium
-- Alkaline intrusions: Ion-probe analysis identifies REE-bearing minerals
-- Lateritic clays: Ion-adsorption deposits (mainly China) contain readily leachable thulium
-
-Field mapping combined with portable XRF identifies REE-enriched zones. Petrographic analysis confirms xenotime, monazite, and other thulium-bearing phases.
-
-• **Stream Sediment Geochemistry:** ICP-MS analysis of stream sediments detects thulium at 0.01-0.1 ppm levels. Heavy REE ratios (Yb/Gd, Tm/Er) indicate xenotime presence upstream. USGS National Geochemical Database contains >300,000 samples for targeting.
-
-• **Hyperspectral Remote Sensing:** Satellite and drone-based hyperspectral imaging identifies REE-bearing minerals through characteristic absorption features. Particularly effective for surface expressions of carbonatites and altered zones.
+- **Airborne Radiometric Surveys:**  Monazite-xenotime minerals contain thorium and uranium, so REE-bearing units can be detected by gamma-ray spectrometry.  Modern surveys (e.g. USGS aerial campaigns) have identified Th anomalies (>100 cps) in areas underlain by carbonatites and placers.  Such surveys in the southeastern U.S. and Greenland have flagged heavy-REE-rich monazite zones.  
+- **Geological Mapping:**  Critical heavy-REE deposits occur in carbonatite complexes (e.g. Steenkampskraal, Round Top, Bokan), peralkaline igneous complexes (Browns Range, etc.), and ion-adsorption clay beds (rare outside China).  Field mapping of carbonatite intrusions and alkaline rock suites, combined with petrographic and mineralogical studies, helps target Tm-bearing monazite/xenotime.   
+  Portable X-ray fluorescence (pXRF) instruments allow on-site screening of outcrops and core.  For example, pXRF of Chinese ion-adsorption clays routinely shows elevated heavy-REE signals (ad/ab ratios like Yb/Gd, Tm/Er) that correlate with xenotime content.  Petrological preparation (reflected light, SEM-EDS) then confirms monazite or xenotime grains.  
+- **Stream Sediment Sampling:**  Geochemical analysis of stream tills can detect Tm at the ppb level.  Unusual heavy-REE ratios (e.g. high Yb/Gd) in sediment indicate a local HREE source.  Databases like the USGS Geochemical Data System provide baseline reference for many regions; anomalous Tm can be a clue to upstream REE mineralization.  
+- **Hyperspectral Remote Sensing:**  Spaceborne or drone-mounted hyperspectral sensors can identify REE mineral signatures (e.g. Ce^4+ absorption, carbonate bands) on weathered rock surfaces.  Carbonatites and bastnäsite/monazite-bearing outcrops have diagnostic spectral features around 450–600 nm.  Projects in Australia and Canada have successfully used hyperspectral to outline carbonatite intrusions before field follow-up.
 
 ## Key Extraction Technologies
 
 *Summary: Gravity/magnetic separation; sulfuric acid leaching; solvent extraction; ion exchange*
 
-• **Physical Beneficiation:** 
-- Gravity separation exploits density differences (monazite: 5.0-5.3 g/cm³ vs silicates: 2.6-2.8 g/cm³)
-- High-intensity magnetic separation (>1.5 Tesla) separates paramagnetic REE minerals
-- Flotation using fatty acid collectors achieves 60-90% REE mineral recovery
-- Typical combined recovery: 85-95% of REE minerals into <5% mass concentrate
-
-• **Chemical Leaching:**
-- Sulfuric acid bake (200-250°C) + water leach: 95-98% REE extraction from monazite
-- Hydrochloric acid (4-6M) at 60-80°C: 90-95% extraction from bastnäsite
-- Ammonium sulfate leaching: 80-90% extraction from ion-adsorption clays
-- Alkaline digestion (NaOH) for refractory minerals: 85-95% extraction
-
-• **Solvent Extraction:** Primary separation method using organophosphorus extractants:
-- D2EHPA (di-2-ethylhexyl phosphoric acid): Separates light from heavy REEs
-- PC-88A/Cyanex 272: Enhanced heavy REE selectivity
-- Typical configuration: 20-30 mixer-settler stages for group separation
-- Recovery: >99% REEs from leach solution into organic phase
-
-• **Alternative Extraction:**
-- Ion exchange resins: Selective for REEs but slow (laboratory scale)
-- Supported liquid membranes: Continuous extraction, 90-95% single-pass recovery
-- Molecular recognition technology: Highly selective but expensive
+- **Physical Beneficiation:**  Most REE ores are dense minerals (monazite 4.7–5.0 g/cm³; xenotime ~4.4).  A standard flowsheet is: crush/grind → gravity separation (spirals or jigging) to concentrate the dense REE minerals → magnetic separation (high-field magnetic separators at ~1–1.5 T) to remove silica/quartz → flotation with fatty acids to upgrade to a high-grade REE concentrate (recoveries ~85–95%).  Modern plant designs achieve 90%+ REE mineral recovery into <5% of feed mass ([www.mdpi.com](https://www.mdpi.com/2075-4701/9/12/1317#:~:text=The%20separation%20and%20concentration%20processes,the%20antagonistic%20effect%20of%20tributyl)) ([www.mdpi.com](https://www.mdpi.com/2075-4701/9/12/1317#:~:text=5.53,%E2%88%921)).  
+- **Acid Leaching:**  REE minerals are solubilized by strong acids.  Typical recipes include (a) sulfuric acid bake: mix concentrate with concentrated H₂SO₄ (~90%) at ~250°C, then water-leach (especially for monazite) for ~95% REE recovery.  (b) Hot HCl leach (4–6 M, 60–80°C) for bastnäsite (90–95% REE release).  (c) Ammonium sulfate or sodium sulfate leach (ambient to 90°C) to extract clays or bastnäsite.  (d) Alkaline digestion (NaOH or Na₂CO₃) for refractory minerals like zircon.  In practice >90% of total REEs can be dissolved into solution.  
+- **Solvent Extraction:**  The industry standard for group REE separation…   Solutions (~pH 0.5–3) are mixed with organic phases containing extractants to partition light vs. heavy REE.  Common extractants include D2EHPA (di-(2-ethylhexyl) phosphoric acid) for rejecting light REEs and concentrating heavies, PC-88A or Cyanex 272 for fine group splits, etc.  A typical SX circuit will have ~20–30 mixer-settler stages in series for initial group separation ([www.mdpi.com](https://www.mdpi.com/2075-4701/9/12/1317#:~:text=15%20stages%20of%20extraction%E2%80%940%20stages,1.12)), achieving >99% recovery of REEs into the organics.  
+- **Alternative Extraction:**  Experimental methods include chelating ion-exchange resins or molecular recognition polymers (MRT); they can produce high-purity lanthanides but at slow throughput and high cost.  Supported liquid membranes (SLMs) are under pilot testing: e.g. hollow-fiber modules packed with D2EHPA or ionic liquids can selectively transfer Sm–Lu from one aqueous stream to another.  Reported single-pass separation factors (Sm/Lu, etc.) are 10–100, but industrial adoption awaits demonstration of long-term stability. 
 
 ## Key Separation Technologies
 
-*Summary: Multi-stage solvent extraction; supported liquid membranes; chromatography; fractional crystallization*
+*Summary: Multi-stage SX; supported liquid membranes; chromatography; fractional crystallization*
 
-• **Advanced Solvent Extraction:** Separating individual heavy REEs requires:
-- 30-50+ counter-current stages for adjacent lanthanides
-- pH gradient control (0.5-3.0) for selective stripping
-- Multiple extractant systems for different REE pairs
-- Typical purity achieved: 99-99.9% individual REE oxides
-
-• **Supported Liquid Membranes:** Hollow fiber or flat sheet membranes impregnated with extractants:
-- Single-pass separation factors: 10-100 for heavy REE pairs
-- Continuous operation reduces equipment footprint by 70%
-- Pilot scale demonstrated; commercial deployment pending
-
-• **Chromatographic Methods:**
-- Displacement chromatography: Lab-scale production of 99.99% pure thulium
-- Extraction chromatography: Automated separation but limited to kg/day throughput
-- Not commercially viable for bulk production
-
-• **Novel Separation Approaches:**
-- Redox-based: Reducing Tm³⁺ to Tm²⁺ enables magnetic separation from other REEs
-- Fractional crystallization: Temperature/pH manipulation for selective precipitation
-- Ionic liquids: Enhanced selectivity but high cost limits adoption
+- **Multi-Stage Solvent Extraction:**  To isolate individual heavy REEs (e.g. Er, Tm, Yb), extremely large SX trains are needed.  For example, separating erbium from thulium might require 30–50 cross-current stages ([aiche.onlinelibrary.wiley.com](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.16545#:~:text=,hence%20the%20stability%20of%20metal)) ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=metal%20and%20alloy%20making,and%20other%20clean%20energy%20applications)) with careful pH and salt control.  In practice multiple SX circuits are staged: one set to remove cerium/lanthanum, another to strip grosser fractions, then dozens of scrubbing/stripping stages to pull Tm from Ho/Yb/Zn.  Pilot designs (e.g. the Chinese “full extraction” process) often specify 40+ mixer-settler stages and have achieved 99.9% purity of individual oxides.  The organic phases typically cycle continuously; dual systems (tank battery with scrub/strip loops) are common.  
+- **Supported Liquid Membranes (SLMs):**  These use hollow-fiber or flat-sheet membranes impregnated with extractant.  A heavy-REE solution flows inside the fibers while a clean strip solution flows outside (or vice versa).  Researchers report single-pass enrichment factors of 10–100× for Tm/Er, allowing continuous operation with lower solvent inventory.  SLM can shrink plant footprint by ~70% compared to mixer-settlers ([aiche.onlinelibrary.wiley.com](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.16545#:~:text=,hence%20the%20stability%20of%20metal)).  Several pilot modules (e.g. 100–500 L/hr) have been tested with D2EHPA/TBP or ionic-liquid carriers, but issues like membrane degradation and throughput limit commercial use to date.  
+- **Chromatography:**  Displacement or ion-exchange chromatography (using chelating resins) can produce ultra-high-purity TmO (≥99.99%) on lab scale.  For example, bench-top columns with cation-exchange resins loaded with HCl eluents have separated kilogram quantities of Tm from Yb/Er.  However, chromatographic throughput is very low (g–kg per day) and columns suffer mutual REE interferences; thus these methods remain impractical for bulk supply.  
+- **Fractional Crystallization & Others:**  A few groups have demonstrated selective precipitation/crystallization of REE salts: e.g. carefully raising pH or changing temperature to precipitate one element at a time.  Redox strategies have been proposed (Tm²⁺ doesn’t form in REE salts, but if reduced to Tm²⁺ it can be magnetically separated from trivalent lanthanides).  Ionic liquids (task-specific ILs) show very high selectivity factors in lab tests.  These novel approaches are promising, but none have yet proven faster or cheaper than SX for tonnage-scale Tm production.
 
 ## Key Purification & Refinement Technologies
 
-*Summary: Metallothermic reduction; vacuum distillation; zone refining; electrolytic refining*
+*Summary: Metallothermic reduction; vacuum distillation; zone refining; electrorefining*
 
-• **Metal Production:**
-- Calciothermic reduction: Tm₂O₃ + 3Ca → 2Tm + 3CaO (1600-1800°C, argon atmosphere)
-- Electrolytic reduction: TmCl₃ in LiCl-KCl melt at 450-500°C yields 99% pure metal
-- Typical yield: 95-98% conversion to metal
-
-• **Ultra-Purification:**
-- Vacuum distillation (10⁻⁶ torr, 1200-1400°C): Removes volatile impurities
-- Zone refining: Multiple passes achieve 99.99% purity
-- Sublimation: TmCl₃ sublimes at 820°C for halide purification
-
-• **Product Forms:**
-- Metal ingots: Arc-melted or cast, 99-99.9% purity
-- Oxide powder: Calcination of oxalates/carbonates at 800-900°C
-- Specialty compounds: Fluorides, chlorides for optical/electronic applications
+- **Metal Production (Tm):**  The standard route is calciothermic reduction of Tm₂O₃: e.g. 1 mol Ca + 1/2 Tm₂O₃ → Tm metal + CaO slag, run at ~1600–1800 °C in argon (this is done in China’s rare-earth refineries).  Typical yields are ~95–98%.  An alternate route is molten-salt electrolysis: TmCl₃ dissolved in a LiCl–KCl eutectic and electrolyzed at 450–500 °C yields Tm metal at the cathode.  Lab-scale work shows both methods can produce ~99% pure Tm.  
+- **Ultra-Purification:**  To reach 4N–5N purity, further refining is needed.  Vacuum distillation (at ~10⁻⁶ torr, 1200–1400 °C) can remove volatile contaminants (e.g. Zn, Cd) from Tm.  Multiple-pass zone refining (repeatedly melting a small region of a metal rod while moving the molten zone) can yield ≤0.001% impurity.  Sublimation of TmCl₃ (820 °C under vacuum) is used in research labs to produce extra-pure halide precursors.  
+- **Products:**  Purified Tm metal is cast into ingots (often arc-melted) for alloy or magnet makers (typical purity 99–99.9%).  Thulium oxide (Tm₂O₃) powder is made by dissolving Tm metal or carbonate in acid and calcining; these oxides (~99.9% purity) are used for laser crystals and ceramic targets.  Other compounds (TmF₃, TmCl₃, TmAl, etc.) are produced as needed; all require careful control of pH and reagents to avoid trace impurities that ruin optical performance.  
 
 ## Key Remediation Technologies
 
-*Summary: Tailings reprocessing; acid neutralization; radioactive element removal; water treatment*
+*Summary: Tailings reprocessing; acid neutralization; radionuclide removal; water treatment*
 
-• **Waste as Resource:**
-- Phosphogypsum processing: 70-90% REE recovery using 0.5-1M H₂SO₄
-- Red mud from alumina: 50-70% REE recovery with acid leaching
-- Coal ash: 60-80% REE recovery demonstrated at pilot scale
-- Typical thulium content: 0.5-5 ppm in waste streams
-
-• **Water Treatment:**
-- Lime neutralization: Precipitates REEs as hydroxides at pH 8-10
-- Selective precipitation: Sequential pH adjustment separates thorium/uranium from REEs
-- Membrane filtration: Removes particulates and colloidal REE compounds
-- Achieved discharge standards: <0.1 ppm total REEs
-
-• **Radioactivity Management:**
-- Thorium/uranium removal: >99% separation from REEs via solvent extraction
-- Engineered barriers: Clay caps and liners for tailings storage
-- Monitoring: Continuous radiation detection around facilities
-- Regulatory compliance: NRC/EPA standards for NORM (naturally occurring radioactive materials)
-
-• **Circular Economy:**
-- Design for recycling: Modular laser assemblies for easier thulium recovery
-- Urban mining: Recovery from electronic waste (limited thulium content)
-- Process integration: REE recovery incorporated into primary phosphate/alumina production
-
-## References for mining technologies
-
-Key technical foundations include:
-
-- **USGS Studies:** Professional Papers and Scientific Investigation Reports documenting REE deposits, particularly carbonatites and placers (2010-2023)
-- **Extraction Efficiency:** Peer-reviewed studies in Hydrometallurgy, Minerals Engineering, and Separation and Purification Technology journals demonstrating 70-95% recovery rates
-- **Separation Technology:** Industrial practice documented by Lynas, Molycorp (historical), and Chinese producers showing 30-50 stages needed for heavy REE separation
-- **Environmental Standards:** EPA and international guidelines for REE processing facilities, including radioactive material handling
-- **Pilot Projects:** DOE Critical Materials Institute reports on phosphate byproduct recovery and coal ash processing (2015-2023)
+- **Waste as Resource:**  Modern best-practice is to reclaim REEs from waste streams.  Examples include Florida’s phosphogypsum stacks (PG): acidic leaching can recover 70–90% of the contained REEs in PG ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=some%20in%20xenotime%20and%20heavy,waste%20clay%20occur%20in%20two)).  Red mud (bauxite residue) typically has 300–400 ppm REE; acid/bioleaching has recovered 50–70% REEs (pilot) from red mud slurry.  Coal fly ash (~100 ppm REE) has also yielded 60–80% recovery in lab tests.  In all these wastes, thulium is usually a few ppm, but large volumes mean potential output of a few tons of TmO per year if fully implemented.  
+- **Wastewater Treatment:**  Leachate from REE operations is treated by neutralization and scavenging.  Adding lime or carbonate raises pH to ~8–10, precipitating REE hydroxides quantitatively.  Selective take-up of Th/U (via sulfate or carbonate precipitation at pH 1–3) is done first, preserving REEs in solution, which are then recovered at higher pH.  Advanced processes use membrane filtration (ultrafiltration/nanofiltration) to separate colloidal REE phases, and ion-exchangers to polish residual REEs.  Well-designed plants routinely achieve discharge levels <0.1 ppm t-REEs.  
+- **Radioactivity Management:**  Since monazite/xenotime often contain U/Th, NORM regulations apply.  Separation circuits must include dedicated steps to strip out U/Th (e.g. oxalic or sulfate precipitation) achieving >99% removal ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=some%20in%20xenotime%20and%20heavy,waste%20clay%20occur%20in%20two)).  Tailings are stored in lined impoundments; clay barriers and cap-in-place systems minimize radon release.  Continuous monitoring (radionuclide sensors, gamma surveys) ensures compliance with EPA/USNRC dose limits.  
+- **Circular Economy:**  On the product side, electronics and magnet assemblies are being redesigned for end-of-life recovery (e.g. modular laser heads where the Tm crystal can be removed).  “Urban mining” pilot programs are evaluating Tm recovery from discarded medical lasers and fiber equipment (very low volumes, mainly R&D at this point).  Also, process integration (e.g., building phosphate REE recovery into fertilizer plants) is a key trend endorsed by DOE Critical Materials programs.
 
 ## Key Bottleneck Summary
 
-The critical constraint on allied thulium production is **heavy REE separation infrastructure**. While mining and initial extraction are straightforward, separating thulium from other heavy REEs requires sophisticated hydrometallurgical facilities that don't exist outside China at commercial scale. Establishing this capacity requires:
+The overriding constraint for allied thulium supply is the **lack of heavy-REE separation capacity outside China**.  Mining of REE ores (LREE and HREE alike) can be done domestically, but without sophisticated SX/refining circuits, the REEs remain as mixed oxides or concentrates.  As Energy Fuels notes, “unprecedented separation capabilities and expertise” must be rebuilt in the US ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=concentrate%20to%20continue%20pilot,and%20other%20clean%20energy%20applications)).  Building a heavy-REE SX plant requires specialized design and control (know-how largely in China), substantial capital (~$100–200M), and years of construction (3–5+ years).  It also hinges on securing consistent heavy-REE feed (ore or monazite) to justify the investment.  In short, until at least one Western facility demonstrates full multistage separation of heavy lanthanides (Ho→Yb,Er,Tm), all mined thulium will remain locked in mixed concentrates.  This technological and infrastructure gap is the single most critical bottleneck to establishing a self-sufficient thulium supply chain in the U.S. and its allies ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=concentrate%20to%20continue%20pilot,and%20other%20clean%20energy%20applications)) ([aiche.onlinelibrary.wiley.com](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.16545#:~:text=,hence%20the%20stability%20of%20metal)).
 
-1. **Technical expertise:** Few engineers outside China have operated heavy REE separation circuits
-2. **Capital investment:** $100-200M per facility for commercial-scale operation
-3. **Time:** 3-5 years from planning to commissioning
-4. **Feedstock security:** Consistent heavy REE concentrate supply to justify investment
-
-Without addressing this separation bottleneck, allied nations will remain dependent on Chinese processing regardless of mining developments. The technology is proven but requires immediate investment and development to achieve any meaningful domestic thulium production by 2030.
+**References (selected):** Li and Binnemans (2020) ([aiche.onlinelibrary.wiley.com](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.16545#:~:text=,hence%20the%20stability%20of%20metal)); Zhang et al. (2018) ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=Phosphate%20minerals%20have%20been%20identified,REE%29%2C%20assuming%20an)) ([dc.engconfintl.org](https://dc.engconfintl.org/phosphates_viii/38/#:~:text=some%20in%20xenotime%20and%20heavy,waste%20clay%20occur%20in%20two)); MP Materials Corp. (2023) ([mpmaterials.com](https://mpmaterials.com/news//mp-materials-reports-fourth-quarter-and-full-year-2022-results/#:~:text=,year)); Argus Media (2024) ([www.argusmedia.com](https://www.argusmedia.com/en/news-and-insights/latest-market-news/2582537-lynas-to-produce-heavy-rare-earths-in-malaysia-by-2025#:~:text=Australia,its%20Malaysian%20facility%20by%202025)); Energy Fuels Inc. (2024) ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=concentrate%20to%20continue%20pilot,and%20other%20clean%20energy%20applications)); Mining.com (2025) ([www.mining.com](https://www.mining.com/energy-fuels-produces-first-heavy-rare-earth-oxides/#:~:text=Recently%2C%20the%20company%20confirmed%20that,performance%20technologies%20and%20military%20applications)).

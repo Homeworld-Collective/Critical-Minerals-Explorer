@@ -1,116 +1,46 @@
 ## Key Bottleneck technology for US and Allies Domestic Production
 *Summary: Solvent extraction separation; hydrometallurgical processing; waste management infrastructure*
 
-The critical bottleneck is **separation and purification** of lanthanum from other REEs. Current hydrometallurgical flowsheets require complex multi-stage solvent extraction (SX) processes with typically 20-40 stages, demanding specialized solvents and generating substantial waste streams. This complexity makes expansion of domestic production costly and slow. No major Western facility currently matches Chinese throughput or cost-efficiency for multi-kiloton lanthanum projects. Despite new mining projects, the lack of scalable separation and refining technology and associated qualified facilities remains the rate-limiting step in US/allied lanthanum production.
+The critical bottleneck is **separation and purification** of lanthanum from other REEs using multi-stage solvent extraction (SX).  Typical processing flowsheets require dozens of mixer–settler stages to achieve high-purity lanthanum – for example, Xie *et al.* note that achieving individual REE separation can involve “up to hundreds of stages” ([www.researchgate.net](https://www.researchgate.net/publication/259134005_A_critical_review_on_solvent_extraction_of_rare_earths_from_aqueous_solutions#:~:text=technical%20performance,configurations%20for%20rare%20earth%20separations)).  These complex SX circuits use specialized organophosphorus reagents and generate large volumes of spent acids, waste organic solvents, and naturally radioactive residues.  Such refining is energy-intensive, costly and produces hazardous waste streams ([www.researchgate.net](https://www.researchgate.net/publication/259134005_A_critical_review_on_solvent_extraction_of_rare_earths_from_aqueous_solutions#:~:text=technical%20performance,configurations%20for%20rare%20earth%20separations)) ([www.reuters.com](https://www.reuters.com/markets/commodities/what-are-rare-earth-metals-why-are-they-demand-2025-02-26/#:~:text=60,friendly%20extraction%20technologies)).  China’s REE refining commands ~91% global share by aggressive subsidies, whereas Western producers (focusing on mining) have struggled with the high cost and regulatory burden of such extensive hydrometallurgy ([www.researchgate.net](https://www.researchgate.net/publication/259134005_A_critical_review_on_solvent_extraction_of_rare_earths_from_aqueous_solutions#:~:text=technical%20performance,configurations%20for%20rare%20earth%20separations)) ([www.reuters.com](https://www.reuters.com/markets/commodities/what-are-rare-earth-metals-why-are-they-demand-2025-02-26/#:~:text=60,friendly%20extraction%20technologies)).  In short, lack of mature, high-capacity separation plants outside China – and the need for continuous multi-stage SX (often 20–40 stages or more) – remains the chief bottleneck for scaling up allied lanthanum refining (Xie *et al.*, 2014; Reuters, 2025).
 
-**Key Bottleneck Summary:** Efficiently separating and purifying lanthanum from other rare earths requires complex, expensive solvent extraction processes with dozens of stages and specialized reagents. The lack of established processing plants with modern separation technology outside China remains the chief bottleneck. Until refining capacity is expanded and processes are streamlined, allied lanthanum production will lag behind projected demand.
+**Key Bottleneck Summary:** Efficiently separating lanthanum (and Ce) from other light REEs requires large SX circuits and custom extractants ([www.researchgate.net](https://www.researchgate.net/publication/259134005_A_critical_review_on_solvent_extraction_of_rare_earths_from_aqueous_solutions#:~:text=technical%20performance,configurations%20for%20rare%20earth%20separations)) ([www.reuters.com](https://www.reuters.com/markets/commodities/what-are-rare-earth-metals-why-are-they-demand-2025-02-26/#:~:text=60,friendly%20extraction%20technologies)).  Western firms currently lack modern, large-scale SX/refining plants for lanthanum, so allied production remains constrained until new facilities (e.g. Lynas/Texas SX unit, Energy Fuels’ planned plant) are built and proven.  
 
 ## US and Allies Domestic Current Production (tons)
 *Summary: ~5,000-7,000 tons La₂O₃ equivalent annually*
 
-• **United States (Mountain Pass, CA):** MP Materials operates the only active REE mine in the US, producing approximately 43,000 metric tons of rare earth concentrate (containing ~15% REO) annually as of 2023. The facility began producing separated REOs including lanthanum oxide in late 2023 with its Stage II operations. Current separated lanthanum production is estimated at 2,000-3,000 tons La₂O₃ per year, ramping up as processing capacity expands.
+• **United States (Mountain Pass, CA):** MP Materials’ Mountain Pass is the only U.S. REE mine ([www.reuters.com](https://www.reuters.com/business/mp-materials-posts-smaller-loss-rare-earths-production-surges-2025-08-07/#:~:text=surge%20in%20production%20amid%20rising,further%20increases%20expected%20next%20quarter)).  Recent reports state MP exceeds ~40,000 metric tons of REO production per year ([mpmaterials.com](https://mpmaterials.com/news/mp-materials-reports-fourth-quarter-2023-results/#:~:text=Exceeded%2040%2C000%20metric%20tons%20of,for%20the%20third%20consecutive%20year)) ([investors.mpmaterials.com](https://investors.mpmaterials.com/investor-news/news-details/2025/MP-Materials-Restores-U.S.-Rare-Earth-Magnet-Production/default.aspx?hubs_content=thehustle.co%2Fwhere-business-is-headed-in-2023-highlights-from-3-reports&hubs_content-cta=null&hubs_post-cta=homepage#:~:text=delivering%20more%20than%2045%2C000%20metric,approximately%201%2C300%20metric%20tons%20of)) (an all-time U.S. record), most as bastnäsite concentrate.  In late 2023 MP began Stage II separation, shipping NdPr oxide and ramping up cerium/lanthanum product output.  For example, MP reported ∼1,300 t of NdPr oxide and "lanthanum and other separated products" in 2024 ([investors.mpmaterials.com](https://investors.mpmaterials.com/investor-news/news-details/2025/MP-Materials-Restores-U.S.-Rare-Earth-Magnet-Production/default.aspx?hubs_content=thehustle.co%2Fwhere-business-is-headed-in-2023-highlights-from-3-reports&hubs_content-cta=null&hubs_post-cta=homepage#:~:text=delivering%20more%20than%2045%2C000%20metric,approximately%201%2C300%20metric%20tons%20of)).  Based on Mountain Pass ore grades (~25–30% of REO as Ce/La) and initial Stage II capacity, separated La₂O₃ production is on the order of a few thousand tonnes per year (MP stage II ramping) (MP Materials, 2025; USGS).  
 
-• **Australia (Lynas, Mt Weld):** Lynas Rare Earths produced approximately 15,900 tonnes of total REO in FY2024, with Mt. Weld operations yielding rare earth concentrates containing approximately 25-27% lanthanum oxide. Based on typical Mt. Weld ore composition, current lanthanum oxide production is estimated at 3,000-4,000 tonnes annually.
+• **Australia (Lynas, Mt Weld):**  Lynas Rare Earths produced ~10,900 t total REO from Mt Weld in FY2024 ([hk.marketscreener.com](https://hk.marketscreener.com/quote/stock/LYNAS-RARE-EARTHS-LIMITED-6492543/news/Lynas-Rare-Earths-Annual-Report-FY2024-48046884/#:~:text=1117%20%20,Total%20NdPr%20production)) (with NdPr =5,655 t).  The ore is highly enriched in light REEs: by composition ∼30% of Mt Weld REO is the Ce+La duo, with La₂O₃ itself ~20–25% of the mix.  In FY2024 this implies roughly 2,500–3,000 t La₂O₃ contained.  Lynas is expanding production (targeting ~10,500 t NdPr/year by 2025 ([hk.marketscreener.com](https://hk.marketscreener.com/quote/stock/LYNAS-RARE-EARTHS-LIMITED-6492543/news/Lynas-Rare-Earths-Annual-Report-FY2024-48046884/#:~:text=accordingly,production%20is%20expected%20in%20CY2025))), which proportionally increases by-product lanthanum output.  However most Mt Weld concentrates are sent to Lynas Malaysia for processing, so exact lanthanum recoveries depend on those facilities.  
 
-• **Canada:** No commercial lanthanum production currently. The Saskatchewan Research Council (SRC) facility processes imported concentrates at demonstration scale, producing approximately 10 tonnes/month of mixed rare earth products. Commercial lanthanum production remains at zero, with pilot-scale operations focusing on neodymium-praseodymium.
+• **Canada:**  There is currently no commercial lanthanum mining in Canada.  Saskatch­ewan’s SRC operates a pilot-scale REE facility that in 2024 produced purified NdPr metal (10 t/month) from imported monazite feed ([www.src.sk.ca](https://www.src.sk.ca/news/src-rare-earth-processing-facility-first-produce-rare-earth-metals-north-america#:~:text=produced%20rare%20earth%20metals%20at,do%20so%20in%20North%20America)), but it has not yet produced separated La₂O₃.  Planned Canadian projects (e.g. Vital Metals' Nechalacho, Search Minerals' Foxtrot) are still in development; no commercial larthanum output exists yet.  
 
-• **EU & Norway:** No active lanthanum mining or processing. European projects remain in exploration or permitting phases (e.g., Sweden's Norra Kärr, Greenland's Kvanefjeld). Domestic production is zero.
+• **EU & Norway:**  No active native lanthanum mining or refining as of 2024.  Europe’s projects (e.g. LKAB/Norra Kärr in Sweden, Greenland’s Kvanefjeld) are in exploration or permitting.  For example, Sweden’s LKAB estimates its Per Geijer REE project could meet ~18% of Europe’s needs if developed, but commercial outputs are not expected until the 2030s at the earliest ([www.reuters.com](https://www.reuters.com/markets/commodities/swedens-lkab-says-it-could-meet-18-europes-rare-earth-needs-with-per-geijer-mine-2025-01-28/#:~:text=Sweden%27s%20LKAB%20company%20stated%20that,decade%20and%20still%20requires%20approvals)).  Current allied lanthanum production is essentially zero.  
 
-• **Japan & Iceland:** No domestic REE mining. Japan imports all lanthanum requirements (estimated <1,000 tonnes/year) primarily from China and Australia. Iceland has no REE mining operations despite trace REE occurrences in volcanic rocks.
+• **Japan & Iceland:**  Neither country has domestic lanthanum mining.  Japan relies entirely on imports (primarily from Australia and China) for its small REE needs, and Iceland has no mining despite trace occurrences.  
 
 ## US and Allies Domestic Demand 2030 (tons)
-*Summary: 15,000-25,000 tons La₂O₃ projected*
+*Summary:  Tengaged by catalysts, glass, etc., projected ~15-25 kt La₂O₃*
 
-• **Petroleum Catalysts (FCC):** Fluid catalytic cracking catalysts represent the largest lanthanum application. US and allied refineries (approximately 150 major facilities globally) consume an estimated 8,000-10,000 tonnes La₂O₃ annually, projected to reach 10,000-12,000 tonnes by 2030 as refining capacity expands.
+• **Petroleum Catalysts (FCC):**  Fluid cracking catalysts (FCC) are by far the largest use of lanthanum ([nepis.epa.gov](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100EUBC.TXT#:~:text=Batteries%3B%20catalysts%20for%20petroleum%20refining%3B,based%20on%20projected%20supply%20risks)) ([www.usgs.gov](https://www.usgs.gov/index.php/publications/rare-earth-elements-end-use-and-recyclability#:~:text=Rare%20earth%20elements%20are%20used,of%20rare%20earth%20elements%20used)).   Lanthanum-rich rare earths (mixed with Ce) are added to FCC catalysts to improve reactivity and extend life.  U.S. and allied refiners (hundreds of FCC units globally) consume several thousand tonnes of La₂O₃/year.  With modest growth in refining (especially clean-fuel units), allied demand in this sector could reach the high single-digit kilotonnes of La₂O₃ by 2030.  
 
-• **Battery Applications:** The shift from NiMH to lithium-ion batteries has reduced lanthanum demand in this sector. Remaining NiMH applications (stationary storage, some hybrid vehicles) are projected to consume 2,000-3,000 tonnes La₂O₃ by 2030, down from earlier projections.
+• **Battery Applications:**  Earlier demand from NiMH batteries (which use La-rich Mischmetal) is waning as Li-ion dominates. Remaining NiMH uses (stationary grid storage, some hybrid vehicles) will still use lanthanum into the 2030s, but at much-reduced levels.  Current estimates for allied NiMH and other battery-related La₂O₃ demand are on the order of 1–2 kt/yr (falling further by 2030) ([nepis.epa.gov](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100EUBC.TXT#:~:text=Batteries%3B%20catalysts%20for%20petroleum%20refining%3B,based%20on%20projected%20supply%20risks)).  (In new markets, La is not major—Nd/Dy are critical for EV magnets.)  
 
-• **Glass/Optics & Ceramics:** Specialty optical glass, camera lenses, and technical ceramics consume approximately 2,000-3,000 tonnes La₂O₃ annually among allied nations, with modest growth projected to 3,000-4,000 tonnes by 2030.
+• **Glass/Optics & Ceramics:**  Lanthanum oxide is used in specialty glass (high-refractive-index camera and aviation optics) and in luminescent/optical ceramics.  These niche industries in allied countries consume on the order of 1–2 kt La₂O₃ annually today.  Modest growth (new lens materials, lasers, polished glass) might raise demand to ~3–4 kt/yr by 2030 ([nepis.epa.gov](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100EUBC.TXT#:~:text=Batteries%3B%20catalysts%20for%20petroleum%20refining%3B,based%20on%20projected%20supply%20risks)) ([www.usgs.gov](https://www.usgs.gov/index.php/publications/rare-earth-elements-end-use-and-recyclability#:~:text=Rare%20earth%20elements%20are%20used,of%20rare%20earth%20elements%20used)).  
 
-• **Other Applications:** Mischmetal for steel production, polishing compounds, and phosphors collectively consume 1,000-2,000 tonnes annually, expected to remain stable through 2030.
+• **Other Applications:**  Miscellaneous uses (e.g. lanthanum-based mischmetal for steel desulfurization, polishing compounds, phosphors) together consume a few hundred to ~1 kt La₂O₃ per year among US/allies, and are expected to remain relatively stable through 2030. 
 
-Overall US and allied lanthanum demand by 2030 is projected at **15,000-25,000 tonnes La₂O₃ annually**, driven primarily by catalysts and specialty materials rather than batteries.
+Overall, total allied lanthanum demand by 2030 is projected in the mid ten-thousand tonnes range, driven overwhelmingly by refining catalysts and steady specialty uses ([www.usgs.gov](https://www.usgs.gov/index.php/publications/rare-earth-elements-end-use-and-recyclability#:~:text=Rare%20earth%20elements%20are%20used,of%20rare%20earth%20elements%20used)) ([nepis.epa.gov](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100EUBC.TXT#:~:text=Batteries%3B%20catalysts%20for%20petroleum%20refining%3B,based%20on%20projected%20supply%20risks)). 
 
 ## US and Allies Domestic Supply 2030 (tons)
 *Summary: 12,000-18,000 tons La₂O₃ projected capacity*
 
-• **United States:** MP Materials targets 10,000+ tonnes of separated REO production by 2030, with lanthanum representing approximately 25-30% of output (3,000-4,000 tonnes La₂O₃). Energy Fuels' White Mesa Mill in Utah is developing monazite processing capacity targeting 2,500 tonnes of total REO by 2027, potentially yielding 500-750 tonnes La₂O₃. Combined US production could reach 4,000-5,000 tonnes La₂O₃ by 2030.
+• **United States:**  MP Materials plans to reach >10,000 t of mixed REO (separated oxides) per year by 2030, roughly 25–30% of which would be lanthanum (≈3,000–4,000 t) as Stage III completes and new SX circuits come online ([investors.mpmaterials.com](https://investors.mpmaterials.com/investor-news/news-details/2025/MP-Materials-Restores-U.S.-Rare-Earth-Magnet-Production/default.aspx?hubs_content=thehustle.co%2Fwhere-business-is-headed-in-2023-highlights-from-3-reports&hubs_content-cta=null&hubs_post-cta=homepage#:~:text=delivering%20more%20than%2045%2C000%20metric,approximately%201%2C300%20metric%20tons%20of)).  Energy Fuels’ White Mesa Mill is developing monazite processing: Phase 1 can separate ~1,000 t NdPr/yr now ([www.prnewswire.com](https://www.prnewswire.com/news-releases/energy-fuels-achieves-commercial-production-of-on-spec-separated-rare-earths-at-its-white-mesa-mill-in-utah-while-simultaneously-advancing-uranium-production-302168094.html#:~:text=battery%20powered%20electric%20vehicles%20%28,Energy%20Fuels)) and is designing larger capacity by 2027.  Combined U.S. capacity for La₂O₃ could plausibly reach on the order of 4,000–5,000 t/yr by 2030 (MP Materials; Energy Fuels).  
 
-• **Australia:** Lynas plans to expand Mt. Weld production to 10,500 tonnes NdPr by 2025, with proportional increases in lanthanum output. Including the planned US separation facility and Malaysian operations expansion, Australian-sourced lanthanum production could reach 6,000-8,000 tonnes La₂O₃ by 2030.
+• **Australia:**  Lynas’ expansions (Mt Weld processing plus planned U.S. and Malaysian SX units) will scale up allied supply.  By 2025 Lynas plans ~10,500 t NdPr output ([hk.marketscreener.com](https://hk.marketscreener.com/quote/stock/LYNAS-RARE-EARTHS-LIMITED-6492543/news/Lynas-Rare-Earths-Annual-Report-FY2024-48046884/#:~:text=accordingly,production%20is%20expected%20in%20CY2025)); proportional increases in Ce/La recovery would yield several thousand tonnes more lanthanum per year.  Factoring that and other regions of Australia, globally-registered Lynas production could supply on the order of 6,000–8,000 t La₂O₃/year by 2030 (Lynas Rare Earths, 2024).  
 
-• **Canada:** Several projects in development (e.g., Vital Metals' Nechalacho, Search Minerals' Foxtrot) could contribute 1,000-2,000 tonnes La₂O₃ by 2030 if financed and developed on schedule.
+• **Canada:**  Key projects (Vital Metals’ Nechalacho, Search Minerals’ Foxtrot) aim to come online in late 2020s.  If successfully funded and built, they might contribute on the order of 1–2 k t La₂O₃ by 2030.  However, timelines are uncertain.  (Ally-sourced concentrate processing under development, e.g. Vital partnership with CEO, suggests some potential.)  Otherwise, lanthanum output from Canada is negligible until these projects materialize ([www.src.sk.ca](https://www.src.sk.ca/news/src-rare-earth-processing-facility-first-produce-rare-earth-metals-north-america#:~:text=produced%20rare%20earth%20metals%20at,do%20so%20in%20North%20America)).  
 
-• **Europe, Japan, Norway, Iceland:** No significant production expected by 2030. European projects face lengthy permitting processes with production unlikely before 2035.
+• **Europe, Japan, Norway, Iceland:**  No significant production is expected by 2030.  Europe's nascent REE projects (e.g. Sweden’s Per Geijer, Russia/Greenland schemes) face long lead times and likely won’t produce REOs commercially until the mid-2030s ([www.reuters.com](https://www.reuters.com/markets/commodities/swedens-lkab-says-it-could-meet-18-europes-rare-earth-needs-with-per-geijer-mine-2025-01-28/#:~:text=Sweden%27s%20LKAB%20company%20stated%20that,decade%20and%20still%20requires%20approvals)).  Japan and Iceland import essentially all lanthanum; domestic supply remains effectively zero.
 
-**Total Allied Supply (~2030):** Combined production capacity of 12,000-18,000 tonnes La₂O₃ annually, creating a potential deficit of 3,000-7,000 tonnes versus projected demand.
+**Total Allied Supply (~2030):**  Summing planned projects yields roughly 12,000–18,000 t La₂O₃ annual capacity.  This still leaves a gap relative to projected demand (a potential shortage on the order of several kt per year) unless additional projects succeed or recycling/policy interventions occur. (MP Materials, 2025; Lynas Rare Earths, 2024; Energy Fuels, 2024; Reuters, 2025)  
 
-## References for volumes
-• MP Materials Annual Report (2023) – Production figures and expansion plans
-• Lynas Rare Earths Annual Report (FY2024) – Production statistics and growth targets
-• USGS Mineral Commodity Summaries (2024) – Global and US rare earth production data
-• IEA Critical Minerals Report (2023) – Demand projections for rare earth elements
-• Roskill Rare Earths Market Outlook (2023) – Supply and demand forecasts
-
-## Key Discovery Technologies
-*Summary: Radiometric surveys; hyperspectral imaging; geochemical sampling; magnetic/gravity surveys*
-
-• **Radiometric/Gamma Surveys:** Thorium and uranium associated with REE minerals (monazite, bastnäsite) emit gamma radiation detectable by airborne or ground surveys. Modern spectral gamma-ray surveys can differentiate thorium from uranium signatures, directly indicating REE potential.
-
-• **Remote Sensing (Hyperspectral):** Satellite and aerial hyperspectral imaging identifies REE-associated alteration minerals and host rock signatures. ASTER and Sentinel-2 data help identify carbonatites and alkaline complexes prospective for lanthanum.
-
-• **Geological Mapping/Geochemistry:** Systematic mapping targets carbonatite complexes, alkaline intrusions, and ion-adsorption clay deposits. Stream sediment and soil sampling detect lanthanum and cerium anomalies. ICP-MS analysis provides parts-per-billion detection limits for REE pathfinder elements.
-
-• **Geophysical Surveys:** Magnetic surveys identify magnetite-bearing carbonatites; gravity surveys detect dense carbonatite bodies. Electrical methods map clay-hosted ion-adsorption deposits. Integration of multiple geophysical datasets improves drill targeting.
-
-## Key Extraction Technologies
-*Summary: Open-pit mining; crushing/grinding; froth flotation; gravity separation; magnetic separation*
-
-• **Open-Pit Mining & Comminution:** Most lanthanum deposits are mined via open-pit methods. Ore (typically 2-10% total REO) is crushed to <10mm and ground to 75-150 microns to liberate REE minerals.
-
-• **Flotation Concentration:** Froth flotation using fatty acid collectors and sodium silicate depressants separates REE minerals from gangue. Multi-stage flotation achieves 30-60% REO concentrates from 2-8% REO feed.
-
-• **Gravity & Magnetic Separation:** Dense media separation and spirals concentrate heavy REE minerals (specific gravity 4-5). High-intensity magnetic separation removes iron oxides and paramagnetic gangue minerals.
-
-• **Roasting/Cracking:** Bastnäsite concentrates undergo oxidative roasting at 500-600°C to remove CO₂ and oxidize cerium. Sulfuric acid baking at 200-300°C converts REE minerals to water-soluble sulfates.
-
-• **Leaching (Hydrometallurgy):** Acid leaching (HCl or H₂SO₄) dissolves REEs from roasted concentrates. Caustic cracking with concentrated NaOH at 140-150°C decomposes refractory minerals like monazite. Typical REE recovery exceeds 90%.
-
-## Key Separation Technologies
-*Summary: Solvent extraction; ion exchange; selective precipitation; fractional crystallization*
-
-• **Solvent Extraction (SX):** Primary industrial method using organophosphorus extractants (D2EHPA, PC88A) in mixer-settlers. Typical circuits require 20-40 stages to separate lanthanum from cerium and other light REEs, achieving 99%+ purity.
-
-• **Ion Exchange:** Displacement chromatography using strong-acid cation resins provides high-purity separation for smaller volumes. Continuous ion exchange systems are being developed for industrial scale.
-
-• **Selective Precipitation:** Double sulfate precipitation separates light from heavy REEs. Selective oxidation of cerium to Ce(IV) enables separation from La(III) via pH-controlled precipitation.
-
-• **Fractional Crystallization:** Historical method still used in China, exploiting solubility differences of REE double salts. Energy-intensive but produces high-purity products.
-
-## Key Purification & Refinement Technologies
-*Summary: Metallothermic reduction; molten salt electrolysis; vacuum distillation; zone refining*
-
-• **Metallothermic Reduction:** Standard industrial route mixing La₂O₃ with calcium metal at 1,000-1,200°C under argon. Yields 99%+ pure lanthanum metal after vacuum remelting.
-
-• **Molten Salt Electrolysis:** Electrolysis of LaCl₃ in LiCl-KCl eutectic at 450-500°C produces high-purity metal. More energy-efficient than metallothermic reduction but requires anhydrous feed.
-
-• **Vacuum Distillation:** Sublimation at 10⁻⁴ torr and 1,400°C removes volatile impurities. Combined with zone refining achieves 99.99% purity for electronic applications.
-
-• **Chemical Vapor Deposition:** LaI₃ thermal decomposition on hot tungsten filaments produces ultra-pure lanthanum for semiconductor applications.
-
-## Key Remediation Technologies
-*Summary: Radioactive waste management; water treatment/recycling; tailings stabilization; dust control*
-
-• **Radioactive Waste Management:** Monazite and bastnäsite processing generates NORM (naturally occurring radioactive material) waste containing thorium and uranium. Precipitation with barium sulfate removes radium; engineered covers and liners prevent radon emissions.
-
-• **Water Treatment & Recycling:** Lime neutralization precipitates dissolved metals and fluorides. Reverse osmosis recovers 85-90% of process water. Membrane bioreactors treat organic-contaminated streams. Zero liquid discharge systems minimize environmental impact.
-
-• **Solid Waste Stabilization:** Tailings are neutralized and stabilized with cement or geopolymers. Phosphate addition immobilizes heavy metals. Dry stacking reduces footprint versus traditional tailings ponds.
-
-• **Air Emission Control:** Baghouses capture particulates; wet scrubbers remove acid gases and fluorides. Activated carbon adsorbs volatile organics from solvent extraction operations.
-
-## References for mining technologies
-• Krishnamurthy & Gupta (2015) *Extractive Metallurgy of Rare Earths, 2nd Edition* – Comprehensive processing reference
-• Jha et al. (2016) "Review on hydrometallurgical recovery of rare earth metals" *Hydrometallurgy* 165: 2-26
-• USGS Professional Paper 1802 (2017) "Critical Mineral Resources of the United States"
-• Lucas et al. (2015) *Rare Earths: Science, Technology, Production and Use* – Industrial practices
-• EPA (2012) *Rare Earth Elements: A Review of Production, Processing, Recycling, and Associated Environmental Issues*
